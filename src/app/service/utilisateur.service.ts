@@ -23,10 +23,10 @@ export class UtilisateurService {
 
 
 
-  // delete(id:number):Observable<void>
-  // {
-  //   return this.http.delete<void>("http://localhost:8080/article/delateArticle/" + id)
-  // }
+   delete(id_U:number):Observable<void>
+   {
+     return this.http.delete<void>("http://localhost:8080/article/delateuTILISATEUR/" + id_U)
+   }
 
   // getArticleById(id:number): Observable<Article>
   // {

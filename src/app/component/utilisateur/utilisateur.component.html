@@ -11,12 +11,12 @@
     </thead>
     <tbody>
       <tr *ngFor="let u of listeU$ | async">
-        <th scope="row">{{u.id}}</th>
+        <th scope="row">{{u.id_U}}</th>
         <td>{{u.nom}}</td>
         <td>{{u.prenom}}</td>
         <td>{{u.mail}}</td>
         <td>{{u.telephone}}</td>
-        <td><button (click)="supprimer(u.id)">Supprimer</button></td>
+        <td><button (click)="supprimer(u.id_U)">Supprimer</button></td>
         
       </tr>
     </tbody>
