@@ -19,7 +19,8 @@ import { ConnexionFormulaireComponent } from './component/connexion-formulaire/c
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule, 
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
