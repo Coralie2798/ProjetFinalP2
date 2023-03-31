@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UtilisateurService } from 'src/app/service/utilisateur.service';
 
@@ -9,10 +9,12 @@ import { UtilisateurService } from 'src/app/service/utilisateur.service';
   styleUrls: ['./connexion-formulaire.component.css']
 })
 export class ConnexionFormulaireComponent implements OnInit {
-connexionForm!:FormGroup;
+
+  connexionForm!:FormGroup;
 
   constructor(private r:Router, private fb:FormBuilder){}
   
+
   
   ngOnInit(): void {
      //On passe par une fonction

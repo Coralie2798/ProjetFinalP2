@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Utilisateur } from 'src/app/model/utilisateur.model';
 import { UtilisateurService } from 'src/app/service/utilisateur.service';
 
+
 @Component({
   selector: 'app-formulaire-inscription',
   templateUrl: './formulaire-inscription.component.html',
@@ -33,7 +34,7 @@ export class FormulaireInscriptionComponent {
 
     saveUtilisateur()
     {
-      this.us.addUtilisateur(this.utilisateurForm.value).subscribe();
+      this.us.addUtilisateur(this.utilisateurForm.value).subscribe();    
     }
 
   
