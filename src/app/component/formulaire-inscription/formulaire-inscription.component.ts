@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup} from '@angular/forms';
 
 import { UtilisateurService } from 'src/app/service/utilisateur.service';
+
 
 @Component({
   selector: 'app-formulaire-inscription',
@@ -32,8 +33,7 @@ export class FormulaireInscriptionComponent {
 
     saveUtilisateur()
     {
-      this.us.addUtilisateur(this.utilisateurForm.value).subscribe();
-      
+      this.us.addUtilisateur(this.utilisateurForm.value).subscribe();    
     }
 
   
