@@ -14,6 +14,7 @@ import { ConnexionFormulaireComponent } from './component/connexion-formulaire/c
     UtilisateurComponent,
     FormulaireInscriptionComponent,
     ConnexionFormulaireComponent
+
   ],
   imports: [
     BrowserModule,
