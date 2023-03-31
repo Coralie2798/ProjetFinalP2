@@ -3,14 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
+import { FormulaireInscriptionComponent } from './component/formulaire-inscription/formulaire-inscription.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ConnexionFormulaireComponent } from './component/connexion-formulaire/connexion-formulaire.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UtilisateurComponent,
+    FormulaireInscriptionComponent,
+    ConnexionFormulaireComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
