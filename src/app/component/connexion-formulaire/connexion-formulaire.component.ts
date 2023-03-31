@@ -13,6 +13,8 @@ export class ConnexionFormulaireComponent {
 
   constructor(private r:Router, private fb:FormBuilder){};
 
+  
+
 
   //On passe par une fonction
   connexionForm = this.fb.group({

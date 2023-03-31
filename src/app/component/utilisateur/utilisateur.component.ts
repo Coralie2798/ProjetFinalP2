@@ -21,7 +21,7 @@ export class UtilisateurComponent implements OnInit{
   supprimer(id_U:number)
   {
     this.us.delete(id_U);
-    this.router.navigate([Utilisateur]);
+    this.router.navigate(['utilisateur']);
   }
 
 
