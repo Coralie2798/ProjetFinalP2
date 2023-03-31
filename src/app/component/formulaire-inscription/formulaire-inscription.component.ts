@@ -34,7 +34,16 @@ export class FormulaireInscriptionComponent {
 
     saveUtilisateur()
     {
-      this.us.addUtilisateur(this.utilisateurForm.value).subscribe();    
+      this.us.addUtilisateur(this.utilisateurForm.value).subscribe();   
+      this.utilisateurForm.patchValue({ // remettre les valeurs à 0
+      nom:'',
+      prenom:'',
+      mail:'',
+      telephone:'',
+      login:'',
+      mdp:'',
+      abonne_nl:[null]
+      }); 
     }
 
   
