@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Resume j1
+creation du projet avec la commande ng new ProjetFinalP2 , 
+creation de classes avec ng g class model/... --type=model,
+creation de services avec ng g s service/... 
+creation de composant avec ng g c component/...
+creation du formulaire d'inscription Utilisateur

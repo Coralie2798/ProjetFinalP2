@@ -1,0 +1,25 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prénom</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Téléphone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of listeU$ | async">
+        <th scope="row">{{u.id_U}}</th>
+        <td>{{u.nom}}</td>
+        <td>{{u.prenom}}</td>
+        <td>{{u.mail}}</td>
+        <td>{{u.telephone}}</td>
+        <td><button (click)="supprimer(u.id_U)">Supprimer</button></td>
+        
+      </tr>
+    </tbody>
+  </table>
+
+
