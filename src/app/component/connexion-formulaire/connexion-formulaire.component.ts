@@ -32,7 +32,7 @@ export class ConnexionFormulaireComponent {
       else
       {
 
-        this.connexionForm.patchValue({
+        this.connexionForm.patchValue({ // remettre les valeurs à 0
           login:"",
           mdp:""
         });

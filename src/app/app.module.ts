@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
 import { FormulaireInscriptionComponent } from './component/formulaire-inscription/formulaire-inscription.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConnexionFormulaireComponent } from './component/connexion-formulaire/connexion-formulaire.component';
 
 @NgModule({
@@ -13,13 +13,13 @@ import { ConnexionFormulaireComponent } from './component/connexion-formulaire/c
     AppComponent,
     UtilisateurComponent,
     FormulaireInscriptionComponent,
-    ConnexionFormulaireComponent
+    ConnexionFormulaireComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

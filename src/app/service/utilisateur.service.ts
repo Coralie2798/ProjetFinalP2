@@ -27,9 +27,5 @@ export class UtilisateurService {
    {
      return this.http.delete<void>("http://localhost:8080/article/delateuTILISATEUR/" + id_U)
    }
-
-  // getArticleById(id:number): Observable<Article>
-  // {
-  //   return this.http.get<Article>("http://localhost:8080/article/articleId/" + id)
-  // }
+   
 }
