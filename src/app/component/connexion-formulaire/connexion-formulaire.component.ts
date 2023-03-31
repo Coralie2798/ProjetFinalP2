@@ -23,13 +23,9 @@ connexionForm!:FormGroup;
     })
 
   }
-;
 
 
 
- 
-
-  
   connexion()
     {
       console.log(this.connexionForm.value)
