@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { Utilisateur } from 'src/app/model/utilisateur.model';
+
 import { UtilisateurService } from 'src/app/service/utilisateur.service';
 
 @Component({
@@ -34,6 +33,7 @@ export class FormulaireInscriptionComponent {
     saveUtilisateur()
     {
       this.us.addUtilisateur(this.utilisateurForm.value).subscribe();
+      
     }
 
   

@@ -20,8 +20,7 @@ export class ConnexionFormulaireComponent {
     mdp:['', Validators.required], 
     })
 
-
-  
+    
   connexion()
     {
       console.log(this.connexionForm.value)
