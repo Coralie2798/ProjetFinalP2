@@ -18,6 +18,12 @@ export class UtilisateurComponent implements OnInit{
     this.listeU$ = this.us.getUtilisateur();
   }
 
+  supprimer(id_U:number)
+  {
+    this.us.delete(id_U);
+    this.router.navigate([Utilisateur]);
+  }
+
 
   
 
