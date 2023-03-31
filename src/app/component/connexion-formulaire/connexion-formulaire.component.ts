@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UtilisateurService } from 'src/app/service/utilisateur.service';
 
@@ -8,18 +8,26 @@ import { UtilisateurService } from 'src/app/service/utilisateur.service';
   templateUrl: './connexion-formulaire.component.html',
   styleUrls: ['./connexion-formulaire.component.css']
 })
-export class ConnexionFormulaireComponent {
+export class ConnexionFormulaireComponent implements OnInit {
+connexionForm!:FormGroup;
 
-
-  constructor(private r:Router, private fb:FormBuilder){};
-
-
-  //On passe par une fonction
-  connexionForm = this.fb.group({
+  constructor(private r:Router, private fb:FormBuilder){}
+  
+  
+  ngOnInit(): void {
+     //On passe par une fonction
+ 
+  this.connexionForm = this.fb.group({
     login: ['', Validators.required],
     mdp:['', Validators.required], 
     })
 
+  }
+;
+
+
+
+ 
 
   
   connexion()
