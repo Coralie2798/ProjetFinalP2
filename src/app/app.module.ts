@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
 import { FormulaireInscriptionComponent } from './component/formulaire-inscription/formulaire-inscription.component';
-import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { FormGroup,ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { ConnexionFormulaireComponent } from './component/connexion-formulaire/connexion-formulaire.component';
-import {HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
