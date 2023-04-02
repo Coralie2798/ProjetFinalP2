@@ -6,7 +6,8 @@ import { UtilisateurComponent } from './component/utilisateur/utilisateur.compon
 
 const routes: Routes = [
   {path:"utilisateur", component:UtilisateurComponent},
-  {path:"inscription", component:FormulaireInscriptionComponent}
+  {path:"inscription", component:FormulaireInscriptionComponent},
+  {path:"connexion", component:ConnexionFormulaireComponent}
 
 ];
 
