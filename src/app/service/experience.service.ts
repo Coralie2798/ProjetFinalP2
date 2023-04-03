@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-
 import { Injectable } from '@angular/core';
+import { Trajet } from '../model/trajet.model';
 import { Experience } from '../model/experience.model';
 import { Restaurant } from '../model/restaurant';
 import { Observable } from 'rxjs';
-import { Trajet } from '../model/trajet.model';
+
 
 
 @Injectable({
