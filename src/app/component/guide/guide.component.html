@@ -1,0 +1,17 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Contenu</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let g of listeG$ | async">
+        <th scope="row">{{g.id_guide}}</th>
+        <td>{{g.contenu}}</td>
+        <td><button (click)="supprimer(g.id_guide)">Supprimer</button></td>
+        
+      </tr>
+    </tbody>
+  </table>
