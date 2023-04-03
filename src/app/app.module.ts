@@ -20,6 +20,7 @@ import { LieuxComponent } from './lieux/lieux.component';
 import { ExperienceComponent } from './component/experience/experience.component';
 import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
 import { Experience } from './model/experience.model';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { Experience } from './model/experience.model';
     LieuxComponent,
     ExperienceComponent,
     FormulaireExperienceGeneraleComponent,
+    RestaurantComponent,
   
 
   ],
