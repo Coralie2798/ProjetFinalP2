@@ -24,7 +24,6 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
     FormulaireInscriptionComponent,
     ConnexionFormulaireComponent,
     MainNavComponent 
-
   ],
   imports: [
     BrowserModule,
