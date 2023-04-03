@@ -2,13 +2,13 @@ export class Restaurant {
     id_r:number;
     nom:string;
     adresse:string;
-    prix:number;
+    prix_l:number;
 
-    constructor(id_r:number, nom:string,adresse:string,prix:number){
+    constructor(id_r:number, nom:string,adresse:string,prix_l:number){
        this.id_r=id_r;
        this.nom=nom;
        this.adresse=adresse;
-       this.prix=prix;
+       this.prix_l=prix_l;
 
     }
 }
