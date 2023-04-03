@@ -18,7 +18,7 @@ export class RestaurantComponent {
     this.restaurantForm = this.fb.group({
       nom:[null],
       adresse:[null],
-      prix:[null],
+      prix_l:[null],
     })
   }
 
@@ -28,7 +28,7 @@ export class RestaurantComponent {
       this.restaurantForm.patchValue({ 
       nom:'',
       adresse:'',
-      prix:'',
+      prix_l:'',
       }); 
     }
 

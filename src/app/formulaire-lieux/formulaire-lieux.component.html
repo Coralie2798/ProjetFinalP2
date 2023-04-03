@@ -1,0 +1,11 @@
+<form [formGroup]="lieuxForm" (ngSubmit)="saveLieux()"> 
+    <div class="form-group">
+      <label>Nom</label>
+      <input type="text" formControlName="nom_L" class="form-control" id="nom_L" >
+    </div>
+    <div class="form-group">
+        <label>Prix</label>
+        <input type="text" formControlName="prix_L" class="form-control" id="prix_L">
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
