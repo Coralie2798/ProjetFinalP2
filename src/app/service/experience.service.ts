@@ -18,12 +18,12 @@ export class ExperienceService {
   getTrajet():Observable<Trajet[]>
   {  
     
-    return this.http.get<Trajet[]>("http://localhost:8080/trajet/listeTrajet");
+    return this.http.get<Trajet[]>("http://localhost:8080/trajet/listeTrajet/");
   }
 
   addTrajet(t:Trajet):Observable<Trajet>
   {
-    return this.http.post<Trajet>("http://localhost:8080/trajet/saveTrajet", t);
+    return this.http.post<Trajet>("http://localhost:8080/trajet/saveTrajet/", t);
   }
 
 
