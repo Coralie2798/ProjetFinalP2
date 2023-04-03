@@ -13,6 +13,7 @@ export class CompagnieFormulaireComponent {
   form=new FormGroup( {
       "nom": new FormControl(""),
       "type":new FormControl("")
+      
   })
 
   submit(){
