@@ -10,6 +10,8 @@ import { ConnexionFormulaireComponent } from './component/connexion-formulaire/c
 import { HttpClientModule } from '@angular/common/http';
 import { Experience } from './model/experience.model';
 import { ExperienceComponent } from './component/experience/experience.component';
+import { LieuxComponent } from './lieux/lieux.component';
+import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ExperienceComponent } from './component/experience/experience.component
     UtilisateurComponent,
     FormulaireInscriptionComponent,
     ConnexionFormulaireComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    LieuxComponent,
+    FormulaireLieuxComponent
 
   ],
   imports: [
