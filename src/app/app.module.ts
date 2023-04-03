@@ -32,7 +32,8 @@ import { Experience } from './model/experience.model';
     FormulaireLieuxComponent,
     LieuxComponent,
     ExperienceComponent,
-    FormulaireExperienceGeneraleComponent
+    FormulaireExperienceGeneraleComponent,
+  
 
   ],
   imports: [
