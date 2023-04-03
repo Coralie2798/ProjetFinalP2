@@ -22,7 +22,7 @@ import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-g
 import { Experience } from './model/experience.model';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { TrajetComponent } from './component/trajet/trajet.component';
-
+import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +36,8 @@ import { TrajetComponent } from './component/trajet/trajet.component';
     ExperienceComponent,
     FormulaireExperienceGeneraleComponent,
     RestaurantComponent,
-    TrajetComponent
-  
+    TrajetComponent,
+    CompagnieFormulaireComponent 
 
   ],
   imports: [
