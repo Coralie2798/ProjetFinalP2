@@ -13,10 +13,10 @@ export class CompagnieFormulaireComponent {
   form=new FormGroup( {
       "nom": new FormControl(""),
       "type":new FormControl("")
-      
+
   })
 
-  submit(){
+  submitForm(){
     
     
     this.cs.addCompagnie(this.form.value)
