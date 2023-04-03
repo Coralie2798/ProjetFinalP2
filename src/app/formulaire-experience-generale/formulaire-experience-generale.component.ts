@@ -28,7 +28,7 @@ export class FormulaireExperienceGeneraleComponent {
 
   saveExperience():void{
     this.es.addExperience(this.experienceForm.value).subscribe();
-    this.rout.navigate(['connexion']);
+    this.rout.navigate(['resto']);
   }
 
 
