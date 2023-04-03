@@ -23,7 +23,7 @@ export class FormulaireGuideComponent {
 
     
 
-    saveUtilisateur()
+    saveGuide()
     {
       this.gs.addGuide(this.guideForm.value).subscribe();   
       this.guideForm.patchValue({ 
