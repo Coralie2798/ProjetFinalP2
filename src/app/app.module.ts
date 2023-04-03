@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { Experience } from './model/experience.model';
 import { ExperienceComponent } from './component/experience/experience.component';
 import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+import { TrajetComponent } from './component/trajet/trajet.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-g
     ConnexionFormulaireComponent,
     ExperienceComponent,
     FormulaireExperienceGeneraleComponent,
+    RestaurantComponent,
+    TrajetComponent
   
 
   ],

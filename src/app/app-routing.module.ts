@@ -5,6 +5,8 @@ import { ConnexionFormulaireComponent } from './component/connexion-formulaire/c
 import { FormulaireInscriptionComponent } from './component/formulaire-inscription/formulaire-inscription.component';
 import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
 import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+import { TrajetComponent } from './component/trajet/trajet.component';
 
 
 
@@ -12,7 +14,10 @@ const routes: Routes = [
   {path:"experience", component:ExperienceComponent},
   {path:"utilisateur", component:UtilisateurComponent},
   {path:"inscription", component:FormulaireInscriptionComponent},
-  {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent}
+  {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent},
+  {path:"restaurant", component:RestaurantComponent},
+  {path:"trajet", component:TrajetComponent}
+  
 ];
 
 

@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './restaurant.component.html',
   styleUrls: ['./restaurant.component.css']
 })
-export class RestaurantComponent implements OnInit{
+export class RestaurantComponent {
 
   restaurantForm!:FormGroup;
   constructor(private fb:FormBuilder, private es:ExperienceService){ }
