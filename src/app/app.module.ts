@@ -25,15 +25,11 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
     UtilisateurComponent,
     FormulaireInscriptionComponent,
     ConnexionFormulaireComponent,
-    MainNavComponent 
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
+    MainNavComponent, 
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
