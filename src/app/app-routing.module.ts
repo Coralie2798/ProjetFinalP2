@@ -13,6 +13,7 @@ import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.co
 import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
 
 import { RestaurantComponent } from './restaurant/restaurant.component';
+import { FormulaireGuideComponent } from './formulaire-guide/formulaire-guide.component';
 
 
 
@@ -22,7 +23,7 @@ const routes: Routes = [
   {path:"utilisateur", component:UtilisateurComponent},
   {path:"inscription", component:FormulaireInscriptionComponent},
   {path:"connexion", component:ConnexionFormulaireComponent},
-  {path:"compagnie", component:CompagnieFormulaireComponent}
+  {path:"compagnie", component:CompagnieFormulaireComponent},
 
 
   {path:"trajet", component:TrajetComponent},
@@ -35,7 +36,8 @@ const routes: Routes = [
   {path:"resto", component:RestaurantComponent},
   {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent},
 
-  {path:"trajet", component:TrajetComponent}
+  {path:"trajet", component:TrajetComponent},
+  {path:"guideformulaire", component:FormulaireGuideComponent}
 ];
 
 
