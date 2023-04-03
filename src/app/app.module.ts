@@ -16,6 +16,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
     UtilisateurComponent,
     FormulaireInscriptionComponent,
     ConnexionFormulaireComponent,
-    MainNavComponent 
+    MainNavComponent,
+    CompagnieFormulaireComponent 
 
   ],
   imports: [

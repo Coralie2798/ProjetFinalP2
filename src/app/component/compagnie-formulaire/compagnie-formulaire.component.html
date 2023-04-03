@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <p>
+        <label>Nom de la compagnie :</label>
+        <input type="text" formControlName="nom">
+    </p>
+    <p>
+        <label>Type de compagnie</label>
+        <input type="radio" formControlName="type" value="Aerienne">Compagnie Aerienne
+        <input type="radio" formControlName="type" value="Maritime">Compagnie Maritime
+    </p>
+    <p>
+        <button  (click)="submit()">Submit</button>
+    </p>
+    
+
+
+</form>
