@@ -1,0 +1,28 @@
+<form [formGroup]="experienceForm" ngSubmit="saveExperience()">
+
+    <div class="form-group">
+        <label>Destination</label>
+        <input type="text" formControlName="destination" class="form-control" id="destination" >
+      </div>
+    
+      <div class="form-group">
+          <label>Description</label>
+          <input type="text" formControlName="description" class="form-control" id="description" placeholder="Entrez cotre description, les choses qui vous ont marqué pendant ce voyage">
+      </div>
+    
+      <div class="form-group">
+        <label for="formFile" class="form-label">Ajoutez une photo</label>
+        <input class="form-control" formControlName="formFile" type="file" id="formFile">
+      </div>
+    
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Notez votre experience sur 5:</label>
+        <select class="form-control" id="noteExperience" formControlName="noteExperience">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+</form>

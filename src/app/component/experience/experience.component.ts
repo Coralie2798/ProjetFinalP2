@@ -9,11 +9,4 @@ import { ExperienceService } from 'src/app/service/experience.service';
 })
 export class ExperienceComponent {
 
-  constructor (private fb:FormBuilder, private es:ExperienceService) {}
-
-
-  experienceForm!:FormGroup;
-
-  
-
 }
