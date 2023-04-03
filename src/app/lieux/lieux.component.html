@@ -1,0 +1,21 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Nom</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of listeL$ | async">
+        <th scope="row">{{l.id_L}}</th>
+        <td>{{l.prix_l}}</td>
+        <td>{{l.nom_l}}</td>
+
+        <td><button (click)="supprimer(l.id_L)">Supprimer</button></td>
+        
+      </tr>
+    </tbody>
+  </table>
+
