@@ -21,6 +21,7 @@ import { ExperienceComponent } from './component/experience/experience.component
 import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { TrajetComponent } from './component/trajet/trajet.component';
+import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import { TrajetComponent } from './component/trajet/trajet.component';
     FormulaireExperienceGeneraleComponent,
     RestaurantComponent,
     TrajetComponent,
-  
+    CompagnieFormulaireComponent 
 
   ],
   imports: [
