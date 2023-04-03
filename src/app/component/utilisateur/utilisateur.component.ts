@@ -20,7 +20,7 @@ export class UtilisateurComponent implements OnInit{
 
   supprimer(id_U:number)
   {
-    this.us.delete(id_U);
+    this.us.delete(id_U).subscribe(()=>{this.ngOnInit()});
     this.router.navigate(['utilisateur']);
   }
 

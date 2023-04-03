@@ -23,9 +23,9 @@ export class UtilisateurService {
 
 
 
-   delete(id_U:number):Observable<void>
+   delete(id_U:number)
    {
-     return this.http.delete<void>("http://localhost:8080/utilisateur/deleteUtilisateur/" + id_U)
+     return this.http.delete("http://localhost:8080/utilisateur/deleteUtilisateur/" + id_U)
    }
 
 }
