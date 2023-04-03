@@ -35,6 +35,7 @@ import { TrajetComponent } from './component/trajet/trajet.component';
     ExperienceComponent,
     FormulaireExperienceGeneraleComponent,
     RestaurantComponent,
+    TrajetComponent,
   
 
   ],

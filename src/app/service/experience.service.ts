@@ -45,9 +45,5 @@ export class ExperienceService {
     return this.http.post<Experience>("http://localhost:8080/utilisateur/saveExperience", e);
   }
 
-  getExperience(e:Experience):Observable<Experience>
-  {
-    return this.http.get<Experience>("http://localhost:8080/utilisateur/getExperience", e)
-  }
 
 }
