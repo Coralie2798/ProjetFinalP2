@@ -1,5 +1,6 @@
 <h1>Publiez une experience de voyage!</h1>
 
+<form [formGroup]="experienceForm" ngSubmit="saveExperience()">
 <div class="accordion accordion-flush" id="accordionFlushExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -42,3 +43,4 @@
       </div>
     </div>
   </div>
+</form>
