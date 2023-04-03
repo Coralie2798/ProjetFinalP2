@@ -4,10 +4,10 @@ import { ExperienceComponent } from './component/experience/experience.component
 import { ConnexionFormulaireComponent } from './component/connexion-formulaire/connexion-formulaire.component';
 import { FormulaireInscriptionComponent } from './component/formulaire-inscription/formulaire-inscription.component';
 import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
-import { TrajetComponent } from './component/trajet/trajet.component';
 import { LieuxComponent } from './lieux/lieux.component';
 import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.component';
 import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
+import { TrajetComponent } from './component/trajet/trajet.component';
 
 
 
@@ -15,11 +15,11 @@ const routes: Routes = [
   {path:"experience", component:ExperienceComponent},
   {path:"utilisateur", component:UtilisateurComponent},
   {path:"inscription", component:FormulaireInscriptionComponent},
-  {path:"trajet", component:TrajetComponent},
   {path:"connexion", component:ConnexionFormulaireComponent},
   {path:"lieux", component:LieuxComponent},
   {path:"lieuxformulaire", component:FormulaireLieuxComponent},
-  {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent}
+  {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent},
+  {path:"trajet", component:TrajetComponent}
 ];
 
 
