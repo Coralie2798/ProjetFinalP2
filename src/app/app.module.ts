@@ -3,6 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
+import { ExperienceComponent } from './component/experience/experience.component';
+
+
+=======
 import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
 import { FormulaireInscriptionComponent } from './component/formulaire-inscription/formulaire-inscription.component';
 import { FormGroup,ReactiveFormsModule, FormsModule} from '@angular/forms';
@@ -20,6 +25,13 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
+    ExperienceComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+=======
     UtilisateurComponent,
     FormulaireInscriptionComponent,
     ConnexionFormulaireComponent,
