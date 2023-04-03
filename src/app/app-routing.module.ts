@@ -16,7 +16,6 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 
 
 
-
 const routes: Routes = [
   {path:"experience", component:ExperienceComponent},
   {path:"utilisateur", component:UtilisateurComponent},
@@ -30,8 +29,9 @@ const routes: Routes = [
   {path:"lieuxformulaire", component:FormulaireLieuxComponent},
   {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent},
   {path:"resto", component:RestaurantComponent},
-  {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent}
+  {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent},
 
+  {path:"trajet", component:TrajetComponent}
 ];
 
 
