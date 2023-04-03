@@ -6,6 +6,7 @@ import { FormulaireInscriptionComponent } from './component/formulaire-inscripti
 import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
 import { LieuxComponent } from './lieux/lieux.component';
 import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.component';
+import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
 
 
 
@@ -15,8 +16,8 @@ const routes: Routes = [
   {path:"inscription", component:FormulaireInscriptionComponent},
   {path:"connexion", component:ConnexionFormulaireComponent},
   {path:"lieux", component:LieuxComponent},
-  {path:"lieuxformulaire", component:FormulaireLieuxComponent}
-
+  {path:"lieuxformulaire", component:FormulaireLieuxComponent},
+  {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent}
 ];
 
 

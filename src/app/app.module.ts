@@ -17,6 +17,11 @@ import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.component';
 import { LieuxComponent } from './lieux/lieux.component';
+import { ExperienceComponent } from './component/experience/experience.component';
+import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
+import { Experience } from './model/experience.model';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +30,9 @@ import { LieuxComponent } from './lieux/lieux.component';
     ConnexionFormulaireComponent,
     MainNavComponent,
     FormulaireLieuxComponent,
-    LieuxComponent
+    LieuxComponent,
+    ExperienceComponent,
+    FormulaireExperienceGeneraleComponent
 
   ],
   imports: [
@@ -40,7 +47,9 @@ import { LieuxComponent } from './lieux/lieux.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule ,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
