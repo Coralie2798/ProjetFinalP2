@@ -23,30 +23,32 @@
                             </div>
                         </div>
                         <div class="row justify-content-center">
+                           
                             <div class="col-md-6 mb-4 ">
-                                <div class="form-outline ">
+                                <div class="input-group form-outline ">
                                     <input type="number" formControlName="prix_t" id="form3Example1" class="form-control" />
+                                    <span class="input-group-text" id="basic-addon2">€</span>
                                     <label class="form-label" for="form3Example1">Prix de l'aller-retour</label>
                                 </div>
                             </div>
                         </div>
-
-                        <select class="form-select mb-3 " aria-label=".form-select-lg example" formControlName="listeCompagnie">
+<!-- 
+                        <select class="form-select mb-3 " *ngFor="let c of listeCompagnie" aria-label=".form-select-lg example" formControlName="listeCompagnie">
                             <option selected>--Compagnie--</option>
-                            <option value="1">compagnie1</option>
-                            <option value="3">Autre compagnie</option>
-                        </select>
+                            <option value="{{c.id_c}}">{{c.nom}}</option>
+                            <option value="">Autre compagnie</option>
+                        </select> -->
                         <button type="submit" class="btn btn-primary btn-block mb-4">
                             Valider
                         </button>
-                        <input type="checkbox">
+                        
                     </form>
                 </div>
             </div>
         </div>
         <div class="col-lg-6 mb-5 mb-lg-0">
             <img src="https://as1.ftcdn.net/v2/jpg/00/71/41/34/1000_F_71413455_GBCbY3cWW125quIdT4omGDSV3WvVfb8m.jpg"
-             class="rounded-4 shadow-4"
+             class="w-100 rounded-4 shadow-4"
               alt="trajet" />
           </div>
     </div>

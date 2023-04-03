@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Ville de départ</th>
+        <th scope="col">Ville d'arrivée</th>
+        <th scope="col">Prix de l'aller-retour</th>
+        <th scope="col">compagnie</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of listeT$ | async">
+        <th scope="row">{{t.id_T}}</th>
+        <td>{{t.ville_depart}}</td>
+        <td>{{t.ville_arrivee}}</td>
+        <td>{{t.prix_t}}</td>
+
+        <td><button (click)="supprimer(t.id_T)">Supprimer</button></td>
+        
+      </tr>
+    </tbody>
+  </table>
