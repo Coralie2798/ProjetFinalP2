@@ -1,23 +1,19 @@
 import { HttpClient } from '@angular/common/http';
-<<<<<<< HEAD
-import { Injectable } from '@angular/core';
-import { Trajet } from '../model/trajet.model';
-=======
 
 import { Injectable } from '@angular/core';
 import { Experience } from '../model/experience.model';
 import { Restaurant } from '../model/restaurant';
->>>>>>> 6b6ad63520f1787a27e958f1347e98a87b3adaac
 import { Observable } from 'rxjs';
+import { Trajet } from '../model/trajet.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExperienceService {
 
-<<<<<<< HEAD
  
-  constructor(private http:HttpClient) { }
+  
 
   getTrajet():Observable<Trajet[]>
   {  
@@ -36,7 +32,6 @@ export class ExperienceService {
    {
      return this.http.delete<void>("http://localhost:8080/trajet/deleteTrajet/" + id_T)
    }
-=======
   constructor(private http:HttpClient){}
 
   addRestaurant(resto:Restaurant):Observable<Restaurant>
@@ -55,5 +50,4 @@ export class ExperienceService {
     return this.http.get<Experience>("http://localhost:8080/utilisateur/getExperience", e)
   }
 
->>>>>>> 6b6ad63520f1787a27e958f1347e98a87b3adaac
 }
