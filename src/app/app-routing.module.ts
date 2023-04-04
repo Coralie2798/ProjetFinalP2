@@ -15,6 +15,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { FormulaireGuideComponent } from './formulaire-guide/formulaire-guide.component';
 import { GuideComponent } from './component/guide/guide.component';
 import { FormulaireVilleComponent } from './formulaire-ville/formulaire-ville.component';
+import { VilleComponent } from './component/ville/ville.component';
 
 
 
