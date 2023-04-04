@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { Compagnie } from 'src/app/model/compagnie.model';
 import { CompagnieService } from 'src/app/service/compagnie.service';
 import { ExperienceService } from 'src/app/service/experience.service';
 
@@ -14,7 +15,7 @@ export class TrajetComponent {
   constructor(private fb:FormBuilder, private es: ExperienceService,private router:Router, private cs: CompagnieService){ }
 
   trajetForm!:FormGroup;
-  listCompagnie!:Observable<any>
+  listCompagnie!:Compagnie[]
   ngOnInit(): void {
 
     this.trajetForm = this.fb.group({
@@ -33,6 +34,7 @@ export class TrajetComponent {
     {
       this.es.addTrajet(this.trajetForm.value).subscribe();   
       console.log(this.listCompagnie)
+      console.log(this.trajetForm.value)
       this.router.navigate(['compagnie']);
     }
 
