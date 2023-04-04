@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { Compagnie } from 'src/app/model/compagnie.model';
 import { Trajet } from 'src/app/model/trajet.model';
+import { CompagnieService } from 'src/app/service/compagnie.service';
 import { ExperienceService } from 'src/app/service/experience.service';
 
 @Component({
@@ -11,10 +13,12 @@ import { ExperienceService } from 'src/app/service/experience.service';
 })
 export class ListeTrajetsComponent {
   listeT$!: Observable<Trajet[]>;
-  constructor(private es:ExperienceService, private router:Router){}
+  listeC$!:Observable<Compagnie[]>
+  constructor(private es:ExperienceService,private cs:CompagnieService, private router:Router){}
 
   ngOnInit(): void {
     this.listeT$ = this.es.getTrajet();
+    
   }
 
   supprimer(id_t:number)

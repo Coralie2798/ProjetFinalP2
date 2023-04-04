@@ -26,7 +26,8 @@
                            
                             <div class="col-md-6 mb-4 ">
                                 <div class="input-group form-outline ">
-                                    <input type="number" formControlName="prix_t" id="form3Example1" class="form-control" />
+                                    <div>
+                                    <input type="number" formControlName="prix_t" id="form3Example1" class="form-control" /></div>
                                     <span class="input-group-text" id="basic-addon2">€</span>
                                     <label class="form-label" for="form3Example1">Prix de l'aller-retour</label>
                                 </div>
@@ -38,6 +39,10 @@
                             <option *ngFor="let c of listCompagnie"  [ngValue]="c">{{c.nom}}</option>
             
                         </select> 
+                        
+
+
+                        
                         <button type="submit" class="btn btn-primary btn-block mb-4">
                             Valider
                         </button>

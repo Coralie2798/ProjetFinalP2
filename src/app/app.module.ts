@@ -23,6 +23,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { TrajetComponent } from './component/trajet/trajet.component';
 import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
 import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.component';
+import { ListeExperienceComponent } from './component/liste-experience/liste-experience.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.c
     RestaurantComponent,
     TrajetComponent,
     CompagnieFormulaireComponent,
-    ListeTrajetsComponent 
+    ListeTrajetsComponent,
+    ListeExperienceComponent 
 
   ],
   imports: [
