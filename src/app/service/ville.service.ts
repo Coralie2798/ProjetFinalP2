@@ -10,13 +10,13 @@ export class VilleService {
 
   constructor(private http:HttpClient) { }
 
-  getUtilisateur():Observable<Ville[]>
+  getVille():Observable<Ville[]>
   {  
     // return this.listeA;
     return this.http.get<Ville[]>("http://localhost:8080/ville/listeVille");
   }
 
-  addUtilisateur(v:Ville):Observable<Ville>
+  addVille(v:Ville):Observable<Ville>
   {
     return this.http.post<Ville>("http://localhost:8080/ville/saveVille", v);
   }

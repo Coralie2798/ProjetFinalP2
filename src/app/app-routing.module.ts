@@ -14,6 +14,7 @@ import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-g
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { FormulaireGuideComponent } from './formulaire-guide/formulaire-guide.component';
 import { GuideComponent } from './component/guide/guide.component';
+import { VilleComponent } from './component/ville/ville.component';
 
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
 
 
   {path:"trajet", component:TrajetComponent},
+  {path:"ville", component:VilleComponent},
 
 
   {path:"connexion", component:ConnexionFormulaireComponent},
