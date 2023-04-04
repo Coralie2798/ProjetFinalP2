@@ -34,6 +34,7 @@ import { VilleComponent } from './component/ville/ville.component';
 import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.component';
 import { ListeExperienceComponent } from './component/liste-experience/liste-experience.component';
 import { PaysComponent } from './pays/pays.component';
+import { FormulairePaysComponent } from './formulaire-pays/formulaire-pays.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { PaysComponent } from './pays/pays.component';
     
     ListeTrajetsComponent,
     ListeExperienceComponent,
-    PaysComponent 
+    PaysComponent,
+    FormulairePaysComponent 
 
   ],
   imports: [

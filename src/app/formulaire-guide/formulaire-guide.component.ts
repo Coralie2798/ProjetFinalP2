@@ -17,7 +17,7 @@ export class FormulaireGuideComponent {
   creerVill=false
   guideForm!:FormGroup;
   listeVille!:Ville[];
-  idV!:number;
+  
 
   ngOnInit(): void {
 
