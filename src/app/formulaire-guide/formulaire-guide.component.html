@@ -4,7 +4,7 @@
         <label>Selectionnez une ville </label>
         <select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="listeVille">
                         
-            <option *ngFor="let v of listeVille"  [ngValue]="v.id_ville">{{v.nom}}</option>
+            <option *ngFor="let v of listeVille"  [ngValue]="v">{{v.nom}}</option>
 
         </select> 
       <label>Inscrivez votre contenu ici :</label>

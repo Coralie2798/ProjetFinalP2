@@ -16,7 +16,8 @@ export class FormulaireGuideComponent {
   constructor(private fb:FormBuilder, private gs:GuideService, private router:Router, private vs:VilleService){ }
   creerVill=false
   guideForm!:FormGroup;
-  listeVille!:Ville[]
+  listeVille!:Ville[];
+  idV!:number;
 
   ngOnInit(): void {
 
@@ -41,4 +42,5 @@ export class FormulaireGuideComponent {
       this.creerVill=!this.creerVill
       
     }
+    
 }
