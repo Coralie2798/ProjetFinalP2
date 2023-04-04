@@ -18,6 +18,7 @@ import { FormulaireVilleComponent } from './formulaire-ville/formulaire-ville.co
 import { VilleComponent } from './component/ville/ville.component';
 import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.component';
 import { ListeExperienceComponent } from './component/liste-experience/liste-experience.component';
+import { PaysComponent } from './pays/pays.component';
 
 
 
@@ -47,7 +48,8 @@ const routes: Routes = [
   {path:"villeformulaire", component:FormulaireVilleComponent},
   {path:"trajet", component:TrajetComponent},
   {path:"trajets",component:ListeTrajetsComponent},
-  {path:"listeExperiences",component:ListeExperienceComponent}
+  {path:"listeExperiences",component:ListeExperienceComponent},
+  {path:"pays",component:PaysComponent},
 ];
 
 
