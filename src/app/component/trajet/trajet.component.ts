@@ -13,9 +13,9 @@ import { ExperienceService } from 'src/app/service/experience.service';
 })
 export class TrajetComponent {
   constructor(private fb:FormBuilder, private es: ExperienceService,private router:Router, private cs: CompagnieService){ }
-
+  creerComp=false
   trajetForm!:FormGroup;
-  listCompagnie!:Compagnie[]
+  listCompagnie!:Observable<Compagnie[]>
   ngOnInit(): void {
 
     this.trajetForm = this.fb.group({
@@ -25,7 +25,7 @@ export class TrajetComponent {
       listeCompagnie:[null]
       
     })
-    this.cs.getCompagnies().subscribe(data=>{this.listCompagnie=data})
+    this.listCompagnie=this.cs.getCompagnies()
   }
 
     
@@ -35,7 +35,12 @@ export class TrajetComponent {
       this.es.addTrajet(this.trajetForm.value).subscribe();   
       console.log(this.listCompagnie)
       console.log(this.trajetForm.value)
-      this.router.navigate(['compagnie']);
+      
+    }
+
+    creerCompagnie(){
+      this.creerComp=!this.creerComp
+      
     }
 
 }
