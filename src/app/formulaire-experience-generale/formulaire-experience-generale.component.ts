@@ -22,7 +22,7 @@ export class FormulaireExperienceGeneraleComponent {
       destination:[null],
       description:[null],
       photo:[null],
-      noteExperience:[null]
+      rating_moyen:[null]
     })
   }
 

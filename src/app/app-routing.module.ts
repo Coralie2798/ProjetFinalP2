@@ -31,7 +31,7 @@ const routes: Routes = [
   {path:"resto", component:RestaurantComponent},
   {path:"trajet", component:TrajetComponent},
   {path:"trajets",component:ListeTrajetsComponent},
-  {path:"experiences", component:ListeExperienceComponent}
+  {path:"listeExperiences",component:ListeExperienceComponent}
 ];
 
 

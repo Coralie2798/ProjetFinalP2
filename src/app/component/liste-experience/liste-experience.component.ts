@@ -16,12 +16,14 @@ export class ListeExperienceComponent implements OnInit {
 
   constructor(private es:ExperienceService, private router:Router, private ls:LieuxService){}
    
+
   listeE$!: Observable<Experience[]>;
   listeR$!: Observable<Restaurant[]>;
   listeL$!:Observable<Lieux[]>;
+  
 
  ngOnInit(): void {
-   this.listeE$=this.es.getExperience();
+  // this.listeE$=this.es.getExperience().subscribe();
    this.listeR$=this.es.getRestaurant();
    this.listeL$=this.ls.getLieux();
   }
