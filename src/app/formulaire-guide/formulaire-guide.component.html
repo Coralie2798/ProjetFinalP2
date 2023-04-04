@@ -11,4 +11,11 @@
       <input type="text" formControlName="contenu" class="form-control" id="contenu" >
     <button type="submit" class="btn btn-primary" >Submit</button>
     </div>
-    </form>
+    <button (click)="creerVille()">Creer une nouvelle ville</button>
+
+    <div *ngIf="creerVill">
+        <app-formulaire-ville></app-formulaire-ville>
+
+              
+    
+    

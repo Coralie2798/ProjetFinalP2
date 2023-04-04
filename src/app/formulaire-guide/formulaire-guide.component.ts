@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class FormulaireGuideComponent {
 
   constructor(private fb:FormBuilder, private gs:GuideService, private router:Router, private vs:VilleService){ }
-
+  creerVill=false
   guideForm!:FormGroup;
   listeVille!:Ville[]
 
@@ -32,9 +32,13 @@ export class FormulaireGuideComponent {
     saveGuide()
     {
       this.gs.addGuide(this.guideForm.value).subscribe();  
-      this.router.navigate(['villeformulaire']); 
       this.guideForm.patchValue({ 
         contenu:''
       }); 
+    }
+
+    creerVille(){
+      this.creerVill=!this.creerVill
+      
     }
 }
