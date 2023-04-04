@@ -29,6 +29,5 @@ export class ListeExperienceComponent implements OnInit {
   }
 
 nbEtoile(){
-
 }
 }
