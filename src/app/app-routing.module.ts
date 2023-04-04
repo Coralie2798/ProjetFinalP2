@@ -13,6 +13,7 @@ import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.co
 import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.component';
+import { ListeExperienceComponent } from './component/liste-experience/liste-experience.component';
 
 
 
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent},
   {path:"resto", component:RestaurantComponent},
   {path:"trajet", component:TrajetComponent},
-  {path:"trajets",component:ListeTrajetsComponent}
+  {path:"trajets",component:ListeTrajetsComponent},
+  {path:"listeExperiences",component:ListeExperienceComponent}
 ];
 
 

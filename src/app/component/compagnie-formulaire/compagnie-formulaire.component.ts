@@ -23,9 +23,12 @@ export class CompagnieFormulaireComponent {
     
     
     this.cs.addCompagnie(this.form.value)
-    this.rout.navigate(['resto'])
+    window.location.reload()
   }
 
-  
 
+  recupCompagnie() {
+    console.log(this.cs.getCompagnies())
+  }
+  
 }
