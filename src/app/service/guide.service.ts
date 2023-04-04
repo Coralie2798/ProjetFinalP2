@@ -11,11 +11,11 @@ export class GuideService {
   constructor(private http:HttpClient) { }
   getGuide():Observable<Guide[]>
   {  
-    return this.http.get<Guide[]>("http://localhost:8080/lieux/listeGuide");
+    return this.http.get<Guide[]>("http://localhost:8080/guide/listeGuide");
   }
   addGuide(g:Guide):Observable<Guide>
   {
-    return this.http.post<Guide>("http://localhost:8080/lieux/saveGuide", g);
+    return this.http.post<Guide>("http://localhost:8080/guide/saveGuide", g);
   }
   delete(id_guide:number):Observable<void>
   {
