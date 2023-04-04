@@ -1,11 +1,13 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Compagnie } from '../model/compagnie.model';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompagnieService {
-
+  
     url!:string
   constructor(private http: HttpClient) { }
 

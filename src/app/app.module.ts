@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UtilisateurComponent } from './component/utilisateur/utilisateur.component';
@@ -16,7 +15,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.component';
+import { LieuxComponent } from './lieux/lieux.component';
+import { ExperienceComponent } from './component/experience/experience.component';
+import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+import { TrajetComponent } from './component/trajet/trajet.component';
 import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
+import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +32,14 @@ import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/c
     FormulaireInscriptionComponent,
     ConnexionFormulaireComponent,
     MainNavComponent,
-    CompagnieFormulaireComponent 
+    FormulaireLieuxComponent,
+    LieuxComponent,
+    ExperienceComponent,
+    FormulaireExperienceGeneraleComponent,
+    RestaurantComponent,
+    TrajetComponent,
+    CompagnieFormulaireComponent,
+    ListeTrajetsComponent 
 
   ],
   imports: [
@@ -40,7 +54,8 @@ import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/c
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule ,
+    HttpClientModule
     
   ],
   providers: [],
