@@ -1,10 +1,10 @@
-.card{
-    width: 30rem;
+.bi-star-fill{
+    color: rgb(239, 239, 83);
 }
 
 
 
-/* .container .cards-container{
+/* .card{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:2rem;
