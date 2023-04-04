@@ -29,7 +29,8 @@ export class TrajetComponent {
 
     saveTrajet()
     {
-      this.es.addTrajet(this.trajetForm.value).subscribe();   
+      this.es.addTrajet(this.trajetForm.value).subscribe();  
+       
       
       this.router.navigate(['compagnie']);
     }
