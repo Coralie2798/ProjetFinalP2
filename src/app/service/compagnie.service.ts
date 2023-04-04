@@ -28,7 +28,7 @@ export class CompagnieService {
   }
 
   getCompagnies(){
-    return this.http.get<any>("http://localhost:8080/compagnie/listeCompagnie")
+    return this.http.get<Compagnie[]>("http://localhost:8080/compagnie/listeCompagnie")
   }
 
 
