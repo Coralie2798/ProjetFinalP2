@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ExperienceService } from 'src/app/service/experience.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ExperienceService } from 'src/app/service/experience.service';
   styleUrls: ['./trajet.component.css']
 })
 export class TrajetComponent {
-  constructor(private fb:FormBuilder, private es: ExperienceService){ }
+  constructor(private fb:FormBuilder, private es: ExperienceService,private router:Router){ }
 
   trajetForm!:FormGroup;
 
@@ -29,13 +30,8 @@ export class TrajetComponent {
     saveTrajet()
     {
       this.es.addTrajet(this.trajetForm.value).subscribe();   
-      this.trajetForm.patchValue({ // remettre les valeurs à 0
-        ville_depart:'',
-        ville_arrivee:'',
-         prix_t:[null],
-         listeCompagnie:[null]
-         
-      }); 
+      
+      this.router.navigate(['compagnie']);
     }
 
 }
