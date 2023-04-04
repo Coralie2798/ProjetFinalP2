@@ -1,10 +1,10 @@
 export class Compagnie {
 
-     id_c:number;
+     id:number;
      nom:string;
 
-    constructor(id_c:number,nom:string){
-        this.id_c=id_c;
+    constructor(id:number,nom:string){
+        this.id=id;
         this.nom=nom;
     }
 }
