@@ -52,9 +52,9 @@ export class ExperienceService {
     return this.http.get<Experience[]>("http://localhost:8080/experience/listeExperience");
   }
 
-  getExperienceById(id_voyage:number):Observable<Experience>
+  getExperienceById(id:number):Observable<Experience>
   {
-    return this.http.get<Experience>("http://localhost:8080/experience/experienceId/" + id_voyage);
+    return this.http.get<Experience>("http://localhost:8080/experience/experienceId/" + id);
   }
 
 }
