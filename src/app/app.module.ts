@@ -17,7 +17,6 @@ import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
-
 import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.component';
 import { LieuxComponent } from './lieux/lieux.component';
 import { ExperienceComponent } from './component/experience/experience.component';
@@ -27,6 +26,7 @@ import { TrajetComponent } from './component/trajet/trajet.component';
 import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
 import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.component';
 import { ListeExperienceComponent } from './component/liste-experience/liste-experience.component';
+
 
 
 @NgModule({
@@ -48,7 +48,8 @@ import { ListeExperienceComponent } from './component/liste-experience/liste-exp
     TrajetComponent,
     CompagnieFormulaireComponent,
     ListeTrajetsComponent,
-    ListeExperienceComponent 
+    ListeExperienceComponent,
+    
 
   ],
   imports: [

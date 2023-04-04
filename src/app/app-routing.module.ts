@@ -30,7 +30,8 @@ const routes: Routes = [
   {path:"resto", component:RestaurantComponent},
   {path:"trajet", component:TrajetComponent},
   {path:"trajets",component:ListeTrajetsComponent},
-  {path:"listeExperiences",component:ListeExperienceComponent}
+  {path:"listeExperiences",component:ListeExperienceComponent},
+  
 ];
 
 
