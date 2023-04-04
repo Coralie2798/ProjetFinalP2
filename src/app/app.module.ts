@@ -57,6 +57,14 @@ import { GuideComponent } from './component/guide/guide.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    BrowserAnimationsModule ,
     HttpClientModule
     
   ],
