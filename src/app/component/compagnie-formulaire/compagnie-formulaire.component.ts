@@ -26,6 +26,9 @@ export class CompagnieFormulaireComponent {
     this.rout.navigate(['resto'])
   }
 
-  
 
+  recupCompagnie() {
+    console.log(this.cs.getCompagnies())
+  }
+  
 }
