@@ -11,9 +11,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ExperienceService {
-
- 
   
+ constructor(private http:HttpClient){}
 
   getTrajet():Observable<Trajet[]>
   {  
@@ -26,28 +25,31 @@ export class ExperienceService {
     return this.http.post<Trajet>("http://localhost:8080/trajet/saveTrajet", t);
   }
 
-
-
-   delete(id_T:number):Observable<void>
+   delete(id_t:number):Observable<void>
    {
-     return this.http.delete<void>("http://localhost:8080/trajet/deleteTrajet/" + id_T)
+     return this.http.delete<void>("http://localhost:8080/trajet/deleteTrajet/" + id_t)
    }
-  constructor(private http:HttpClient){}
+ 
 
   addRestaurant(resto:Restaurant):Observable<Restaurant>
   {
     return this.http.post<Restaurant>("http://localhost:8080/restaurants/save", resto);
   }
+  getRestaurant():Observable<Restaurant[]>
+  {  
+    
+    return this.http.get<Restaurant[]>("http://localhost:8080/restaurants/afficher");
+  }
 
 
   addExperience(e:Experience):Observable<Experience>
   {
-    return this.http.post<Experience>("http://localhost:8080/utilisateur/saveExperience", e);
+    return this.http.post<Experience>("http://localhost:8080/experience/saveExperience", e);
   }
-
-  getExperience(e:Experience):Observable<Experience>
-  {
-    return this.http.get<Experience>("http://localhost:8080/utilisateur/getExperience", e)
+ getExperience():Observable<Experience[]>
+  {  
+    
+    return this.http.get<Experience[]>("http://localhost:8080/experience/listeExperience");
   }
 
 }

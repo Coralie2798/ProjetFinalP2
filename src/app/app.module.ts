@@ -31,6 +31,9 @@ import { VilleComponent } from './component/ville/ville.component';
 
 
 
+import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.component';
+import { ListeExperienceComponent } from './component/liste-experience/liste-experience.component';
+
 
 @NgModule({
   declarations: [
@@ -54,8 +57,10 @@ import { VilleComponent } from './component/ville/ville.component';
     FormulaireGuideComponent,
     GuideComponent,
     FormulaireVilleComponent,
-    VilleComponent
+    VilleComponent,
     
+    ListeTrajetsComponent,
+    ListeExperienceComponent 
 
   ],
   imports: [

@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Compagnie } from 'src/app/model/compagnie.model';
+import { CompagnieService } from 'src/app/service/compagnie.service';
 import { ExperienceService } from 'src/app/service/experience.service';
 
 @Component({
@@ -8,11 +12,10 @@ import { ExperienceService } from 'src/app/service/experience.service';
   styleUrls: ['./trajet.component.css']
 })
 export class TrajetComponent {
-  constructor(private fb:FormBuilder, private es: ExperienceService){ }
+  constructor(private fb:FormBuilder, private es: ExperienceService,private router:Router, private cs: CompagnieService){ }
 
   trajetForm!:FormGroup;
-
-
+  listCompagnie!:Compagnie[]
   ngOnInit(): void {
 
     this.trajetForm = this.fb.group({
@@ -22,6 +25,7 @@ export class TrajetComponent {
       listeCompagnie:[null]
       
     })
+    this.cs.getCompagnies().subscribe(data=>{this.listCompagnie=data})
   }
 
     
@@ -29,13 +33,9 @@ export class TrajetComponent {
     saveTrajet()
     {
       this.es.addTrajet(this.trajetForm.value).subscribe();   
-      this.trajetForm.patchValue({ // remettre les valeurs à 0
-        ville_depart:'',
-        ville_arrivee:'',
-         prix_t:[null],
-         listeCompagnie:[null]
-         
-      }); 
+      console.log(this.listCompagnie)
+      console.log(this.trajetForm.value)
+      this.router.navigate(['compagnie']);
     }
 
 }
