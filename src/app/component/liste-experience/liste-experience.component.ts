@@ -28,5 +28,7 @@ export class ListeExperienceComponent implements OnInit {
    this.listeL$=this.ls.getLieux();
   }
 
+nbEtoile(){
 
+}
 }
