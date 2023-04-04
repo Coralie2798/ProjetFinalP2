@@ -39,8 +39,18 @@ ngOnInit(): void {
   this.listeE$=this.es.getExperience();
   this.listeT$=this.es.getTrajet();
 }
+affE:boolean=true;
+affT:boolean=false;
+affA:boolean=false;
 
+AfficherE(){
 
+}
+AfficherT(){
 
+}
+AfficherA(){
+
+}
 
 }
