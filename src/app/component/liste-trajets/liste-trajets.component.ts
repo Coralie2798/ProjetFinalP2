@@ -17,9 +17,9 @@ export class ListeTrajetsComponent {
     this.listeT$ = this.es.getTrajet();
   }
 
-  supprimer(id_T:number)
+  supprimer(id_t:number)
   {
-    this.es.delete(id_T).subscribe(()=>{this.ngOnInit()});
+    this.es.delete(id_t).subscribe(()=>{this.ngOnInit()});
     this.router.navigate(['trajets']);
   }
 }
