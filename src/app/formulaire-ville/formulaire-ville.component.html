@@ -1,0 +1,7 @@
+<form [formGroup]="villeForm" (ngSubmit)="saveVille()"> 
+    <div class="form-group">
+      <label>Entrez le nom de la ville</label>
+      <input type="text" formControlName="nom" class="form-control" id="nom" >
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>

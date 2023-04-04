@@ -26,7 +26,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { TrajetComponent } from './component/trajet/trajet.component';
 import { FormulaireGuideComponent } from './formulaire-guide/formulaire-guide.component';
 import { GuideComponent } from './component/guide/guide.component';
-import { VilleComponent } from './component/ville/ville.component';
+import { FormulaireVilleComponent } from './formulaire-ville/formulaire-ville.component';
 
 
 
@@ -51,7 +51,7 @@ import { VilleComponent } from './component/ville/ville.component';
     FormulaireGuideComponent ,
     FormulaireGuideComponent,
     GuideComponent,
-    VilleComponent
+    FormulaireVilleComponent
 
   ],
   imports: [
