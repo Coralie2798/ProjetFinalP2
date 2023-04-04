@@ -10,6 +10,10 @@ export class UtilisateurService {
 
   constructor(private http:HttpClient) { }
 
+  getUtilisateurTri():Observable<Utilisateur[]>{ //Donne les utilisateurs avec le plus grand nombre de guides
+    return this.http.get<Utilisateur[]>("http://localhost:8080/utilisateur/listeUtilisateurTri")
+  }
+
   getUtilisateur():Observable<Utilisateur[]>
   {  
     // return this.listeA;
@@ -27,5 +31,6 @@ export class UtilisateurService {
    {
      return this.http.delete("http://localhost:8080/utilisateur/deleteUtilisateur/" + id_U)
    }
+
 
 }
