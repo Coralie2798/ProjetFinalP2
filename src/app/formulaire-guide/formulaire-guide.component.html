@@ -1,8 +1,21 @@
 
 <form [formGroup]="guideForm" (ngSubmit)="saveGuide()"> 
     <div class="form-group">
+        <label>Selectionnez une ville </label>
+        <select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="listeVille">
+                        
+            <option *ngFor="let v of listeVille"  [ngValue]="v.id_ville">{{v.nom}}</option>
+
+        </select> 
       <label>Inscrivez votre contenu ici :</label>
       <input type="text" formControlName="contenu" class="form-control" id="contenu" >
     <button type="submit" class="btn btn-primary" >Submit</button>
     </div>
-    </form>
+    <button (click)="creerVille()">Creer une nouvelle ville</button>
+
+    <div *ngIf="creerVill">
+        <app-formulaire-ville></app-formulaire-ville>
+
+              
+    
+    

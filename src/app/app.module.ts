@@ -23,10 +23,16 @@ import { ExperienceComponent } from './component/experience/experience.component
 import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { TrajetComponent } from './component/trajet/trajet.component';
-import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
+import { FormulaireGuideComponent } from './formulaire-guide/formulaire-guide.component';
+import { GuideComponent } from './component/guide/guide.component';
+import { FormulaireVilleComponent } from './formulaire-ville/formulaire-ville.component';
+import { VilleComponent } from './component/ville/ville.component';
+
+
+
 import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.component';
 import { ListeExperienceComponent } from './component/liste-experience/liste-experience.component';
-
+import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
 
 
 @NgModule({
@@ -47,9 +53,14 @@ import { ListeExperienceComponent } from './component/liste-experience/liste-exp
 
     TrajetComponent,
     CompagnieFormulaireComponent,
-    ListeTrajetsComponent,
-    ListeExperienceComponent,
+    FormulaireGuideComponent ,
+    FormulaireGuideComponent,
+    GuideComponent,
+    FormulaireVilleComponent,
+    VilleComponent,
     
+    ListeTrajetsComponent,
+    ListeExperienceComponent 
 
   ],
   imports: [

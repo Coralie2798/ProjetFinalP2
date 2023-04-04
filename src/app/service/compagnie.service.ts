@@ -32,7 +32,9 @@ export class CompagnieService {
 
     return this.http.post(this.url,O).subscribe()
 
-  }
+  }       
+
+  
 
   getCompagnies(){
     return this.http.get<Compagnie[]>("http://localhost:8080/compagnie/listeCompagnie")
