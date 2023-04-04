@@ -28,9 +28,9 @@ export class ExperienceService {
 
 
 
-   delete(id_T:number):Observable<void>
+   delete(id_t:number):Observable<void>
    {
-     return this.http.delete<void>("http://localhost:8080/trajet/deleteTrajet/" + id_T)
+     return this.http.delete<void>("http://localhost:8080/trajet/deleteTrajet/" + id_t)
    }
   constructor(private http:HttpClient){}
 
