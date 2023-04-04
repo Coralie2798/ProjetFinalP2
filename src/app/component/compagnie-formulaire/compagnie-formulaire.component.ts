@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CompagnieService } from 'src/app/service/compagnie.service';
 
 @Component({
@@ -8,7 +9,9 @@ import { CompagnieService } from 'src/app/service/compagnie.service';
   styleUrls: ['./compagnie-formulaire.component.css']
 })
 export class CompagnieFormulaireComponent {
-  constructor(private cs:CompagnieService){}
+
+
+  constructor(private cs:CompagnieService, private rout:Router){}
 
   form=new FormGroup( {
       "nom": new FormControl(""),
@@ -16,10 +19,13 @@ export class CompagnieFormulaireComponent {
 
   })
 
-  submitForm(){
+  saveCompagnie(){
     
     
     this.cs.addCompagnie(this.form.value)
+    this.rout.navigate(['resto'])
   }
+
+  
 
 }
