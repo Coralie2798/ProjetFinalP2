@@ -40,4 +40,6 @@ export class CompagnieService {
     return this.http.get<Compagnie[]>("http://localhost:8080/compagnie/listeCompagnie")
   }
 
+
+
 }

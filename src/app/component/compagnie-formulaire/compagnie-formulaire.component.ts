@@ -26,6 +26,9 @@ export class CompagnieFormulaireComponent {
     window.location.reload()
   }
 
-  
 
+  recupCompagnie() {
+    console.log(this.cs.getCompagnies())
+  }
+  
 }
