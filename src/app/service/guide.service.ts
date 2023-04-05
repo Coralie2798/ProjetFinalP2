@@ -13,6 +13,10 @@ export class GuideService {
   {  
     return this.http.get<Guide[]>("http://localhost:8080/guide/listeGuide");
   }
+  getGuideIDV():Observable<Guide[]>
+  {
+    return this.http.get<Guide[]>("http://localhost:8080/guide/guideIdVille/")
+  }
   addGuide(g:Guide):Observable<Guide>
   {
     return this.http.post<Guide>("http://localhost:8080/guide/saveGuide", g);
