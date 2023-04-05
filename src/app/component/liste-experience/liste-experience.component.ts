@@ -15,13 +15,16 @@ import { LieuxService } from 'src/app/service/lieux.service';
 export class ListeExperienceComponent implements OnInit {
 
   constructor(private es:ExperienceService, private router:Router, private ls:LieuxService, private ar:ActivatedRoute){this.id=ar.snapshot.params["id"]}
-   
+  
   exp$!:Observable<Experience>;
   id!:number;
 
   listeE$!: Observable<Experience[]>;
   listeR$!: Observable<Restaurant[]>;
   listeL$!:Observable<Lieux[]>;
+
+ 
+
   
 
  ngOnInit(): void {
@@ -30,15 +33,12 @@ export class ListeExperienceComponent implements OnInit {
    this.listeL$=this.ls.getLieux();
   }
 
-nbEtoile(){
-
-}
-
 
 afficherExperience(id:number) {
-  console.log(id)
-  this.exp$=this.es.getExperienceById(id)
-  // this.router.navigate(['experience/']);
+  console.log(id);
+  this.exp$=this.es.getExperienceById(id);
+  this.es.idExp=id;
+  this.router.navigate(['experience/']);
 }
 
 }
