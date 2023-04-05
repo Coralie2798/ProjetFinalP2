@@ -9,7 +9,7 @@ import { GuideService } from 'src/app/service/guide.service';
   templateUrl: './guide.component.html',
   styleUrls: ['./guide.component.css']
 })
-export class GuideComponent implements OnInit{
+export class GuideComponent{
   
   listeG$!: Observable<Guide[]>;
   constructor(private gs:GuideService, private router:Router){}
