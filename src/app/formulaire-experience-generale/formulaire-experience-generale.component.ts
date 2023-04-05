@@ -40,18 +40,18 @@ export class FormulaireExperienceGeneraleComponent {
   saveExperience():void{
 
    
-    this.payload=this.experienceForm.value
+    this.payload=new ExperienceComplet(this.experienceForm.value.destination,this.experienceForm.value.description,this.experienceForm.value.photo,this.experienceForm.value.rating_moyen,new Utilisateur(parseInt(this.iduser!),"","","","","","",""))
     
     console.log(this.payload)
     //this.payload.setuser(new Utilisateur(parseInt(this.iduser!),"","","","","","",""))
-    console.log(Object.assign(this.experienceForm.value,new Utilisateur(parseInt(this.iduser!),"","","","","","","")))
     
+    console.log(JSON.stringify(this.payload))
     //this.experienceFormCompl$=this.experienceForm.valueChanges.pipe(map(
      // formValue=>({
      //   ...formValue,
      //   u:{"id_U":this.iduser}})))
      //   console.log(this.experienceForm.value)
-    //this.es.addExperience(this.experienceForm.value).subscribe();
+    this.es.addexpwithusertest(this.payload).subscribe();
     this.rout.navigate(['trajet']);
   }
 

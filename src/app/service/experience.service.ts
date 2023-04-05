@@ -60,4 +60,7 @@ export class ExperienceService {
     return this.http.get<Experience>("http://localhost:8080/experience/experienceId/" + id);
   }
 
+    addexpwithusertest(e:any){
+      return this.http.post("http://localhost:8080/experience/saveExperience/",e)
+    }
 }
