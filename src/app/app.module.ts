@@ -32,7 +32,10 @@ import { VilleComponent } from './component/ville/ville.component';
 
 import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.component';
 import { ListeExperienceComponent } from './component/liste-experience/liste-experience.component';
-import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
+import { PaysComponent } from './pays/pays.component';
+import { FormulairePaysComponent } from './formulaire-pays/formulaire-pays.component';
+import { TrackuserComponent } from './trackuser/trackuser.component';
+
 
 
 @NgModule({
@@ -60,7 +63,10 @@ import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/c
     VilleComponent,
     
     ListeTrajetsComponent,
-    ListeExperienceComponent 
+    ListeExperienceComponent,
+    PaysComponent,
+    FormulairePaysComponent ,
+    TrackuserComponent 
 
   ],
   imports: [

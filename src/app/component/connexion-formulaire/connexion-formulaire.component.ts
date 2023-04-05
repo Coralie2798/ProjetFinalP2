@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable, delay } from 'rxjs';
+import { Utilisateur } from 'src/app/model/utilisateur.model';
 import { UtilisateurService } from 'src/app/service/utilisateur.service';
 
 @Component({
@@ -11,8 +13,10 @@ import { UtilisateurService } from 'src/app/service/utilisateur.service';
 export class ConnexionFormulaireComponent implements OnInit {
 
   connexionForm!:FormGroup;
+  userO!:Observable<Utilisateur>
+  user!:Utilisateur
 
-  constructor(private r:Router, private fb:FormBuilder){}
+  constructor(private r:Router, private fb:FormBuilder, private us:UtilisateurService){}
   
 
   
@@ -30,10 +34,25 @@ export class ConnexionFormulaireComponent implements OnInit {
 
   connexion()
     {
-      console.log(this.connexionForm.value)
-      if (this.connexionForm.value.login == "admin" && this.connexionForm.value.mdp == "admin")
+
+
+      
+      try{
+      this.us.getUserbyLogin(this.connexionForm.value.login).subscribe((u:Utilisateur)=>this.user=u)}
+      catch(error)
       {
-        this.r.navigate(['utilisateur']);
+
+        console.log("pas d'user du login :"+this.connexionForm.value.login)
+
+      }
+      console.log(this.user)
+      if (this.connexionForm.value.login == this.user.login && this.connexionForm.value.mdp == this.user.mdp)
+      {
+        
+        this.us.user=this.user
+        
+        this.r.navigate(['listeExperiences']);
+        
       }
       else
       {
