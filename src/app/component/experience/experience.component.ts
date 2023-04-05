@@ -23,9 +23,10 @@ export class ExperienceComponent implements OnInit {
 listeU$!:Observable<Utilisateur[]>;
 listeT$!:Observable<Trajet[]>;
 listeC$!:Observable<Compagnie[]>;
-listeE$!: Observable<Experience[]>;
+exp$!: Observable<Experience>;
 listeR$!: Observable<Restaurant[]>;
 listeL$!:Observable<Lieux[]>;
+
 
 
 constructor(private es:ExperienceService, private router:Router, private ls:LieuxService,
@@ -36,24 +37,38 @@ ngOnInit(): void {
   this.listeL$=this.ls.getLieux();
   this.listeU$=this.us.getUtilisateur();
   this.listeC$=this.cs.getCompagnies();
-  this.listeE$=this.es.getExperience();
+  // this.exp$=this.;
   this.listeT$=this.es.getTrajet();
 }
-affE:boolean=true;
-affT:boolean=false;
-affA:boolean=false;
+
+
+
+affE:boolean=false;
+affT:boolean=true;
+affA:boolean=true;
 
 
 
 
-afficherE():void{
-  this.affE=!this.affE
+afficherE(){
+  
+  console.log("afficherE")
+  this.affE=false
+  this.affT=true
+  this.affA=true
+  
 }
 afficherT():void{
-this.affT=!this.affT
+  console.log("afficherT")
+  this.affE=true
+  this.affT=false
+  this.affA=true
 }
 afficherA():void{
-this.affA=!this.affA
+  console.log("afficherA")
+  this.affE=true
+  this.affT=true
+  this.affA=false
 }
 
 
