@@ -16,7 +16,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
 
 import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.component';
 import { LieuxComponent } from './lieux/lieux.component';
@@ -47,7 +46,7 @@ import { TrackuserComponent } from './trackuser/trackuser.component';
     ConnexionFormulaireComponent,
     MainNavComponent,
 
-    CompagnieFormulaireComponent ,
+    
 
     FormulaireLieuxComponent,
     LieuxComponent,
