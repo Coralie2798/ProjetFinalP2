@@ -28,6 +28,10 @@ listeR$!: Observable<Restaurant[]>;
 listeL$!:Observable<Lieux[]>;
 
 
+exp!:Observable<Experience>;
+
+
+
 constructor(private es:ExperienceService, private router:Router, private ls:LieuxService,
   private cs:CompagnieService, private us:UtilisateurService){}
 
@@ -39,10 +43,15 @@ ngOnInit(): void {
   this.listeE$=this.es.getExperience();
   this.listeT$=this.es.getTrajet();
 }
+
+
+
+
+
+
 affE:boolean=true;
 affT:boolean=false;
 affA:boolean=false;
-
 
 
 
