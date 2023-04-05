@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
 export class ExperienceService {
   
  constructor(private http:HttpClient){}
-  
+
   idExp!:number;
 
 
@@ -38,11 +38,18 @@ export class ExperienceService {
   {
     return this.http.post<Restaurant>("http://localhost:8080/restaurants/save", resto);
   }
+
+
   getRestaurant():Observable<Restaurant[]>
   {  
     
     return this.http.get<Restaurant[]>("http://localhost:8080/restaurants/afficher");
   }
+
+  // getRestaurantById():Observable<Restaurant>
+  // {
+  //   return this.http.get<Restaurant>("http://localhost:8080/restaurants/restaurantId/" + id);
+  // }
 
 
   addExperience(e:Experience):Observable<Experience>

@@ -22,7 +22,7 @@ export class ExperienceComponent implements OnInit {
 
   
 constructor(private es:ExperienceService, private router:Router, private ls:LieuxService,
-  private cs:CompagnieService, private us:UtilisateurService, private ar:ActivatedRoute){this.idExperience = ar.snapshot.params['idExperience'];}
+  private cs:CompagnieService, private us:UtilisateurService, private ar:ActivatedRoute){this.idExperience = ar.snapshot.params['idExperience']; this.idResto = ar.snapshot.params['idResto']}
 
 
 
@@ -32,7 +32,9 @@ listeC$!:Observable<Compagnie[]>;
 listeR$!: Observable<Restaurant[]>;
 listeL$!:Observable<Lieux[]>;
 idExperience!:number; //Récupération id de l'experience
+idResto!:number;
 exp!:Observable<Experience>;
+resto!:Observable<Restaurant>;
 
 
 //destination:string=this.es
@@ -49,6 +51,7 @@ ngOnInit(): void {
   this.listeC$=this.cs.getCompagnies();
   this.listeT$=this.es.getTrajet();
   this.exp=this.es.getExperienceById(this.idExperience);
+  //this.resto=this.es.getRestoByid(this)
 }
 
 
