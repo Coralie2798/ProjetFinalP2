@@ -43,14 +43,19 @@ affE:boolean=true;
 affT:boolean=false;
 affA:boolean=false;
 
-AfficherE(){
 
-}
-AfficherT(){
 
-}
-AfficherA(){
 
+afficherE():void{
+  this.affE=!this.affE
 }
+afficherT():void{
+this.affT=!this.affT
+}
+afficherA():void{
+this.affA=!this.affA
+}
+
+
 
 }
