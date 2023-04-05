@@ -39,6 +39,7 @@ afficherExperience(id:number) {
   this.exp$=this.es.getExperienceById(id);
   this.es.idExp=id;
   this.router.navigate(['experience/']);
+  //this.router.navigate(['experience/' + id]);
 }
 
 }
