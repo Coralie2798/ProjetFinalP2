@@ -14,7 +14,13 @@
 
 
 <div [hidden]=affE id="E">
+  <br>
   <p>experience</p>
+  <p>{{idExperience}}</p>
+  <p *ngIf="exp | async as e"> {{e.destination}}</p>
+
+
+
  <h3 ngvalue="Experience.destination"> </h3>
 </div>
 
