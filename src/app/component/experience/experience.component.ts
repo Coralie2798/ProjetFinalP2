@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Compagnie } from 'src/app/model/compagnie.model';
 import { Experience } from 'src/app/model/experience.model';
@@ -20,40 +20,62 @@ import { UtilisateurService } from 'src/app/service/utilisateur.service';
 })
 export class ExperienceComponent implements OnInit {
 
+  
+constructor(private es:ExperienceService, private router:Router, private ls:LieuxService,
+  private cs:CompagnieService, private us:UtilisateurService, private ar:ActivatedRoute){this.idExperience = ar.snapshot.params['idExperience'];}
+
+
+
 listeU$!:Observable<Utilisateur[]>;
 listeT$!:Observable<Trajet[]>;
 listeC$!:Observable<Compagnie[]>;
-listeE$!: Observable<Experience[]>;
 listeR$!: Observable<Restaurant[]>;
 listeL$!:Observable<Lieux[]>;
+idExperience!:number; //Récupération id de l'experience
+exp!:Observable<Experience>;
 
 
-constructor(private es:ExperienceService, private router:Router, private ls:LieuxService,
-  private cs:CompagnieService, private us:UtilisateurService){}
+//destination:string=this.es
+
+
+
+
 
 ngOnInit(): void {
+  this.idExperience=this.es.idExp;
   this.listeR$=this.es.getRestaurant();
   this.listeL$=this.ls.getLieux();
   this.listeU$=this.us.getUtilisateur();
   this.listeC$=this.cs.getCompagnies();
-  this.listeE$=this.es.getExperience();
   this.listeT$=this.es.getTrajet();
+  this.exp=this.es.getExperienceById(this.idExperience);
 }
-affE:boolean=true;
-affT:boolean=false;
-affA:boolean=false;
 
+
+
+affE:boolean=false;
+affT:boolean=true;
+affA:boolean=true;
 
 
 
 afficherE():void{
-  this.affE=!this.affE
+  console.log("afficherE")
+  this.affE=false
+  this.affT=true
+  this.affA=true
 }
 afficherT():void{
-this.affT=!this.affT
+  console.log("afficherT")
+  this.affE=true
+  this.affT=false
+  this.affA=true
 }
 afficherA():void{
-this.affA=!this.affA
+  console.log("afficherA")
+  this.affE=true
+  this.affT=true
+  this.affA=false
 }
 
 
