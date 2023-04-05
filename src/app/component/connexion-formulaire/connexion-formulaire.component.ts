@@ -49,7 +49,9 @@ export class ConnexionFormulaireComponent implements OnInit {
       if (this.connexionForm.value.login == this.user.login && this.connexionForm.value.mdp == this.user.mdp)
       {
         
-        this.us.user=this.user
+        
+        localStorage.setItem('currentUser', this.user.id_U.toString());
+        console.log(localStorage.getItem('currentUser'))
         
         this.r.navigate(['listeExperiences']);
         
