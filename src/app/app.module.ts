@@ -35,6 +35,8 @@ import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.c
 import { ListeExperienceComponent } from './component/liste-experience/liste-experience.component';
 import { PaysComponent } from './pays/pays.component';
 import { FormulairePaysComponent } from './formulaire-pays/formulaire-pays.component';
+import { TrackuserComponent } from './trackuser/trackuser.component';
+
 
 
 @NgModule({
@@ -64,7 +66,8 @@ import { FormulairePaysComponent } from './formulaire-pays/formulaire-pays.compo
     ListeTrajetsComponent,
     ListeExperienceComponent,
     PaysComponent,
-    FormulairePaysComponent 
+    FormulairePaysComponent ,
+    TrackuserComponent 
 
   ],
   imports: [

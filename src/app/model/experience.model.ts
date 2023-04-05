@@ -15,4 +15,8 @@ export class Experience {
         this.id_voyage=id_voyage
     }
 
+public get Destination() : string {
+    return this.destination;
+}
+
 }

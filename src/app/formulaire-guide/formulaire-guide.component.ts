@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Ville } from '../model/ville.model';
 import { VilleService } from '../service/ville.service';
 import { Router } from '@angular/router';
+import { Guide } from '../model/guide.model';
 
 @Component({
   selector: 'app-formulaire-guide',
@@ -17,13 +18,15 @@ export class FormulaireGuideComponent {
   creerVill=false
   guideForm!:FormGroup;
   listeVille!:Ville[];
+  v!:Ville;
   
 
   ngOnInit(): void {
 
     this.guideForm = this.fb.group({
       contenu:[null],
-      listeVille: [null]
+      listeVille: [null],
+      v:[null]
     })
     this.vs.getVille().subscribe(data=>{this.listeVille=data})
   }
@@ -32,10 +35,14 @@ export class FormulaireGuideComponent {
 
     saveGuide()
     {
-      this.gs.addGuide(this.guideForm.value).subscribe();  
+      console.log(this.guideForm.value)
+      console.log("Ville : " + this.v)
+      this.gs.addGuide(new Guide(0 ,this.guideForm.value.contenu, this.v)).subscribe();  
       this.guideForm.patchValue({ 
         contenu:''
+        
       }); 
+  
     }
 
     creerVille(){
@@ -43,4 +50,8 @@ export class FormulaireGuideComponent {
       
     }
     
+    villeselectionne(v:Ville){
+      this.v = v;
+
+    }
 }
