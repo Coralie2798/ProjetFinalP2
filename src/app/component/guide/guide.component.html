@@ -1,4 +1,7 @@
-
+<select class="form-select" aria-label="Default select example">
+  <option selected>Selectionnez une ville</option>
+  <option *ngFor="let v of listeV$ | async " [ngValue]="v" (click)="villeselectionne(v)">{{v.nom}}</option>
+</select>
   <table class="table">
     <thead>
       <tr>
@@ -6,14 +9,14 @@
         <th scope="col">Contenu</th> 
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let g of listeG$ | async">
-        <th scope="row">{{g.id_guide}}</th>
-        <td>{{g.contenu}}</td>
-        <td><button (click)="supprimer(g.id_guide)">Supprimer</button></td>
-        
-      </tr>
-    </tbody>
+    <tbody>  
+        <tr *ngFor="let g of listeG$ | async">
+          <th scope="row">{{g.id_guide}}</th>
+          <td>{{g.contenu}}</td>
+          <td><button (click)="supprimer(g.id_guide)">Supprimer</button></td>   
+        </tr>
+      </tbody>   
+    
   </table>
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
