@@ -46,7 +46,7 @@ export class ExperienceService {
     return this.http.get<Restaurant[]>("http://localhost:8080/restaurants/afficher");
   }
 
-  // getRestaurantById():Observable<Restaurant>
+  // getRestaurantById(id_resto):Observable<Restaurant>
   // {
   //   return this.http.get<Restaurant>("http://localhost:8080/restaurants/restaurantId/" + id);
   // }
