@@ -30,8 +30,6 @@ listeL$!:Observable<Lieux[]>;
 
 exp!:Observable<Experience>;
 
-
-
 constructor(private es:ExperienceService, private router:Router, private ls:LieuxService,
   private cs:CompagnieService, private us:UtilisateurService){}
 
@@ -44,16 +42,15 @@ ngOnInit(): void {
   this.listeT$=this.es.getTrajet();
 }
 
-
-
 affE:boolean=false;
 affT:boolean=true;
 affA:boolean=true;
 
-
-
 afficherE():void{
-  this.affE=!this.affE
+  console.log("afficherE")
+  this.affE=false
+  this.affT=true
+  this.affA=true
 }
 afficherT():void{
   console.log("afficherT")
