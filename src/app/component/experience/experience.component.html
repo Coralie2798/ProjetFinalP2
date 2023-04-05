@@ -5,21 +5,25 @@
 
   <input type="radio" class="btn-check" name="btnradio" id="btnradio2" (click)="afficherT()" autocomplete="off">
   <label class="btn btn-outline-primary" for="btnradio2">Trajet et Compagnie</label>
+ 
 
   <input type="radio" class="btn-check" name="btnradio" id="btnradio3" (click)="afficherA()" autocomplete="off">
   <label class="btn btn-outline-primary" for="btnradio3">Activités</label>
 
 </div>
 
+
 <div [hidden]=affE id="E">
   <p>experience</p>
  <h3 ngvalue="Experience.destination"> </h3>
-  
 </div>
+
 <div [hidden]=affT id="T">
   <p>trajet</p>
 </div>
 <div  [hidden]=affA id="A">
   <p>Activités</p>
 </div>
+
+
 

@@ -28,6 +28,9 @@ listeR$!: Observable<Restaurant[]>;
 listeL$!:Observable<Lieux[]>;
 
 
+exp!:Observable<Experience>;
+
+
 
 constructor(private es:ExperienceService, private router:Router, private ls:LieuxService,
   private cs:CompagnieService, private us:UtilisateurService){}
@@ -49,14 +52,8 @@ affA:boolean=true;
 
 
 
-
-afficherE(){
-  
-  console.log("afficherE")
-  this.affE=false
-  this.affT=true
-  this.affA=true
-  
+afficherE():void{
+  this.affE=!this.affE
 }
 afficherT():void{
   console.log("afficherT")
