@@ -1,15 +1,15 @@
-<form [formGroup]="villeForm" (ngSubmit)="saveVille()"> 
+<form [formGroup]="villeForm" > 
     <label>Selectionnez le Pays</label>
     <select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="listePays">
                         
-        <option *ngFor="let p of listePays"  [ngValue]="p">{{p.nom}}</option>
+        <option *ngFor="let p of listePays"  [ngValue]="p" (click)="paysselectionne(p)">{{p.nom}}</option>
 
     </select> 
     <div class="form-group">
       <label>Entrez le nom de la ville</label>
       <input type="text" formControlName="nom" class="form-control" id="nom" >
     </div>
-    <button type="submit" class="btn btn-primary" >Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="saveVille()">Submit</button>
     <button (click)="creerPays()">Creer un nouveau Pays</button>
   </form>
   <div *ngIf="creerPay">

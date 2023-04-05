@@ -6,18 +6,19 @@
             <div class="row g-0">
               <div class="col-lg-6">
                 <div class="card-body p-md-5 mx-md-4">
-  
+                  <form [formGroup]="restaurantForm" >
                   <div class="text-center">
                       <img src="/ProjetFinalP2/images/logo.jfif" style=" width: 185px;" alt="logo">
                     <h4 class="mt-1 mb-5 pb-1">Restaurant</h4>
                   </div>
+                  
                   <label>Selectionnez une ville </label>
                   <select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="listeVille">
                                   
-                      <option *ngFor="let v of listeVille"  [ngValue]="v">{{v.nom}}</option>
+                      <option *ngFor="let v of listeVille"  [ngValue]="v" (click)="villeselectionne(v)">{{v.nom}}</option>
           
                   </select> 
-                  <form [formGroup]="restaurantForm" (ngSubmit)="saveRestaurant()">
+                    <p>Ville : {{v}}</p>
                     <p>Entrez les informations sur le restaurant</p>
   
                     <div class="form-outline mb-4">
@@ -36,7 +37,7 @@
                       </div>
   
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" >Enregistrer</button>
+                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" (click)="saveRestaurant()">Enregistrer</button>
                     </div>
 
                     <button (click)="creerVille()">Creer une nouvelle ville</button>

@@ -1,9 +1,9 @@
-<form [formGroup]="lieuxForm" (ngSubmit)="saveLieux()"> 
+<form [formGroup]="lieuxForm" > 
     <div class="form-group">
         <label>Selectionnez une ville </label>
         <select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="listeVille">
                         
-            <option *ngFor="let v of listeVille"  [ngValue]="v">{{v.nom}}</option>
+            <option *ngFor="let v of listeVille"  [ngValue]="v" (click)="villeselectionne(v)">{{v.nom}}</option>
 
         </select> 
       <label>Nom</label>
@@ -13,7 +13,7 @@
         <label>Prix</label>
         <input type="text" formControlName="prix_L" class="form-control" id="prix_L">
     </div>
-    <button type="submit" class="btn btn-primary" >Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="saveLieux()" >Submit</button>
   </form>
   <button (click)="creerVille()">Creer une nouvelle ville</button>
 

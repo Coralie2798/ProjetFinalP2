@@ -4,6 +4,7 @@ import { VilleService } from '../service/ville.service';
 import { Pays } from '../model/pays.model';
 import { PaysService } from '../service/pays.service';
 import { Router } from '@angular/router';
+import { Ville } from '../model/ville.model';
 
 @Component({
   selector: 'app-formulaire-ville',
@@ -16,18 +17,20 @@ export class FormulaireVilleComponent {
   creerPay=false
   villeForm!:FormGroup;
   listePays!:Pays[];
+  p!:Pays;
 
   ngOnInit(): void {
 
     this.villeForm = this.fb.group({
       nom:[null],
-      listePays:[null]
+      listePays:[null],
+      p:[null]
     })
     this.ps.getPays().subscribe(data=>{this.listePays=data})
   }
   saveVille()
   {
-    this.vs.addVille(this.villeForm.value).subscribe();   
+    this.vs.addVille(new Ville(0,this.villeForm.value.nom,this.p)).subscribe();   
     this.villeForm.patchValue({
       nom:'',
     }); 
@@ -35,5 +38,9 @@ export class FormulaireVilleComponent {
   creerPays(){
     this.creerPay=!this.creerPay
     
+  }
+  paysselectionne(p:Pays){
+    this.p = p;
+
   }
 }

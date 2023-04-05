@@ -35,8 +35,6 @@ export class FormulaireGuideComponent {
 
     saveGuide()
     {
-      console.log(this.guideForm.value)
-      console.log("Ville : " + this.v)
       this.gs.addGuide(new Guide(0 ,this.guideForm.value.contenu, this.v)).subscribe();  
       this.guideForm.patchValue({ 
         contenu:''
