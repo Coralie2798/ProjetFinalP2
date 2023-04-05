@@ -20,6 +20,7 @@ import { UtilisateurService } from 'src/app/service/utilisateur.service';
 })
 export class ExperienceComponent implements OnInit {
 
+idExperience!:number;
 listeU$!:Observable<Utilisateur[]>;
 listeT$!:Observable<Trajet[]>;
 listeC$!:Observable<Compagnie[]>;
@@ -35,7 +36,15 @@ exp!:Observable<Experience>;
 constructor(private es:ExperienceService, private router:Router, private ls:LieuxService,
   private cs:CompagnieService, private us:UtilisateurService){}
 
+
+
+
+
+
+
+
 ngOnInit(): void {
+  this.idExperience=this.es.idExp;
   this.listeR$=this.es.getRestaurant();
   this.listeL$=this.ls.getLieux();
   this.listeU$=this.us.getUtilisateur();
