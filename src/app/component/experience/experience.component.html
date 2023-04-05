@@ -1,17 +1,29 @@
+<h2> </h2>
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" (click)="afficherE()" autocomplete="off" checked>
+  <label class="btn btn-outline-primary" for="btnradio1">Experience</label>
 
-  <a class="btn btn-primary" data-toggle="collapse" href="#trajet" role="button" aria-expanded="false" aria-controls="trajet">
-    Link with href
-  </a>
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" (click)="afficherT()" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio2">Trajet et Compagnie</label>
+ 
 
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" (click)="afficherA()" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio3">Activités</label>
 
-<div id="E">
-  <p>Experience</p>
 </div>
 
-<div id="T">
-  <p>Trajet</p>
+
+<div [hidden]=affE id="E">
+  <p>experience</p>
+ <h3 ngvalue="Experience.destination"> </h3>
 </div>
 
-<div id="A">
-  <p>A</p>
+<div [hidden]=affT id="T">
+  <p>trajet</p>
 </div>
+<div  [hidden]=affA id="A">
+  <p>Activités</p>
+</div>
+
+
+
