@@ -25,7 +25,7 @@ export class ExperienceService {
   }
   getTrajetByExp():Observable<Trajet>
   {  
-    return this.http.get<Trajet>("http://localhost:8080/trajet/trajetParExp/"+this.idExp);
+    return this.http.get<Trajet>("http://localhost:8080/trajet/trajetParExp/"+ this.idExp);
   }
   addTrajet(t:Trajet):Observable<Trajet>
   {
