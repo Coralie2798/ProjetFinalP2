@@ -13,4 +13,6 @@ export class VilleService {
   getVilles(){
     return this.http.get<Ville[]>("http://localhost:8080/ville/listeVille")
   }
+
+  
 }
