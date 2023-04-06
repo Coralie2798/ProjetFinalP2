@@ -30,6 +30,11 @@ export class GuideComponent{
     this.gs.delete(id_guide).subscribe(()=>{this.ngOnInit()});
     this.router.navigate(['guide']);
   }
+  update(id_guide:number)
+  {
+    this.gs.update(id_guide).subscribe(()=>{this.ngOnInit()});
+    this.router.navigate(['guide']);
+  }
 
   villeselectionne(v:Ville){
 
