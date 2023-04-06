@@ -1,10 +1,17 @@
-<div class="container py-4">
-    <div class="row g-0 align-items-center">
-        <div class="col-lg-6 mb-5 mb-lg-0">
-            <div class="card cascading-right" style="
-                background: hsla(0, 0%, 100%, 0.55);
-                backdrop-filter: blur(30px);
-                ">
+<section class="h-100 gradient-form" style="background-color: #e45353;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+  
+                  <div class="text-center">
+                      <img src="/ProjetFinalP2/images/logo.jfif" style=" width: 185px;" alt="logo">
+                    <h4 class="mt-1 mb-5 pb-1">Restaurant</h4>
+                  </div>
+  
                 <div class="card-body p-5 shadow-5 text-center" *ngIf="listCompagnie">
                     <form [formGroup]="trajetForm" (ngSubmit)="saveTrajet()">
                         <h2 class="fw-bold mb-5">Votre trajet</h2>
@@ -26,9 +33,9 @@
                            
                             <div class="col-md-6 mb-4 ">
                                 <div class="input-group form-outline ">
-                                    <div>
-                                    <input type="number" formControlName="prix_t" id="form3Example1" class="form-control" /></div>
-                                    <span class="input-group-text" id="basic-addon2">€</span>
+                                    <div id="prix">
+                                    <input type="number" formControlName="prix_t" id="form3Example1" class="form-control" />
+                                    <span class="input-group-text" id="basic-addon2">€</span></div>
                                     <label class="form-label" for="form3Example1">Prix de l'aller-retour</label>
                                 </div>
                             </div>
@@ -36,15 +43,10 @@
 
                         <select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="listeCompagnie">
                         
-                            <option *ngFor="let c of listCompagnie | async"  [ngValue]="c">{{c.nom}}</option>
+                            <option *ngFor="let c of listCompagnie | async"  [ngValue]="c.id">{{c.nom}}</option>
             
                         </select> 
-
-                        
-                        
-
-
-                        
+                        <button class="btn btn-outline-secondary btn-sm" (click)="creerCompagnie()">Creer une nouvelle compagnie</button><br>
                         <button type="submit" class="btn btn-primary btn-block mb-4">
                             Valider
                         </button>
@@ -52,7 +54,7 @@
                     </form>
                 </div>
             </div>
-            <button (click)="creerCompagnie()">Creer une nouvelle compagnie</button>
+           
         </div>
         
 <div *ngIf="creerComp">
@@ -65,3 +67,7 @@
           </div>
     </div>
 </div>
+        </div>
+      </div>
+    </div>
+    </section>

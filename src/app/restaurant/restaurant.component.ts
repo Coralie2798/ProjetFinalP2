@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ExperienceService } from '../service/experience.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Ville } from '../model/ville.model';
+import { VilleService } from '../service/ville.service';
 
 @Component({
   selector: 'app-restaurant',
@@ -11,7 +14,8 @@ import { Router } from '@angular/router';
 export class RestaurantComponent implements OnInit{
 
   restaurantForm!:FormGroup;
-  constructor(private fb:FormBuilder, private es:ExperienceService, private router:Router){ }
+  listeVille!:Observable<Ville[]>;
+  constructor(private fb:FormBuilder, private es:ExperienceService, private router:Router, private vs:VilleService){ }
 
   
   ngOnInit(): void {
@@ -21,6 +25,7 @@ export class RestaurantComponent implements OnInit{
       adresse:[null],
       prix_l:[null],
     })
+    this.listeVille=this.vs.getVilles();
   }
 
   saveRestaurant()

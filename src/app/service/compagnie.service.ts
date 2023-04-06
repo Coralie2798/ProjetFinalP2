@@ -33,7 +33,7 @@ export class CompagnieService {
   }
 
   getCompagnieByExp(){
-    return this.http.get<Compagnie>("http://localhost:8080/compagnie/compagnieParExp/"+this.idExp)
+    return this.http.get<Compagnie>("http://localhost:8080/compagnie/compagnieParExp/"+this.idExp);
   }
 
 
