@@ -68,7 +68,7 @@ export class ExperienceService {
   }
 
     addexpwithusertest(e:any){
-      return this.http.post("http://localhost:8080/experience/saveExperience/",e)
+      return this.http.post("http://localhost:8080/experience/saveExperience/", e)
     }
 
     getExperiencebyIdUser(iduser:number){
