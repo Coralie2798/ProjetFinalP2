@@ -13,9 +13,9 @@ export class GuideService {
   {  
     return this.http.get<Guide[]>("http://localhost:8080/guide/listeGuide");
   }
-  getGuideIDV():Observable<Guide[]>
+  getGuideIDV(id_ville:number):Observable<Guide[]>
   {
-    return this.http.get<Guide[]>("http://localhost:8080/guide/guideIdVille/")
+    return this.http.get<Guide[]>("http://localhost:8080/guide/guideIdVille/" + id_ville)
   }
   addGuide(g:Guide):Observable<Guide>
   {
