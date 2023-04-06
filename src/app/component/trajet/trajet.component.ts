@@ -32,10 +32,11 @@ export class TrajetComponent {
 
     saveTrajet()
     {
-      this.es.addTrajet(this.trajetForm.value).subscribe();   
+      this.es.addTrajet(this.trajetForm.value).subscribe();  
+
       console.log(this.listCompagnie)
       console.log(this.trajetForm.value)
-      
+      this.router.navigate(['resto']);
     }
 
     creerCompagnie(){

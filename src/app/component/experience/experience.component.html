@@ -1,5 +1,5 @@
 <h2> </h2>
-<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+<div class="btn-group centre" role="group" aria-label="Basic radio toggle button group">
   <input type="radio" class="btn-check" name="btnradio" id="btnradio1" (click)="afficherE()" autocomplete="off" checked>
   <label class="btn btn-outline-primary" for="btnradio1">Experience</label>
 
@@ -29,10 +29,26 @@
 </div>
 
 <div [hidden]=affT id="T">
-  <p>trajet</p>
+  <h3>Trajet et compagnie</h3>
+  
+  <p *ngIf="tra | async as t">partie de {{t.ville_depart}} et arrivé à {{t.ville_arrivee}} avec la compagnie 
+    <span *ngIf="comp | async as c">{{c.nom}}</span> </p>
+  
 </div>
+
+
+
+
 <div  [hidden]=affA id="A">
-  <p>Activités</p>
+ <h3>Activités</h3>
+ <section>
+ <h4>Restaurant</h4>
+
+ </section>
+<section>
+  <h4>Lieu visité</h4>
+
+</section>
 </div>
 
 
