@@ -16,19 +16,17 @@ export class TrajetComponent {
   creerComp=false
   trajetForm!:FormGroup;
   listCompagnie!:Observable<Compagnie[]>
+
   ngOnInit(): void {
 
     this.trajetForm = this.fb.group({
-     ville_depart:[null],
-     ville_arrivee:[null],
+      ville_depart:[null],
+      ville_arrivee:[null],
       prix_t:[null],
       listeCompagnie:[null]
-      
     })
     this.listCompagnie=this.cs.getCompagnies()
   }
-
-    
 
     saveTrajet()
     {
@@ -39,9 +37,9 @@ export class TrajetComponent {
       this.router.navigate(['resto']);
     }
 
-    creerCompagnie(){
+    creerCompagnie()
+    {
       this.creerComp=!this.creerComp
-      
     }
 
 }

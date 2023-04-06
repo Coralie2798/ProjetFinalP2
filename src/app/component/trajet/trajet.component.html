@@ -9,12 +9,11 @@
   
                   <div class="text-center">
                       <img src="/ProjetFinalP2/images/logo.jfif" style=" width: 185px;" alt="logo">
-                    <h4 class="mt-1 mb-5 pb-1">Restaurant</h4>
+                    <h4 class="mt-1 mb-5 pb-1">Trajet</h4>
                   </div>
   
                 <div class="card-body p-5 shadow-5 text-center" *ngIf="listCompagnie">
                     <form [formGroup]="trajetForm" (ngSubmit)="saveTrajet()">
-                        <h2 class="fw-bold mb-5">Votre trajet</h2>
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
@@ -46,7 +45,7 @@
                             <option *ngFor="let c of listCompagnie | async"  [ngValue]="c.id">{{c.nom}}</option>
             
                         </select> 
-                        <button class="btn btn-outline-secondary btn-sm" (click)="creerCompagnie()">Creer une nouvelle compagnie</button><br>
+                        <button class="btn btn-outline-secondary btn-sm" (click)="creerCompagnie()">Créer une nouvelle compagnie</button><br>
                         <button type="submit" class="btn btn-primary btn-block mb-4">
                             Valider
                         </button>
