@@ -36,6 +36,7 @@ import { PaysComponent } from './pays/pays.component';
 import { FormulairePaysComponent } from './formulaire-pays/formulaire-pays.component';
 import { TrackuserComponent } from './trackuser/trackuser.component';
 import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
+import { AccueilComponent } from './component/accueil/accueil.component';
 
 
 
@@ -67,7 +68,8 @@ import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/c
     ListeExperienceComponent,
     PaysComponent,
     FormulairePaysComponent ,
-    TrackuserComponent 
+    TrackuserComponent,
+    AccueilComponent 
 
   ],
   imports: [
