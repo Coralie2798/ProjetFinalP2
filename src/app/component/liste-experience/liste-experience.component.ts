@@ -18,7 +18,7 @@ export class ListeExperienceComponent implements OnInit {
   
   exp$!:Observable<Experience>;
   id!:number;
-  iduser!:string|null;
+  
   listeE$!: Observable<Experience[]>;
   listeR$!: Observable<Restaurant[]>;
   listeL$!:Observable<Lieux[]>;
@@ -28,14 +28,10 @@ export class ListeExperienceComponent implements OnInit {
   
 
  ngOnInit(): void {
-  this.iduser=localStorage.getItem("currentUser")
-  if(this.iduser){
-    this.listeE$=this.es.getExperiencebyIdUser(parseInt(this.iduser))
-
-  }
-  else{
+ 
+  
     this.listeE$=this.es.getExperience();
-  }
+  
    
    this.listeR$=this.es.getRestaurant();
    this.listeL$=this.ls.getLieux();
