@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Compagnie } from 'src/app/model/compagnie.model';
 import { Experience } from 'src/app/model/experience.model';
@@ -20,27 +20,44 @@ import { UtilisateurService } from 'src/app/service/utilisateur.service';
 })
 export class ExperienceComponent implements OnInit {
 
+  
+constructor(private es:ExperienceService, private router:Router, private ls:LieuxService,
+  private cs:CompagnieService, private us:UtilisateurService, private ar:ActivatedRoute)
+  {
+    this.idExperience = ar.snapshot.params['idExperience'];
+}
+
+
+
 listeU$!:Observable<Utilisateur[]>;
 listeT$!:Observable<Trajet[]>;
 listeC$!:Observable<Compagnie[]>;
-exp$!: Observable<Experience>;
 listeR$!: Observable<Restaurant[]>;
 listeL$!:Observable<Lieux[]>;
-
-
+idExperience!:number; //Récupération id de l'experience
+idE!:number;
 exp!:Observable<Experience>;
+dest!:string;
 
-constructor(private es:ExperienceService, private router:Router, private ls:LieuxService,
-  private cs:CompagnieService, private us:UtilisateurService){}
+
+comp!:Observable<Compagnie>;
+tra!:Observable<Trajet>;
+
 
 ngOnInit(): void {
+  this.idExperience=this.es.idExp;
+  this.idExperience=this.cs.idExp;
   this.listeR$=this.es.getRestaurant();
   this.listeL$=this.ls.getLieux();
   this.listeU$=this.us.getUtilisateur();
   this.listeC$=this.cs.getCompagnies();
-  // this.exp$=this.;
   this.listeT$=this.es.getTrajet();
+  this.exp=this.es.getExperienceById(this.idExperience);
+  this.tra=this.es.getTrajetByExp();
+  this.comp=this.cs.getCompagnieByExp()
 }
+
+
 
 affE:boolean=false;
 affT:boolean=true;
@@ -53,7 +70,7 @@ afficherE():void{
   this.affA=true
 }
 afficherT():void{
-  console.log("afficherT")
+  console.log("afficherT"+ this.idExperience)
   this.affE=true
   this.affT=false
   this.affA=true
