@@ -15,11 +15,10 @@ export class RestaurantComponent implements OnInit{
 
   restaurantForm!:FormGroup;
   listeVille!:Observable<Ville[]>;
+  
   constructor(private fb:FormBuilder, private es:ExperienceService, private router:Router, private vs:VilleService){ }
-
   
   ngOnInit(): void {
-    
     this.restaurantForm = this.fb.group({
       nom:[null],
       adresse:[null],
@@ -38,6 +37,5 @@ export class RestaurantComponent implements OnInit{
       }); 
       this.router.navigate(['lieuxformulaire']);
     }
-
 
 }

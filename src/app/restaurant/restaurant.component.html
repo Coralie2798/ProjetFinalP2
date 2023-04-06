@@ -1,70 +1,77 @@
-<section class="h-100 gradient-form" style="background-color: #e45353;">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-xl-10">
-          <div class="card rounded-3 text-black">
-            <div class="row g-0">
-              <div class="col-lg-6">
-                <div class="card-body p-md-5 mx-md-4">
-  
-                  <div class="text-center">
-                      <img src="/ProjetFinalP2/images/logo.jfif" style=" width: 185px;" alt="logo">
-                    <h4 class="mt-1 mb-5 pb-1">Restaurant</h4>
-                  </div>
-  
-                  <form [formGroup]="restaurantForm" (ngSubmit)="saveRestaurant()">
-  
-                    <div class="form-outline mb-4">
-                      <input class="form-control" type="text" id="nom" formControlName="nom"/>
-                      <label class="form-label" for="form2Example11">Nom du restaurant</label>
-                    </div>
-  
-                    <div class="form-outline mb-4">
-                      <input class="form-control" type="text" id="adresse" formControlName="adresse"/>
-                      <label class="form-label" for="form2Example22">Adresse du restaurant</label>
-                    </div>
+<section class="h-100 gradient-form">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
 
-                    <div class="form-outline mb-4">
-                        <input class="form-control" type="text" id="prix_l" formControlName="prix_l"/>
-                        <label class="form-label" for="form2Example22">Prix du restaurant</label>
+                <div class="text-center">
+                  <img src="/ProjetFinalP2/images/logo.jfif" style=" width: 185px;" alt="logo">
+                  <h4 class="mt-1 mb-5 pb-1">Restaurant</h4>
+                </div>
+
+                <form [formGroup]="restaurantForm" (ngSubmit)="saveRestaurant()">
+                  
+                  <div class="form-outline mb-4">
+                    <input class="form-control" type="text" id="nom" formControlName="nom" />
+                    <label class="form-label" for="nom">Nom du restaurant</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input class="form-control" type="text" id="adresse" formControlName="adresse" />
+                    <label class="form-label" for="adresse">Adresse du restaurant</label>
+                  </div>
+
+                  <div class="col-md-6 mb-4 ">
+                    <div class="input-group form-outline ">
+                        <div id="prix">
+                          <input type="number" formControlName="prix_l" id="form3Example1" class="form-control" />
+                          <span class="input-group-text" id="basic-addon2">€</span>
+                        </div>
+                        <label class="form-label" for="form3Example1">Prix </label>
                     </div>
-                    <div class="form-floating">
-                      <select class="form-select" id="floatingSelect" aria-label="Floating label select example"
-                      >
-                        <option selected>Selectionnez la ville</option>
-                        <option *ngFor="let v of listeVille | async"  [ngValue]="v" >{{v.nom}}</option>
-                      
-                      </select>
-                      <label for="floatingSelect">Ville</label>
-                    </div>
+                </div>
+                  <br>
+
+                  <div id="ville" class="form-floating">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Selectionnez la ville</option>
+                      <option *ngFor="let v of listeVille | async" [ngValue]="v">{{v.nom}}</option>
+
+                    </select>
+                    <label for="floatingSelect">Ville</label>
+                  </div>
+
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Laissez un commentaire" id="floatingTextarea2"
+                      style="height: 100px" formControlName="avis"></textarea>
+                    <label for="floatingTextarea2">Donnez votre avis</label>
+                  </div>
                 
-                    <div class="form-floating">
-                        <textarea class="form-control"  placeholder="Laissez un commentaire" 
-                        id="floatingTextarea2" style="height: 100px" formControlName="avis"></textarea>
-                        <label for="floatingTextarea2">Donnez votre avis</label>
-                    </div>
-                   
-                    <div class="text-center pt-1 mb-5 pb-1">
-                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" >Enregistrer</button>
-                      </div>
-  
-                  </form>
-  
-                </div>
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                      type="submit">Enregistrer</button>
+                  </div>
+
+                </form>
+
               </div>
-              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                    
-                    <img src="https://www.aixenprovencetourism.com/wp-content/uploads/2013/07/ou_manger-1920x1080.jpg"
-                    style="width: 120%;"  alt="logo">
-                    
-                </div>
-              </div>
-              
             </div>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+
+                <img src="https://www.aixenprovencetourism.com/wp-content/uploads/2013/07/ou_manger-1920x1080.jpg"
+                  style="width: 120%;" alt="logo">
+
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <router-outlet></router-outlet>
+  </div>
+</section>
+<router-outlet></router-outlet>
