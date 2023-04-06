@@ -25,7 +25,7 @@ export class ExperienceService {
   }
   getTrajetByExp():Observable<Trajet>
   {  
-    return this.http.get<Trajet>("http://localhost:8080/trajet/trajetParExp/"+this.idExp);
+    return this.http.get<Trajet>("http://localhost:8080/trajet/trajetParExp/"+ this.idExp);
   }
   addTrajet(t:Trajet):Observable<Trajet>
   {
@@ -72,7 +72,7 @@ export class ExperienceService {
   }
 
     addexpwithusertest(e:any){
-      return this.http.post("http://localhost:8080/experience/saveExperience/",e)
+      return this.http.post("http://localhost:8080/experience/saveExperience/", e)
     }
 
     getExperiencebyIdUser(iduser:number){
