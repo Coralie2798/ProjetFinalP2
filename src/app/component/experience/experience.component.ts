@@ -51,7 +51,7 @@ ngOnInit(): void {
   this.listeC$=this.cs.getCompagnies();
   this.listeT$=this.es.getTrajet();
   this.exp=this.es.getExperienceById(this.idExperience);
-  //this.resto=this.es.getRestoByid(this)
+  //this.resto=this.es.getRestoByid(this.idResto)
 }
 
 
