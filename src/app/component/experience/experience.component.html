@@ -14,10 +14,18 @@
 
 
 <div [hidden]=affE id="E">
+  <p *ngIf="exp | async as e"><img src="{{e.photo}}" class="card-img-top" alt="photo" width="300" height="300"></p> 
   <br>
-  <p>experience</p>
-  <p>{{idExperience}}</p>
-  <p *ngIf="exp | async as e" > {{e.destination}}</p>
+  <h3 *ngIf="exp | async as e"> {{e.destination}}</h3>
+  <br> <br>
+  <h4>Son voyage:</h4>
+  <p *ngIf="exp | async as e"> {{e.description}}</p>
+  <br> <br>
+  <h4>Dépenses</h4>
+  <p>restaurant trajet lieu</p>
+  
+
+ <h3 ngvalue="Experience.destination"> </h3>
 </div>
 
 <div [hidden]=affT id="T">

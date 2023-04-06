@@ -18,7 +18,7 @@ export class ListeExperienceComponent implements OnInit {
   
   exp$!:Observable<Experience>;
   id!:number;
-
+  
   listeE$!: Observable<Experience[]>;
   listeR$!: Observable<Restaurant[]>;
   listeL$!:Observable<Lieux[]>;
@@ -28,9 +28,14 @@ export class ListeExperienceComponent implements OnInit {
   
 
  ngOnInit(): void {
-   this.listeE$=this.es.getExperience();
+ 
+  
+    this.listeE$=this.es.getExperience();
+  
+   
    this.listeR$=this.es.getRestaurant();
    this.listeL$=this.ls.getLieux();
+   
   }
 
 
@@ -39,6 +44,7 @@ afficherExperience(id:number) {
   this.exp$=this.es.getExperienceById(id);
   this.es.idExp=id;
   this.router.navigate(['experience/']);
+  //this.router.navigate(['experience/' + id]);
 }
 
 }

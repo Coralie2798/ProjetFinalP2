@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
 export class ExperienceService {
   
  constructor(private http:HttpClient){}
-  
+
   idExp!:number;
   destination!:string;
 
@@ -42,11 +42,18 @@ export class ExperienceService {
   {
     return this.http.post<Restaurant>("http://localhost:8080/restaurants/save", resto);
   }
+
+
   getRestaurant():Observable<Restaurant[]>
   {  
     
     return this.http.get<Restaurant[]>("http://localhost:8080/restaurants/afficher");
   }
+
+  // getRestaurantById(id_resto):Observable<Restaurant>
+  // {
+  //   return this.http.get<Restaurant>("http://localhost:8080/restaurants/restaurantId/" + id);
+  // }
 
 
   addExperience(e:Experience):Observable<Experience>
@@ -64,4 +71,12 @@ export class ExperienceService {
     return this.http.get<Experience>("http://localhost:8080/experience/experienceId/" + id);
   }
 
+    addexpwithusertest(e:any){
+      return this.http.post("http://localhost:8080/experience/saveExperience/",e)
+    }
+
+    getExperiencebyIdUser(iduser:number){
+      return this.http.get<Experience[]>("http://localhost:8080/experience/experienceIdU/"+iduser)
+
+    }
 }
