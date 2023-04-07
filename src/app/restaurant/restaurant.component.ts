@@ -17,7 +17,7 @@ export class RestaurantComponent {
   restaurantForm!:FormGroup;
   creerVill=false
   listeVille!:Ville[];
-  v!:Ville
+  v!:Observable<Ville>
 
   constructor(private fb:FormBuilder, private es:ExperienceService, private router:Router, private vs:VilleService){ }
 
@@ -28,7 +28,7 @@ export class RestaurantComponent {
       adresse:[null],
       prix_l:[null],
       listeVille: [null],
-      v:[null]
+      ville:[null]
     })
     this.vs.getVille().subscribe(data=>{this.listeVille=data})
  
@@ -37,7 +37,7 @@ export class RestaurantComponent {
   saveRestaurant()
     {
       console.log("Ville :" + this.v)
-      this.es.addRestaurant(new Restaurant(0,this.restaurantForm.value.nom,this.restaurantForm.value.adresse,this.restaurantForm.value.prix_l,this.v)).subscribe();   
+      this.es.addRestaurant(new Restaurant(0,this.restaurantForm.value.nom,this.restaurantForm.value.adresse,this.restaurantForm.value.prix_l,this.restaurantForm.value.ville));   
       this.restaurantForm.patchValue({ 
       nom:'',
       adresse:'',
@@ -49,7 +49,7 @@ export class RestaurantComponent {
       this.creerVill=!this.creerVill
       
     }
-    villeselectionne(v:Ville){
+    villeselectionne(v:Observable<Ville>){
       this.v = v;
   
     }
