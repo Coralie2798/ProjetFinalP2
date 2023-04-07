@@ -7,8 +7,8 @@ import { Utilisateur } from '../model/utilisateur.model';
 import { Observable, map } from 'rxjs';
 import { Experience } from '../model/experience.model';
 import { ExperienceComplet } from '../experience-complet';
-import { Ville } from '../ville';
-import { VilleService } from '../ville.service';
+import { Ville } from '../model/ville.model';
+import { VilleService } from '../service/ville.service';
 import { Trajet } from '../model/trajet.model';
 
 @Component({
