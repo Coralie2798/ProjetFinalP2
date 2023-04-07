@@ -45,7 +45,6 @@ tra!:Observable<Trajet>;
 
 ngOnInit(): void {
   this.idExperience=this.es.idExp;
-  this.idExperience=this.cs.idExp;
   this.listeR$=this.es.getRestaurant();
   this.listeL$=this.ls.getLieux();
   this.listeU$=this.us.getUtilisateur();
