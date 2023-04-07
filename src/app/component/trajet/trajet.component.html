@@ -34,7 +34,7 @@
                             </div>
                         </div>
 
-                        <select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="listeCompagnie">
+                        <select  class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="compagnie">
                         
                             <option *ngFor="let c of listCompagnie | async"  [ngValue]="c">{{c.nom}}</option>
             
@@ -46,13 +46,14 @@
 
                         
                         <button type="submit" class="btn btn-primary btn-block mb-4">
-                            Valider
+                            enregistrer le trajet
                         </button>
                         
                     </form>
                 </div>
             </div>
             <button (click)="creerCompagnie()">Creer une nouvelle compagnie</button>
+            <button (click)="sendData()">Valider les trajets</button>
         </div>
         
 <div *ngIf="creerComp">
