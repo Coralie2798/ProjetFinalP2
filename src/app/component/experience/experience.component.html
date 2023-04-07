@@ -1,44 +1,59 @@
 <h1>Publiez une experience de voyage!</h1>
 
-<div class="accordion accordion-flush" id="accordionFlushExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          Trajet parcouru
-        </button>
-      </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-          Compagnie
-        </button>
-      </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          Lieu visité
-        </button>
-      </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          Restaurant
-        </button>
-      </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body"></div>
-      </div>
-    </div>
-  </div>
+
+
+<h2> </h2>
+<div class="btn-group centre" role="group" aria-label="Basic radio toggle button group">
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" (click)="afficherE()" autocomplete="off" checked>
+  <label class="btn btn-outline-primary" for="btnradio1">Experience</label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" (click)="afficherT()" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio2">Trajet et Compagnie</label>
+ 
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" (click)="afficherA()" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio3">Activités</label>
+
+</div>
+
+
+
+<div [hidden]=affE id="E" *ngIf="exp | async as e">
+  <p ><img src="{{e.photo}}" class="card-img-top" alt="photo" width="300" height="300"></p> 
+  <br>
+  <h3 *ngIf="exp | async as e"> Destination</h3>
+  <br> <br>
+  <h4>Son voyage:</h4>
+  <p *ngIf="exp | async as e"> </p>
+  <br> <br>
+
+  
+  <h4>Dépenses</h4>
+  
+
+ <h3 ngvalue=""> </h3>
+</div>
+
+<div [hidden]=affT id="T">
+  <h3>Trajet et compagnie</h3>
+  <p *ngIf="tra | async as t">partie de <b>{{t.ville_depart}}</b> et arrivé à <b>{{t.ville_arrivee}}</b> avec la compagnie 
+    <span *ngIf="comp | async as c">{{c.nom}}</span> </p>
+  
+</div>
+
+
+
+
+<div  [hidden]=affA id="A">
+ <h3>Activités</h3>
+ <section>
+ <h4>Restaurant</h4>
+
+ </section>
+<section>
+  <h4>Lieu visité</h4>
+
+</section>
+</div>
+
+

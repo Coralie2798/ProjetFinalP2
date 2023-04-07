@@ -22,4 +22,5 @@ export class LieuxService {
   {
     return this.http.delete<void>("http://localhost:8080/lieux/deleteLieux/" + id_L)
   }
+  
 }

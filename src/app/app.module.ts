@@ -17,16 +17,68 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.component';
+import { ListeExperienceComponent } from './component/liste-experience/liste-experience.component';
+import { PaysComponent } from './pays/pays.component';
+import { FormulairePaysComponent } from './formulaire-pays/formulaire-pays.component';
+import { TrackuserComponent } from './trackuser/trackuser.component';
+import { ListeExperienceUserComponent } from './liste-experience-user/liste-experience-user.component';
+import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
+import { AccueilComponent } from './component/accueil/accueil.component';
+import { UpdateExperienceComponent } from './component/update-experience/update-experience.component';
+import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.component';
+import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+import { TrajetComponent } from './component/trajet/trajet.component';
+import { FormulaireGuideComponent } from './formulaire-guide/formulaire-guide.component';
+import { GuideComponent } from './component/guide/guide.component';
+import { FormulaireVilleComponent } from './formulaire-ville/formulaire-ville.component';
+import { VilleComponent } from './component/ville/ville.component';
+
+
+
+
+
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
+    UtilisateurComponent,
+    FormulaireInscriptionComponent,
+    ConnexionFormulaireComponent,
+    MainNavComponent,
+    FormulaireLieuxComponent,
+    LieuxComponent,
     ExperienceComponent,
-LieuxComponent
+    FormulaireExperienceGeneraleComponent,
+    RestaurantComponent,
+    TrajetComponent,
+    CompagnieFormulaireComponent,
+    FormulaireGuideComponent ,
+    FormulaireGuideComponent,
+    GuideComponent,
+    FormulaireVilleComponent,
+    VilleComponent,
+    ListeTrajetsComponent,
+    ListeExperienceComponent,
+    TrackuserComponent,
+    UpdateExperienceComponent ,
+    PaysComponent,
+    ListeExperienceUserComponent,
+    FormulairePaysComponent,
+    AccueilComponent
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+  
     ReactiveFormsModule,
     HttpClientModule,
     LayoutModule,
@@ -35,7 +87,9 @@ LieuxComponent
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

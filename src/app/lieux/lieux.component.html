@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+Liste des lieux visités par les utilisateurs
+>>>>>>> 2fe7bf46948c77685217a7719670a2f975d4d6de
 
 <table class="table">
     <thead>
@@ -8,14 +12,24 @@
       </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
       <tr *ngFor="let u of listeL$ | async">
         <th scope="row">{{l.id_L}}</th>
         <td>{{l.prix_l}}</td>
         <td>{{l.nom_l}}</td>
+=======
+      <tr *ngFor="let l of listeL$ | async">
+        <th scope="row">{{l.id_L}}</th>
+        <td>{{l.prix_L}}</td>
+        <td>{{l.nom_L}}</td>
+>>>>>>> 2fe7bf46948c77685217a7719670a2f975d4d6de
 
         <td><button (click)="supprimer(l.id_L)">Supprimer</button></td>
         
       </tr>
     </tbody>
   </table>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fe7bf46948c77685217a7719670a2f975d4d6de
