@@ -4,6 +4,7 @@ import { Trajet } from '../model/trajet.model';
 import { Experience } from '../model/experience.model';
 import { Restaurant } from '../model/restaurant';
 import { Observable } from 'rxjs';
+import { Compagnie } from '../model/compagnie.model';
 
 
 
@@ -14,7 +15,7 @@ export class ExperienceService {
   
  constructor(private http:HttpClient){}
 
-  idExp!:number;
+  idExp!:number; //id de l'experience
   destination!:string;
 
 
@@ -23,10 +24,29 @@ export class ExperienceService {
     
     return this.http.get<Trajet[]>("http://localhost:8080/trajet/listeTrajet");
   }
+
+
+  //RECUPERER TRAJET
   getTrajetByExp():Observable<Trajet>
   {  
     return this.http.get<Trajet>("http://localhost:8080/trajet/trajetParExp/"+ this.idExp);
   }
+
+  //RECUPERER EXPERIENCE
+  getExperienceById(id:number):Observable<Experience>
+  {
+    return this.http.get<Experience>("http://localhost:8080/experience/experienceId/" + this.idExp);
+  }
+
+  //RECUPERER COMPAGNIE
+  getCompagnieByExp(id:number):Observable<Compagnie>
+  {
+    return this.http.get<Compagnie>("http://localhost:8080/compagnie/compagnieParExp/" + this.idExp);
+  }
+
+
+  
+
   addTrajet(t:Trajet):Observable<Trajet>
   {
     return this.http.post<Trajet>("http://localhost:8080/trajet/saveTrajet", t);
@@ -64,11 +84,6 @@ export class ExperienceService {
  getExperience():Observable<Experience[]>
   {  
     return this.http.get<Experience[]>("http://localhost:8080/experience/listeExperience");
-  }
-
-  getExperienceById(id:number):Observable<Experience>
-  {
-    return this.http.get<Experience>("http://localhost:8080/experience/experienceId/" + id);
   }
 
     addexpwithusertest(e:any){

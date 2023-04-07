@@ -18,10 +18,10 @@
 
 
 
-<div [hidden]=affE id="E">
-  <p *ngIf="exp | async as e"><img src="{{e.photo}}" class="card-img-top" alt="photo" width="300" height="300"></p> 
+<div [hidden]=affE id="E" *ngIf="exp | async as e">
+  <p ><img src="{{e.photo}}" class="card-img-top" alt="photo" width="300" height="300"></p> 
   <br>
-  <h3 *ngIf="exp | async as e"> </h3>
+  <h3 *ngIf="exp | async as e"> {{e.destination}}</h3>
   <br> <br>
   <h4>Son voyage:</h4>
   <p *ngIf="exp | async as e"> </p>
@@ -29,7 +29,6 @@
 
   
   <h4>Dépenses</h4>
-  <p>restaurant trajet lieu</p>
   
 
  <h3 ngvalue=""> </h3>
@@ -37,8 +36,7 @@
 
 <div [hidden]=affT id="T">
   <h3>Trajet et compagnie</h3>
-  
-  <p *ngIf="tra | async as t">partie de {{t.ville_depart}} et arrivé à {{t.ville_arrivee}} avec la compagnie 
+  <p *ngIf="tra | async as t">partie de <b>{{t.ville_depart}}</b> et arrivé à <b>{{t.ville_arrivee}}</b> avec la compagnie 
     <span *ngIf="comp | async as c">{{c.nom}}</span> </p>
   
 </div>
