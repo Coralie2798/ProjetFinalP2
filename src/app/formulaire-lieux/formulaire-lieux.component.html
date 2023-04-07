@@ -11,8 +11,16 @@
                   <img src="/ProjetFinalP2/images/logo.jfif" style=" width: 185px;" alt="logo">
                 <h4 class="mt-1 mb-5 pb-1">Lieu visité</h4>
               </div>
-<form [formGroup]="lieuxForm" (ngSubmit)="saveLieux()"> 
+<form [formGroup]="lieuxForm" > 
     <div class="form-group">
+
+        <label>Selectionnez une ville </label>
+        <select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="listeVille">
+                        
+            <option *ngFor="let v of listeVille | async"  [ngValue]="v" (click)="villeselectionne(v)">{{v.nom}}</option>
+
+        </select> 
+      <label>Nom</label>
       <input type="text" formControlName="nom_L" class="form-control" id="nom_L" >
       <label>Nom</label>
     </div>
@@ -57,3 +65,9 @@
     </div>
   </div>
 </section>
+    
+  <button (click)="creerVille()">Creer une nouvelle ville</button>
+
+    <div *ngIf="creerVill">
+        <app-formulaire-ville></app-formulaire-ville>
+    </div>

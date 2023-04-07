@@ -1,13 +1,20 @@
-import { Injectable } from '@angular/core';
-import { Compagnie } from '../model/compagnie.model';
+
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+
+import { Compagnie } from '../model/compagnie.model';
+
+
+
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompagnieService {
-  
+
     url!:string
     idExp!:number;
   constructor(private http: HttpClient) { }
@@ -26,7 +33,9 @@ export class CompagnieService {
 
     return this.http.post(this.url,O).subscribe()
 
-  }
+  }       
+
+  
 
   getCompagnies(){
     return this.http.get<Compagnie[]>("http://localhost:8080/compagnie/listeCompagnie")
