@@ -3,7 +3,6 @@ import { Trajet } from "./model/trajet.model";
 import { Utilisateur } from "./model/utilisateur.model";
 import { Ville } from "./model/ville.model";
 
-
 export class ExperienceComplet {
     private destination:string
     private description:string

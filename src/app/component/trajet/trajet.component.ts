@@ -44,5 +44,8 @@ export class TrajetComponent {
     creerCompagnie(){
       this.creerComp=!this.creerComp
     }
+    sendData(){
+      
+    }
 
 }
