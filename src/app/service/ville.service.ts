@@ -15,7 +15,7 @@ export class VilleService {
     return this.http.get<Ville[]>("http://localhost:8080/ville/listeVille");
   }
 
-  getVilleByIdE(idE:number):Observable<Ville>{
+  getVilleById(idE:number):Observable<Ville>{
     return this.http.get<Ville>("http://localhost:8080/ville/villeId"+idE);
   }
 
