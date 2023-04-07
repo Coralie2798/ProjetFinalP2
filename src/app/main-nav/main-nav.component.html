@@ -21,7 +21,8 @@
   </mat-sidenav>
   <mat-sidenav-content>
     
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary"  >
+      <img src="https://www.aeroportlimoges.com/fileadmin/user_upload/voyages-2.jpg" alt="">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -29,6 +30,7 @@
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        
       </button>
     </mat-toolbar>
 

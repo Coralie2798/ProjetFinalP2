@@ -18,6 +18,10 @@ import { ListeTrajetsComponent } from './component/liste-trajets/liste-trajets.c
 import { ListeExperienceComponent } from './component/liste-experience/liste-experience.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { FormulairePaysComponent } from './formulaire-pays/formulaire-pays.component';
+import { PaysComponent } from './pays/pays.component';
+
+import { UpdateGuideComponent } from './update-guide/update-guide.component';
+
 
 
 
@@ -29,6 +33,12 @@ const routes: Routes = [
   {path:"compagnie", component:CompagnieFormulaireComponent},
   {path:"trajet", component:TrajetComponent},
   {path:"ville", component:VilleComponent},
+
+
+  {path:"trajet", component:TrajetComponent},
+  {path:"ville", component:VilleComponent},
+
+
   {path:"accueil", component:AccueilComponent},
   {path:"connexion", component:ConnexionFormulaireComponent},
   {path:"lieux", component:LieuxComponent},
@@ -40,8 +50,20 @@ const routes: Routes = [
   {path:"villeformulaire", component:FormulaireVilleComponent},
   {path:"trajets",component:ListeTrajetsComponent},
   {path:"listeExperiences",component:ListeExperienceComponent},
-  {path:"pays", component:FormulairePaysComponent}
+  {path:"pays", component:FormulairePaysComponent},
 
+  {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent},
+
+  {path:"trajet", component:TrajetComponent},
+  {path:"guideformulaire", component:FormulaireGuideComponent},
+  {path:"guide", component:GuideComponent},
+  {path:"villeformulaire", component:FormulaireVilleComponent},
+  {path:"trajet", component:TrajetComponent},
+  {path:"trajets",component:ListeTrajetsComponent},
+  {path:"listeExperiences",component:ListeExperienceComponent},
+  {path:"pays",component:PaysComponent},
+  {path:"paysformulaire",component:FormulairePaysComponent},
+  {path:"updateguide",component:UpdateGuideComponent},
 ];
 
 

@@ -8,5 +8,6 @@ import { Utilisateur } from './model/utilisateur.model';
 })
 export class AppComponent {
   title = 'ForumVoyage';
-  
 }
+  
+

@@ -20,6 +20,7 @@ export class LieuxComponent implements OnInit{
 
   supprimer(id_L:number)
   {
+    this.ls.delete(id_L);
     this.ls.delete(id_L).subscribe(()=>{this.ngOnInit()});
     this.router.navigate(['lieux']);
   }

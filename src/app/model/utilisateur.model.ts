@@ -9,6 +9,8 @@ export class Utilisateur {
     mdp:string;
     abonne_nl:string;
 
+    
+
     constructor(id_U:number, nom:string, prenom:string, mail:string, telephone:string,
         login:string, mdp:string, abonne_nl:string)
         {

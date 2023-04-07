@@ -11,6 +11,7 @@ export class LieuxService {
   constructor(private http:HttpClient) { }
   getLieux():Observable<Lieux[]>
   {  
+    // return this.listeA;
     return this.http.get<Lieux[]>("http://localhost:8080/lieux/listeLieux");
   }
   addLieux(l:Lieux):Observable<Lieux>

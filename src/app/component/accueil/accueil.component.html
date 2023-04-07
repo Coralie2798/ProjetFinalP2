@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="bg-image">
     <img
       src="https://mdbootstrap.com/img/new/standard/city/053.webp"
@@ -10,3 +11,121 @@
       </div>
     </div>
   </div>
+=======
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid document" >
+          <a class="navbar-brand" href="accueil">Accueil</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Utilisateur
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="connexion">Connexion</a></li>
+                      <li><a class="dropdown-item" href="inscription">Inscription</a></li>
+                    </ul>
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link document" href="guides">Guides</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Experiences
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="monExperience">Mon Experience</a></li>
+                  <li><a class="dropdown-item" href="listeExperiences">Voir les expériences</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="ajouterExperience">Ajouter une expérience</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+              <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search" id="recherche">  
+              <button class="btn btn-outline-success" type="submit">Recherche</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!-- Navbar -->
+  
+    <!-- Background image -->
+    <div
+      class="p-5 text-center bg-image"
+      style="
+        background-image: url('https://img.freepik.com/photos-gratuite/concept-voyage-complet-points-repere_23-2149153258.jpg');
+        height: 400px;
+      "
+    >
+      <div class="mask" >
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Bienvenue dans Best Trip</h1>
+            <h4 class="mb-3">Partagez vos aventures avec nous !</h4>
+            <a class="btn btn-outline-light btn-lg" href="ajouterExperience" role="button">Je partage mon aventure</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+    <script>
+      document.getElementById('recherche').addEventListener('keyup', function(e) {
+    var recherche = this.value.toLowerCase();
+    var documents = document.querySelectorAll('.document');
+   
+    console.log(documents);
+     
+    Array.prototype.forEach.call(documents, function(document) {
+      console.log(document);
+      // On a bien trouvé les termes de recherche.
+      if (document.innerHTML.toLowerCase().indexOf(recherche) > -1) {
+        console.log("Valide");
+        document.style.display = 'block';
+      } else {
+        document.style.display = 'none';
+      }
+    });
+  });
+    </script>
+  </header>
+
+  <footer class="text-center text-white" style="background-color: #45637d;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Iframe -->
+      <section class="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6">
+            <div class="ratio ratio-16x9">
+              <iframe
+                class="shadow-1-strong rounded"
+                src="https://www.youtube.com/embed/vlDzYIIOYmM"
+                title="YouTube video"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Iframe -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      ¤ Inti Formation session 2023 (Java Jee) :
+      Groupe 2
+    </div>
+    <!-- Copyright -->
+  </footer>
+>>>>>>> 4f761e03b2e5f4dba8332a7118b5b37fd88227b0

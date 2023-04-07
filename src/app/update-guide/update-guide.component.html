@@ -1,0 +1,16 @@
+<form [formGroup]="guideForm" > 
+    <div class="form-group">
+        <label>Selectionnez une ville </label>
+        <select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="listeVille" [(ngModel)]="inputFromParent.ville">           
+            <option *ngFor="let v of listeVille"  [ngValue]="v" (click)="villeselectionne(v)">{{v.nom}}</option>
+        </select> 
+      <label>Inscrivez votre contenu ici :</label>
+      <input type="text" formControlName="contenu" class="form-control" id="contenu" [(ngModel)]="inputFromParent.contenu">
+    <button type="submit" class="btn btn-primary" (click)="update(inputFromParent)" >Submit</button>
+    </div>
+    <button (click)="creerVille()">Creer une nouvelle ville</button>
+
+    <div *ngIf="creerVill">
+        <app-formulaire-ville></app-formulaire-ville>
+
+              

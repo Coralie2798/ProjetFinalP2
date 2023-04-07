@@ -1,4 +1,9 @@
+
 import { Ville } from "./ville.model";
+
+
+
+
 
 export class Lieux {
 
@@ -11,7 +16,8 @@ export class Lieux {
     {
         this.id_L=id_L;
         this.prix_L=prix_L;
-        this.nom_L=nom_L;
-        this.ville=ville
+        this.nom_L=nom_L
+        this.ville=ville;
+
     }
 }

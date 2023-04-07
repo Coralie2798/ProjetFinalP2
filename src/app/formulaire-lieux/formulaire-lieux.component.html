@@ -1,3 +1,4 @@
+
 <section class="h-100 gradient-form" style="background-color: #e45353;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -18,6 +19,7 @@
         <select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="listeVille">
                         
             <option *ngFor="let v of listeVille | async"  [ngValue]="v" (click)="villeselectionne(v)">{{v.nom}}</option>
+
 
         </select> 
       <label>Nom</label>
@@ -55,17 +57,14 @@
       <img src="https://cdn-icons-png.flaticon.com/512/149/149061.png"
         style="width: 120%;" alt="lieu">
 
-    </div>
-  </div>
-
-              
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
     
+    
+    <div class="form-group">
+        <label>Prix</label>
+        <input type="text" formControlName="prix_L" class="form-control" id="prix_L">
+    
+    <button type="submit" class="btn btn-primary" (click)="saveLieux()" >Submit</button>
+  
   <button (click)="creerVille()">Creer une nouvelle ville</button>
 
     <div *ngIf="creerVill">
