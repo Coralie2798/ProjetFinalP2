@@ -21,6 +21,7 @@ import { ListeExperienceComponent } from './component/liste-experience/liste-exp
 import { PaysComponent } from './pays/pays.component';
 import { FormulairePaysComponent } from './formulaire-pays/formulaire-pays.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
+import { UpdateGuideComponent } from './update-guide/update-guide.component';
 
 
 
@@ -54,6 +55,7 @@ const routes: Routes = [
   {path:"listeExperiences",component:ListeExperienceComponent},
   {path:"pays",component:PaysComponent},
   {path:"paysformulaire",component:FormulairePaysComponent},
+  {path:"updateguide",component:UpdateGuideComponent},
 ];
 
 

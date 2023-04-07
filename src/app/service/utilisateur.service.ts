@@ -8,7 +8,7 @@ import { Experience } from '../model/experience.model';
   providedIn: 'root'
 })
 export class UtilisateurService {
-  user!:Utilisateur
+ 
 
   constructor(private http:HttpClient) { }
 

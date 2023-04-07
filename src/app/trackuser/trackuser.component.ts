@@ -12,12 +12,14 @@ import { UtilisateurService } from '../service/utilisateur.service';
 })
 export class TrackuserComponent implements OnInit{
 
+  iduser!:string|null
+  user!:Utilisateur
   constructor(private rout:Router, private us:UtilisateurService){}
 
-  user!:Utilisateur
+  
 
   ngOnInit(): void {
-    this.user=this.us.user
+    this.iduser=localStorage.getItem('currentUser')
   }
   
 

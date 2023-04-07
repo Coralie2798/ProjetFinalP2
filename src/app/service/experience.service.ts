@@ -13,6 +13,9 @@ import { Observable } from 'rxjs';
 export class ExperienceService {
   
  constructor(private http:HttpClient){}
+  
+  idExp!:number;
+
 
   getTrajet():Observable<Trajet[]>
   {  
