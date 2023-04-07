@@ -17,6 +17,7 @@ import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
+
 import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.component';
 import { LieuxComponent } from './lieux/lieux.component';
 import { ExperienceComponent } from './component/experience/experience.component';
@@ -37,6 +38,7 @@ import { FormulairePaysComponent } from './formulaire-pays/formulaire-pays.compo
 import { TrackuserComponent } from './trackuser/trackuser.component';
 import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
+
 
 
 
@@ -85,7 +87,9 @@ import { AccueilComponent } from './component/accueil/accueil.component';
     MatIconModule,
     MatListModule,
     BrowserAnimationsModule ,
-    HttpClientModule
+    HttpClientModule,
+    
+    
     
   ],
   providers: [],
