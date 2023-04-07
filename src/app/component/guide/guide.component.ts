@@ -16,7 +16,10 @@ export class GuideComponent{
   listeG$!: Observable<Guide[]>;
   listeV$!:Observable<Ville[]>;
   v!:Ville;
+  g!:Guide;
   listeVille!:Ville[];
+  villechoisie:boolean=false;
+  updguide=false;
   constructor(private gs:GuideService,private vs:VilleService, private router:Router){}
 
   ngOnInit(): void {
@@ -30,16 +33,22 @@ export class GuideComponent{
     this.gs.delete(id_guide).subscribe(()=>{this.ngOnInit()});
     this.router.navigate(['guide']);
   }
-  update(id_guide:number)
-  {
-    this.gs.update(id_guide).subscribe(()=>{this.ngOnInit()});
-    this.router.navigate(['guide']);
-  }
+  
+  guideselectionne(g:Guide){
 
+    
+
+  }
+  upGuide(g:Guide){
+    this.g = g;
+    this.updguide=!this.updguide
+    
+  }
   villeselectionne(v:Ville){
 
     this.v = v;
     this.listeG$= this.gs.getGuideIDV(v.id_ville);
+    this.villechoisie=true;
   }
 
 

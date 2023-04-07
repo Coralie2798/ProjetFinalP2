@@ -37,6 +37,8 @@ import { FormulairePaysComponent } from './formulaire-pays/formulaire-pays.compo
 import { TrackuserComponent } from './trackuser/trackuser.component';
 import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
+import { UpdateGuideComponent } from './update-guide/update-guide.component';
+
 
 
 
@@ -69,7 +71,8 @@ import { AccueilComponent } from './component/accueil/accueil.component';
     PaysComponent,
     FormulairePaysComponent ,
     TrackuserComponent,
-    AccueilComponent 
+    AccueilComponent,
+    UpdateGuideComponent
 
   ],
   imports: [

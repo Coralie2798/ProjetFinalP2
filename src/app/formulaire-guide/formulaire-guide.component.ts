@@ -16,6 +16,7 @@ export class FormulaireGuideComponent {
 
   constructor(private fb:FormBuilder, private gs:GuideService, private router:Router, private vs:VilleService){ }
   creerVill=false
+  updguide=false
   guideForm!:FormGroup;
   listeVille!:Ville[];
   v!:Ville;
@@ -42,7 +43,7 @@ export class FormulaireGuideComponent {
       }); 
   
     }
-
+   
     creerVille(){
       this.creerVill=!this.creerVill
       
