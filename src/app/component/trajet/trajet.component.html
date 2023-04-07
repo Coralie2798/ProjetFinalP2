@@ -19,12 +19,22 @@
                                 <div class="form-outline">
                                     <input type="text" formControlName="ville_depart" id="form3Example1" class="form-control" />
                                     <label class="form-label" for="form3Example1">Ville de depart</label>
+                                    <select  class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="ville_depart">
+                        
+                                        <!-- <option *ngFor="let v of listeVille| async"  [ngValue]="v">{{v.nom}}</option> -->
+                        
+                                    </select> 
                                 </div>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
                                     <input type="text" formControlName="ville_arrivee" id="form3Example2" class="form-control" >
                                     <label class="form-label" for="form3Example2">Ville d'arrivée</label>
+                                    <select  class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="ville_arrivee">
+                        
+                                        <!-- <option *ngFor="let v of listeVille| async"  [ngValue]="v">{{v.nom}}</option> -->
+                        
+                                    </select> 
                                 </div>
                             </div>
                         </div>
@@ -42,7 +52,7 @@
 
                         <select  class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="compagnie">
                         
-                            <option *ngFor="let c of listCompagnie | async"  [ngValue]="c.id">{{c.nom}}</option>
+                            <option *ngFor="let c of listCompagnie | async"  [ngValue]="c">{{c.nom}}</option>
             
                         </select> 
                         <button class="btn btn-outline-secondary btn-sm" (click)="creerCompagnie()">Créer une nouvelle compagnie</button><br>
@@ -54,7 +64,7 @@
                 </div>
             </div>
             <button (click)="creerCompagnie()">Creer une nouvelle compagnie</button>
-            <button (click)="sendData()">Valider les trajets</button>
+            <!-- <button (click)="sendData()">Valider les trajets</button> -->
            
         </div>
         

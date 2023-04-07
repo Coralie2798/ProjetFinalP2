@@ -34,7 +34,7 @@ export class FormulaireExperienceGeneraleComponent {
   Ltrajets!:Trajet[]
   ngOnInit(): void {
     this.etape=1
-    this.villes$=this.vs.getVilles()
+    this.villes$=this.vs.getVille()
     this.iduser=localStorage.getItem('currentUser')
     
    

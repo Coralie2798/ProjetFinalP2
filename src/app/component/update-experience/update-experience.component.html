@@ -1,0 +1,12 @@
+<h1>Modifiez votre experience</h1>
+
+<!-- <form [formGroup]="experience"> -->
+    <h2>votre experience</h2>
+    <div formGroupName="destination" >
+        <select formControlName="ville" id="ville">
+            <option selected  ngValue="vs"></option>
+            <option ngFor="let v of listeVille| async" [ngValue]="v">ville</option>
+        </select>
+
+    </div>
+<!-- </form> -->
