@@ -8,31 +8,51 @@
       <tr>
         <th scope="col">Id</th>
         <th scope="col">Contenu</th> 
-        <th scope="col">Ville</th> 
-      </tr>
-    </thead>
+       
+      
     <tbody>
       <tr *ngFor="let g of listeG$ | async">
         <th scope="row">{{g.id_guide}}</th>
         <td>{{g.contenu}}</td>
         
-        <td><button (click)="update(g.id_guide)">update</button></td>
         <td><button (click)="supprimer(g.id_guide)">Supprimer</button></td>
+        <td><button (click)="upGuide(g)" >update</button></td>
+        <div *ngIf="updguide">
+          <app-update-guide [inputFromParent] = "g"></app-update-guide>
         
         <td></td>
-      </tr>
       
       
-    </tbody>
+      
     
-    <tbody>  
-        <tr *ngFor="let g of listeG$ | async">
-          <th scope="row">{{g.id_guide}}</th>
-          <td>{{g.contenu}}</td>
-          <td><button (click)="supprimer(g.id_guide)">Supprimer</button></td>   
-        </tr>
-      </tbody>   
     
-  </table>
+    
+      
+      
+   
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://static4.depositphotos.com/1014739/302/i/600/depositphotos_3025013-stock-photo-beautiful-eiffel-tower.jpg" class="d-block w-100" alt="Visite de la Tour Eiffel">
+        </div>
+        <div class="carousel-item">
+          <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res40/363000/363422-Nice-Cathedral.jpg" class="d-block w-100" alt="Vieux-nice">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.hoteledmondrostand.com/wp-content/uploads/2019/04/vieux-port-of-marseille.jpg" class="d-block w-100" alt="Vieux vieux-port-of-marseille">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> 
+    
+
   
 

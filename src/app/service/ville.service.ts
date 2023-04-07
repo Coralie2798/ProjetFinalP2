@@ -10,7 +10,10 @@ export class VilleService {
 
   constructor(private http: HttpClient) { }
 
-  getVille(): Observable<Ville[]> {
+ 
+
+  getVille():Observable<Ville[]>
+  {  
     // return this.listeA;
     return this.http.get<Ville[]>("http://localhost:8080/ville/listeVille");
   }
@@ -26,4 +29,5 @@ export class VilleService {
   delete(id_ville: number) {
     return this.http.delete("http://localhost:8080/ville/deleteVille/" + id_ville)
   }
+ 
 }

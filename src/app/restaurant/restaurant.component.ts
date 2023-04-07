@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Ville } from '../model/ville.model';
+
 import { VilleService } from '../service/ville.service';
 import { Restaurant } from '../model/restaurant';
 
@@ -19,6 +20,7 @@ export class RestaurantComponent {
   listeVille!:Ville[];
   v!:Observable<Ville>
 
+
   constructor(private fb:FormBuilder, private es:ExperienceService, private router:Router, private vs:VilleService){ }
 
   
@@ -28,7 +30,8 @@ export class RestaurantComponent {
       adresse:[null],
       prix_l:[null],
       listeVille: [null],
-      ville:[null]
+      ville:[null],
+      v:[null]
     })
     this.vs.getVille().subscribe(data=>{this.listeVille=data})
  
@@ -53,5 +56,6 @@ export class RestaurantComponent {
       this.v = v;
   
     }
+  
 
 }

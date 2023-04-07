@@ -25,8 +25,9 @@ export class GuideService {
   {
     return this.http.delete<void>("http://localhost:8080/guide/deleteGuide/" + id_guide)
   }
-  update(id_guide:number):Observable<Guide>
+  
+  updateGuide(g:Guide):Observable<Guide>
   {
-    return this.http.put<Guide>("http://localhost:8080/guide/updateGuide/" , id_guide)
+    return this.http.put<Guide>("http://localhost:8080/guide/updateGuide/" , g)
   }
 }

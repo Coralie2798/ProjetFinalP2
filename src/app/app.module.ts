@@ -26,6 +26,9 @@ import { ListeExperienceUserComponent } from './liste-experience-user/liste-expe
 import { CompagnieFormulaireComponent } from './component/compagnie-formulaire/compagnie-formulaire.component';
 import { AccueilComponent } from './component/accueil/accueil.component';
 import { UpdateExperienceComponent } from './component/update-experience/update-experience.component';
+
+
+
 import { FormulaireLieuxComponent } from './formulaire-lieux/formulaire-lieux.component';
 import { FormulaireExperienceGeneraleComponent } from './formulaire-experience-generale/formulaire-experience-generale.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
@@ -40,6 +43,8 @@ import { VilleComponent } from './component/ville/ville.component';
 
 
 
+import { UpdateGuideComponent } from './update-guide/update-guide.component';
+
 
 
 
@@ -51,11 +56,15 @@ import { VilleComponent } from './component/ville/ville.component';
     FormulaireInscriptionComponent,
     ConnexionFormulaireComponent,
     MainNavComponent,
+
+    
+
     FormulaireLieuxComponent,
     LieuxComponent,
     ExperienceComponent,
     FormulaireExperienceGeneraleComponent,
     RestaurantComponent,
+
     TrajetComponent,
     CompagnieFormulaireComponent,
     FormulaireGuideComponent ,
@@ -70,8 +79,16 @@ import { VilleComponent } from './component/ville/ville.component';
     PaysComponent,
     ListeExperienceUserComponent,
     FormulairePaysComponent,
-    AccueilComponent
+    AccueilComponent,
 
+    
+    ListeTrajetsComponent,
+    ListeExperienceComponent,
+    PaysComponent,
+    FormulairePaysComponent ,
+    TrackuserComponent,
+    AccueilComponent,
+    UpdateGuideComponent
 
   ],
   imports: [
@@ -89,6 +106,8 @@ import { VilleComponent } from './component/ville/ville.component';
     MatListModule,
     BrowserAnimationsModule,
     HttpClientModule
+    
+    
     
   ],
   providers: [],

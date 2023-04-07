@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Ville } from '../model/ville.model';
 import { VilleService } from '../service/ville.service';
 import { Router } from '@angular/router';
+
 import { Lieux } from '../model/lieux.model';
 
 @Component({
