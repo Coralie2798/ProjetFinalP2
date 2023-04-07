@@ -1,4 +1,4 @@
-<section class="h-100 gradient-form" style="background-color: #e45353;" *ngIf="iduser !=null">
+<section class="h-100 gradient-form" style="background-color: #e45353;" *ngIf="iduser !=null && etape==1">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-xl-10">
@@ -12,7 +12,7 @@
                       style="width: 185px;" alt="logo">
                     <h4 class="mt-1 mb-5 pb-1">Destination</h4>
                   </div>
-                        <form [formGroup]="experienceForm" >
+                        <form [formGroup]="experienceForm1" >
 
                             <div class="form-group">
                                 <label>Destination</label>
@@ -47,7 +47,7 @@
                             <br> <br>
 
                             <div class="text-center pt-1 mb-5 pb-1">
-                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" (click)="saveExperience()">Enregistrer</button>
+                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" (click)="continuer()">Enregistrer</button>
                             </div>
                         </form>
 
@@ -69,4 +69,16 @@
     </div>
   </div>
 </section>
+<div *ngIf="etape==2">
+<form [formGroup]="experienceForm2">
+<select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="villes">
+                        
+  <option *ngFor="let v of villes$ | async"  [ngValue]="v">{{v.nom}}</option>
+
+</select> 
+<button (click)="validerVilles()">Valider</button>
+</form>
+<button (click)="back()">Retour</button>
+</div>
+<app-trajet *ngIf="etape==3" (output)="getTrajets($event)"></app-trajet>
 <router-outlet></router-outlet>

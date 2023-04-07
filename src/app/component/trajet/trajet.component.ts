@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Compagnie } from 'src/app/model/compagnie.model';
+import { Trajet } from 'src/app/model/trajet.model';
 import { CompagnieService } from 'src/app/service/compagnie.service';
 import { ExperienceService } from 'src/app/service/experience.service';
 
@@ -12,6 +13,9 @@ import { ExperienceService } from 'src/app/service/experience.service';
   styleUrls: ['./trajet.component.css']
 })
 export class TrajetComponent {
+
+  @Output() output=new EventEmitter<Trajet[]>()
+  trajets: Trajet[]=[]
   constructor(private fb:FormBuilder, private es: ExperienceService,private router:Router, private cs: CompagnieService){ }
   creerComp=false
   trajetForm!:FormGroup;
@@ -37,8 +41,7 @@ export class TrajetComponent {
       this.router.navigate(['resto']);
     }
 
-    creerCompagnie()
-    {
+    creerCompagnie(){
       this.creerComp=!this.creerComp
     }
 
