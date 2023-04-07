@@ -27,25 +27,26 @@ export class TrajetComponent {
       ville_depart:[null],
       ville_arrivee:[null],
       prix_t:[null],
-      listeCompagnie:[null]
+      compagnie:[null]
     })
     this.listCompagnie=this.cs.getCompagnies()
   }
 
     saveTrajet()
     {
-      this.es.addTrajet(this.trajetForm.value).subscribe();  
-
-      console.log(this.listCompagnie)
+      //this.es.addTrajet(this.trajetForm.value).subscribe();  
+      this.trajets.push(this.trajetForm.value)
       console.log(this.trajetForm.value)
-      this.router.navigate(['resto']);
+      console.log(this.trajets)
+      
     }
 
     creerCompagnie(){
       this.creerComp=!this.creerComp
     }
     sendData(){
-      
+      this.output.emit(this.trajets)
+
     }
 
 }

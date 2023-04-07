@@ -27,7 +27,7 @@ export class FormulaireExperienceGeneraleComponent {
   experienceForm2!:FormGroup;
   experienceForm3!:FormGroup;
   iduser!:string|null
-  
+  listVilleExp!:Ville[]
   idCompagnies!:number[]
   payload!:ExperienceComplet
   villes$!:Observable<Ville[]>
@@ -44,6 +44,7 @@ export class FormulaireExperienceGeneraleComponent {
       description:[null],
       photo:[null],
       rating_moyen:[null]
+      
 
     })
     this.experienceForm2 = this.fb.group({
@@ -72,7 +73,7 @@ export class FormulaireExperienceGeneraleComponent {
      //   console.log(this.experienceForm.value)
 
 
-   this.es.addexpwithusertest(this.payload).subscribe();
+   //this.es.addexpwithusertest(this.payload).subscribe();
 
 
     //this.rout.navigate(['trajet']);
@@ -89,6 +90,8 @@ export class FormulaireExperienceGeneraleComponent {
 
   validerVilles(){
     this.continuer()
+    this.listVilleExp=this.experienceForm2.value.villes
+    console.log(this.listVilleExp)
   }
 
   getTrajets(trajets:Trajet[]){

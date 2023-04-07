@@ -10,7 +10,7 @@ export class ExperienceComplet {
     private rating_moyen:number
     private u:Utilisateur;
     private listeTrajet:Trajet[];
-    private listVille:Ville[]
+    private listVilleExp:Ville[]
 
     constructor(destination:string,description:string,photo:string,rating_moyen:number, u:Utilisateur,lt:any,lv:any){
         this.description=description
@@ -19,7 +19,7 @@ export class ExperienceComplet {
         this.rating_moyen=rating_moyen
         this.u=u
         this.listeTrajet=lt
-        this.listVille=lv
+        this.listVilleExp=lv
 
     }
     
