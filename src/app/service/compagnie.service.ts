@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class CompagnieService {
   
     url!:string
+    idExp!:number;
   constructor(private http: HttpClient) { }
 
 
@@ -31,6 +32,9 @@ export class CompagnieService {
     return this.http.get<Compagnie[]>("http://localhost:8080/compagnie/listeCompagnie")
   }
 
+  getCompagnieByExp(){
+    return this.http.get<Compagnie>("http://localhost:8080/compagnie/compagnieParExp/"+this.idExp);
+  }
 
 
 }

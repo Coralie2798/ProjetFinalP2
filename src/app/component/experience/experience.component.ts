@@ -32,25 +32,28 @@ listeC$!:Observable<Compagnie[]>;
 listeR$!: Observable<Restaurant[]>;
 listeL$!:Observable<Lieux[]>;
 idExperience!:number; //Récupération id de l'experience
-idResto!:number;
+idE!:number;
 exp!:Observable<Experience>;
+dest!:string;
+idResto!:number;
 resto!:Observable<Restaurant>;
 
 
-//destination:string=this.es
-
-
-
+comp!:Observable<Compagnie>;
+tra!:Observable<Trajet>;
 
 
 ngOnInit(): void {
   this.idExperience=this.es.idExp;
+  this.idExperience=this.cs.idExp;
   this.listeR$=this.es.getRestaurant();
   this.listeL$=this.ls.getLieux();
   this.listeU$=this.us.getUtilisateur();
   this.listeC$=this.cs.getCompagnies();
   this.listeT$=this.es.getTrajet();
   this.exp=this.es.getExperienceById(this.idExperience);
+  this.tra=this.es.getTrajetByExp();
+  this.comp=this.cs.getCompagnieByExp()
   //this.resto=this.es.getRestoByid(this.idResto)
 }
 
@@ -60,8 +63,6 @@ affE:boolean=false;
 affT:boolean=true;
 affA:boolean=true;
 
-
-
 afficherE():void{
   console.log("afficherE")
   this.affE=false
@@ -69,7 +70,7 @@ afficherE():void{
   this.affA=true
 }
 afficherT():void{
-  console.log("afficherT")
+  console.log("afficherT"+ this.idExperience)
   this.affE=true
   this.affT=false
   this.affA=true

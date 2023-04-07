@@ -21,39 +21,28 @@ export class TrajetComponent {
   trajetForm!:FormGroup;
   listCompagnie!:Observable<Compagnie[]>
 
-
   ngOnInit(): void {
 
     this.trajetForm = this.fb.group({
-     ville_depart:[null],
-     ville_arrivee:[null],
+      ville_depart:[null],
+      ville_arrivee:[null],
       prix_t:[null],
-      compagnie:[null]
-      
+      listeCompagnie:[null]
     })
     this.listCompagnie=this.cs.getCompagnies()
   }
 
-    
-
     saveTrajet()
     {
-      //this.es.addTrajet(this.trajetForm.value).subscribe();   
-      
-      console.log(this.trajetForm.value.compagnie)
-      this.trajets.push(new Trajet(0,this.trajetForm.value.ville_depart,this.trajetForm.value.ville_arrivee,this.trajetForm.value.prix_t,this.trajetForm.value.compagnie))
-      console.log(this.trajets)
-      
-    }
+      this.es.addTrajet(this.trajetForm.value).subscribe();  
 
-    sendData(){
-      console.log("hello")
-      this.output.emit(this.trajets)
+      console.log(this.listCompagnie)
+      console.log(this.trajetForm.value)
+      this.router.navigate(['resto']);
     }
 
     creerCompagnie(){
       this.creerComp=!this.creerComp
-      
     }
 
 }
