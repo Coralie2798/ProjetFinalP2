@@ -1,7 +1,8 @@
 import { Experience } from "./model/experience.model";
 import { Trajet } from "./model/trajet.model";
 import { Utilisateur } from "./model/utilisateur.model";
-import { Ville } from "./ville";
+import { Ville } from "./model/ville.model";
+
 
 export class ExperienceComplet {
     private destination:string
