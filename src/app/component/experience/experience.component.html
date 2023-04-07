@@ -1,77 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <h1>Publiez une experience de voyage!</h1>
 
 
-<li>
 
-</li>
-
-
-
-
-
-
-
-
-
-<div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-    <div class="accordion-item open">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          Trajet parcouru
-        </button>
-      </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">  </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-          Compagnie
-        </button>
-      </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          Lieu visité
-        </button>
-      </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree" routerLink="/restaurant">
-          Restaurant
-        </button>
-      </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body"></div>
-      </div>
-    </div>
-  </div>
-=======
->>>>>>> 6de6a6e7c33488ae891f3015dc29ab59830f72bd
-=======
 <h2> </h2>
 <div class="btn-group centre" role="group" aria-label="Basic radio toggle button group">
   <input type="radio" class="btn-check" name="btnradio" id="btnradio1" (click)="afficherE()" autocomplete="off" checked>
@@ -86,20 +16,15 @@
 
 </div>
 
-<<<<<<< HEAD
-<!-- <div [hidden]="cacher()">
-  <p>kzneffMZ</p>
-</div> -->
->>>>>>> c19c8462810f8dd985dc68a2883f68dd76fb77a4
-=======
+
 
 <div [hidden]=affE id="E">
   <p *ngIf="exp | async as e"><img src="{{e.photo}}" class="card-img-top" alt="photo" width="300" height="300"></p> 
   <br>
-  <h3 *ngIf="exp | async as e"> {{e.destination}}</h3>
+  <h3 *ngIf="exp | async as e"> </h3>
   <br> <br>
   <h4>Son voyage:</h4>
-  <p *ngIf="exp | async as e"> {{e.description}}</p>
+  <p *ngIf="exp | async as e"> </p>
   <br> <br>
 
   
@@ -107,7 +32,7 @@
   <p>restaurant trajet lieu</p>
   
 
- <h3 ngvalue="Experience.destination"> </h3>
+ <h3 ngvalue=""> </h3>
 </div>
 
 <div [hidden]=affT id="T">
@@ -134,5 +59,3 @@
 </div>
 
 
-
->>>>>>> 9d0d69caa24affb5cb9431802f15de0f0d769075
