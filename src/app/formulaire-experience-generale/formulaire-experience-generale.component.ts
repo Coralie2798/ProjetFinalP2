@@ -114,14 +114,15 @@ export class FormulaireExperienceGeneraleComponent {
 
   retour(){
     this.etape-=1
-    window.location.reload()
+    
   }
   validExp(){
     console.log(this.experienceForm1.value)
     console.log(this.villeForm.value.Ville.id_ville)
     this.listeResto$=this.es.getRestaurantByVille(this.villeForm.value.Ville.id_ville)
     this.etape+=1
-    console.log(this.listeResto$)
+    
+    
   }
 
   getTrajets(trajets:Trajet[]){
