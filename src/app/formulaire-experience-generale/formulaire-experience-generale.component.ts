@@ -10,6 +10,7 @@ import { ExperienceComplet } from '../experience-complet';
 import { Ville } from '../model/ville.model';
 import { VilleService } from '../service/ville.service';
 import { Trajet } from '../model/trajet.model';
+import { Restaurant } from '../model/restaurant';
 
 @Component({
   selector: 'app-formulaire-experience-generale',
@@ -26,10 +27,13 @@ export class FormulaireExperienceGeneraleComponent {
   experienceForm1!:FormGroup;
   experienceForm2!:FormGroup;
   experienceForm3!:FormGroup;
+
   iduser!:string|null
-
+  listeResto$!:Observable<Restaurant[]>
   villeForm!:FormGroup;
+  restaurantForm!:FormGroup;
 
+  creerRest=false;
   creerVill=false;
   v!:Ville;
   idCompagnies!:number[]
@@ -50,9 +54,14 @@ export class FormulaireExperienceGeneraleComponent {
       rating_moyen:[null]
 
     })
-    this.villeForm = this.fb.group({
-      listeVille:[null],
 
+    this.villeForm = this.fb.group({
+      Ville:[null],
+
+    })
+
+    this.restaurantForm = this.fb.group({
+      listeRestaurant:[null],
     })
 
   }
@@ -61,7 +70,10 @@ export class FormulaireExperienceGeneraleComponent {
 
   creerVille(){
     this.creerVill=!this.creerVill
-    
+  }
+
+  creerResto(){
+    this.creerRest=!this.creerRest
   }
   
   
@@ -73,7 +85,7 @@ export class FormulaireExperienceGeneraleComponent {
     console.log(this.experienceForm2.value.villes)
     console.log(JSON.stringify(this.experienceForm2.value.villes))
     
-    this.payload=new ExperienceComplet(this.experienceForm1.value.destination,this.experienceForm1.value.description,this.experienceForm1.value.photo,this.experienceForm1.value.rating_moyen,new Utilisateur(parseInt(this.iduser!),"","","","","","",""),this.Ltrajets[0],this.experienceForm2.value.villes)
+    //this.payload=new ExperienceComplet(this.experienceForm1.value.destination,this.experienceForm1.value.description,this.experienceForm1.value.photo,this.experienceForm1.value.rating_moyen,new Utilisateur(parseInt(this.iduser!),"","","","","","",""),this.Ltrajets[0],this.experienceForm2.value.villes)
     
     console.log(this.payload)
     //this.payload.setuser(new Utilisateur(parseInt(this.iduser!),"","","","","","",""))
@@ -96,14 +108,20 @@ export class FormulaireExperienceGeneraleComponent {
     this.etape+=1
   }
 
+  validerResto(){
+    console.log(this.restaurantForm.value.listeRestaurant)
+  }
+
   retour(){
     this.etape-=1
     window.location.reload()
   }
   validExp(){
-    this.etape+=1
     console.log(this.experienceForm1.value)
-    console.log(this.villeForm.value)
+    console.log(this.villeForm.value.Ville.id_ville)
+    this.listeResto$=this.es.getRestaurantByVille(this.villeForm.value.Ville.id_ville)
+    this.etape+=1
+    console.log(this.listeResto$)
   }
 
   getTrajets(trajets:Trajet[]){
