@@ -11,6 +11,7 @@ import { Ville } from '../model/ville.model';
 import { VilleService } from '../service/ville.service';
 import { Trajet } from '../model/trajet.model';
 import { Restaurant } from '../model/restaurant';
+import { Lieux } from '../model/lieux.model';
 
 @Component({
   selector: 'app-formulaire-experience-generale',
@@ -28,11 +29,15 @@ export class FormulaireExperienceGeneraleComponent {
   experienceForm2!:FormGroup;
   experienceForm3!:FormGroup;
 
+  
   iduser!:string|null
   listeResto$!:Observable<Restaurant[]>
   villeForm!:FormGroup;
   restaurantForm!:FormGroup;
+  lieuxForm!:FormGroup;
+  listeLieux$!:Observable<Lieux[]>
 
+  creerLieu=false;
   creerRest=false;
   creerVill=false;
   v!:Ville;
@@ -44,6 +49,7 @@ export class FormulaireExperienceGeneraleComponent {
     this.etape=1
     this.villes$=this.vs.getVille()
     this.iduser=localStorage.getItem('currentUser')
+
     
    
     console.log(this.iduser)
@@ -64,6 +70,10 @@ export class FormulaireExperienceGeneraleComponent {
       listeRestaurant:[null],
     })
 
+    this.lieuxForm = this.fb.group({
+      listeLieux:[null]
+    })
+
   }
 
 
@@ -74,6 +84,10 @@ export class FormulaireExperienceGeneraleComponent {
 
   creerResto(){
     this.creerRest=!this.creerRest
+  }
+
+  creerLieux(){
+    this.creerLieu=!this.creerLieu;
   }
   
   
@@ -109,8 +123,13 @@ export class FormulaireExperienceGeneraleComponent {
   }
 
   validerResto(){
-    //console.log(this.restaurantForm.value.listeRestaurant)
-    console.log(this.experienceForm1.value,this.iduser,this.restaurantForm.value,this.villeForm.value)
+    this.etape+=1
+    this.listeLieux$=this.es.getLieuxByVille(this.villeForm.value.Ville.id_ville)
+  }
+
+  validerLieux(){
+    this.etape+=1
+    //renvoyer à la page de recap
   }
 
   retour(){
