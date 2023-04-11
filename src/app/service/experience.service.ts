@@ -6,6 +6,7 @@ import { Restaurant } from '../model/restaurant';
 import { Observable } from 'rxjs';
 import { Compagnie } from '../model/compagnie.model';
 import { Lieux } from '../model/lieux.model';
+import { ExperienceComplet } from '../experience-complet';
 
 
 
@@ -91,9 +92,9 @@ export class ExperienceService {
   // }
 
 
-  addExperience(e:Experience):Observable<Experience>
+  addExperience(e:ExperienceComplet):Observable<ExperienceComplet>
   {
-    return this.http.post<Experience>("http://localhost:8080/experience/saveExperience", e);
+    return this.http.post<ExperienceComplet>("http://localhost:8080/experience/saveExperience", e);
   }
 
  getExperience():Observable<Experience[]>
