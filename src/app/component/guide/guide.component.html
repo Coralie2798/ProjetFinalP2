@@ -9,7 +9,7 @@
         <th scope="col">Id</th>
         <th scope="col">Contenu</th> 
        
-      
+      </thead>
     <tbody>
       <tr *ngFor="let g of listeG$ | async">
         <th scope="row">{{g.id_guide}}</th>
@@ -21,7 +21,7 @@
           <app-update-guide [inputFromParent] = "g"></app-update-guide>
         
         <td></td>
-      
+    
       
       
     
