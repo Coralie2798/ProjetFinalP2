@@ -76,7 +76,7 @@
                         <form [formGroup]="restaurantForm" (ngSubmit)="validerResto()" >
                           <label>Restaurant(s)</label>
                           <select  multiple class="form-control"  id="rating_moyen" formControlName="listeRestaurant">
-                            <option *ngFor="let r of listeResto$ | async" ngValue="r">
+                            <option *ngFor="let r of listeResto$ | async" [ngValue]="r">
                               {{r.nom}}
                             </option>
                             </select>
