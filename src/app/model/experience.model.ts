@@ -4,6 +4,7 @@ export class Experience {
     description:string;
     photo:string;
     rating_moyen:number;
+    id_t
 
     constructor( description:string, photo:string, rating_moyen:number, id_voyage:number)
     {
