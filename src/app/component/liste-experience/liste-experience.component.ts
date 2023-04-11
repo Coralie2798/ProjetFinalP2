@@ -4,8 +4,10 @@ import { Observable } from 'rxjs';
 import { Experience } from 'src/app/model/experience.model';
 import { Lieux } from 'src/app/model/lieux.model';
 import { Restaurant } from 'src/app/model/restaurant';
+import { Ville } from 'src/app/model/ville.model';
 import { ExperienceService } from 'src/app/service/experience.service';
 import { LieuxService } from 'src/app/service/lieux.service';
+import { VilleService } from 'src/app/service/ville.service';
 
 @Component({
   selector: 'app-liste-experience',
@@ -14,7 +16,7 @@ import { LieuxService } from 'src/app/service/lieux.service';
 })
 export class ListeExperienceComponent implements OnInit {
 
-  constructor(private es:ExperienceService, private router:Router, private ls:LieuxService, private ar:ActivatedRoute){this.id=ar.snapshot.params["id"]}
+  constructor(private es:ExperienceService, private router:Router, private ls:LieuxService,private vs:VilleService, private ar:ActivatedRoute){this.id=ar.snapshot.params["id"]}
   
   exp$!:Observable<Experience>;
   id!:number;
@@ -23,7 +25,7 @@ export class ListeExperienceComponent implements OnInit {
   listeR$!: Observable<Restaurant[]>;
   listeL$!:Observable<Lieux[]>;
 
- 
+  destination!:Observable<Ville>;
 
   
 
@@ -35,7 +37,7 @@ export class ListeExperienceComponent implements OnInit {
    
    this.listeR$=this.es.getRestaurant();
    this.listeL$=this.ls.getLieux();
-   
+  
   }
 
 
