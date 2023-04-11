@@ -40,8 +40,9 @@ export class UpdateGuideComponent {
   }
   update(g:Guide)
   {
-    this.gs.updateGuide(g).subscribe(()=>{this.ngOnInit()});
-
+    
+    this.gs.updateGuide(g).subscribe();
+   
   }
  
 
