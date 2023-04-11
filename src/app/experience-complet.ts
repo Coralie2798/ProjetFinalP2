@@ -1,4 +1,6 @@
 import { Experience } from "./model/experience.model";
+import { Lieux } from "./model/lieux.model";
+import { Restaurant } from "./model/restaurant";
 import { Trajet } from "./model/trajet.model";
 import { Utilisateur } from "./model/utilisateur.model";
 import { Ville } from "./model/ville.model";
@@ -9,17 +11,18 @@ export class ExperienceComplet {
     private photo:string
     private rating_moyen:number
     private u:Utilisateur;
-    private listeTrajet:Trajet[];
-    private listVille:Ville[]
+    private listeResto:Restaurant[];
+    private listeLieux:Lieux[];
 
-    constructor(destination:string,description:string,photo:string,rating_moyen:number, u:Utilisateur,lt:any,lv:any){
+
+    constructor(destination:string,description:string,photo:string,rating_moyen:number, u:Utilisateur,lt:any,lv:any, listeResto:Restaurant[], listeLieux:Lieux[]){
         this.description=description
         this.destination=destination
         this.photo=photo
         this.rating_moyen=rating_moyen
         this.u=u
-        this.listeTrajet=lt
-        this.listVille=lv
+        this.listeLieux=listeLieux
+        this.listeResto=listeResto
 
     }
     
