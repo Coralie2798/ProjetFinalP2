@@ -27,6 +27,8 @@ export class FormulaireExperienceGeneraleComponent {
   experienceForm2!:FormGroup;
   experienceForm3!:FormGroup;
   iduser!:string|null
+
+  
   
   idCompagnies!:number[]
   payload!:ExperienceComplet
