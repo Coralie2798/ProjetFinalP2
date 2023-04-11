@@ -23,7 +23,7 @@ L'utilisateur doit être connecté pour pouvoir entrer une expérience de voyage
 ## Expérience de voyage
 
 Un formulaire pour entrée une expérience de voyage a été réalisé à l'intérieur duquel l'utilisateur doit rentré la ville visitée,le lieu visité ainsi que la description de l'expérience.
-On peut également indiquer les restaurants où l'utilisateur a mangé mais aussi noté l'expérience de 1 à 5.
+On peut également indiquer les restaurants où l'utilisateur s'est restauré mais aussi noté l'expérience de 1 à 5.
  
 ## Guides
 
