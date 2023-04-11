@@ -4,6 +4,8 @@ Ce projet a pour sujet n°2 Best Trip.
 
 ## Les developpeurs 
 Les développeurs en charge de ce sujet : Coralie, Florian , Léo , Thaoura et Jérémy.
+## Notion
+Voici le lien de notre Backlog produit (Notion) : https://www.notion.so/ProjetFinalP2Angular-f76ef8327c6441dab97c7020a66f9bc1?pvs=4
 
 ## Resume 
 
@@ -20,11 +22,12 @@ L'utilisateur doit être connecté pour pouvoir entrer une expérience de voyage
 
 ## Expérience de voyage
 
-Un formulaire pour entrée une expérience de voyage a été réalisé à l'intérieur duquel l'utilisateur doit rentré la ville visitée,une description de l'expérience, le(s) restaurants où il a mangé
+Un formulaire pour entrée une expérience de voyage a été réalisé à l'intérieur duquel l'utilisateur doit rentré la ville visitée,le lieu visité ainsi que la description de l'expérience.
+On peut également indiquer les restaurants où l'utilisateur a mangé mais aussi noté l'expérience de 1 à 5.
  
 ## Guides
 
-On peut également entrer un guide avec lequel l'expérience a été réalisé en entrant la ville et le contenu de la visite.
-On pourra afficher afficher la liste des guides par rapport à la ville séléctionnée.
+L'utilisateur à la possibilité d'entrer un guide avec lequel l'expérience a été réalisé en entrant la ville et le contenu de la visite.
+On pourra afficher la liste des guides par rapport à la ville séléctionnée.
 On pourra supprimer et mettre à jour cette liste
 
