@@ -33,13 +33,13 @@ export class ExperienceService {
   }
 
   //RECUPERER EXPERIENCE
-  getExperienceById(id:number):Observable<Experience>
+  getExperienceById(idExp:number):Observable<Experience>
   {
     return this.http.get<Experience>("http://localhost:8080/experience/experienceId/" + this.idExp);
   }
 
   //RECUPERER COMPAGNIE
-  getCompagnieByExp(id:number):Observable<Compagnie>
+  getCompagnieByExp(idExp:number):Observable<Compagnie>
   {
     return this.http.get<Compagnie>("http://localhost:8080/compagnie/compagnieParExp/" + this.idExp);
   }
