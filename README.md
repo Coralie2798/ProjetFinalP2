@@ -4,6 +4,8 @@ Ce projet a pour sujet n°2 Best Trip.
 
 ## Les developpeurs 
 Les développeurs en charge de ce sujet : Coralie, Florian , Léo , Thaoura et Jérémy.
+## Notion
+Voici le lien de notre Backlog produit (Notion) : https://www.notion.so/ProjetFinalP2Angular-f76ef8327c6441dab97c7020a66f9bc1?pvs=4
 
 ## Resume 
 
