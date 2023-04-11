@@ -27,7 +27,7 @@ export class FormulaireLieuxComponent {
       prix_L:[null],
       nom_L:[null],
       listeVille: [null],
-      v:[null]
+      ville:[null]
     })
     // this.listeVille=this.vs.getVilles();
     // this.vs.getVille().subscribe(data=>{this.listeVille=data})
@@ -36,7 +36,8 @@ export class FormulaireLieuxComponent {
   
   saveLieux()
   {
-    this.ls.addLieux(new Lieux(0,this.lieuxForm.value.prix_L,this.lieuxForm.value.nom_L,this.v)).subscribe();   
+    console.log("un message");
+    this.ls.addLieux(new Lieux(0,this.lieuxForm.value.prix_L,this.lieuxForm.value.nom_L,this.lieuxForm.value.ville)).subscribe();   
     this.lieuxForm.patchValue({ 
       prix_L:0,
       nom_L:'',

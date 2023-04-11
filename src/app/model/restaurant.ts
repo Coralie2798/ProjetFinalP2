@@ -5,7 +5,8 @@ export class Restaurant {
     nom:string;
     adresse:string;
     prix_l:number;
-    ville:Ville
+    ville:Ville;
+    
 
     constructor(id_r:number, nom:string,adresse:string,prix_l:number,ville:Ville){
        this.id_r=id_r;

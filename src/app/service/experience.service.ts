@@ -5,6 +5,7 @@ import { Experience } from '../model/experience.model';
 import { Restaurant } from '../model/restaurant';
 import { Observable } from 'rxjs';
 import { Compagnie } from '../model/compagnie.model';
+import { Lieux } from '../model/lieux.model';
 
 
 
@@ -77,7 +78,11 @@ export class ExperienceService {
     return this.http.get<Restaurant[]>("http://localhost:8080/restaurants/rechercher/" + idVille);
   }
 
-  
+  getLieuxByVille(idVille:number):Observable<Lieux[]>
+  {
+    return this.http.get<Lieux[]>("http://localhost:8080/lieux/lieuxIdVille/" + idVille);
+  }
+
 
   // getRestaurantById(id_resto):Observable<Restaurant>
   // {

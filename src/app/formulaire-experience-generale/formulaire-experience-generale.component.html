@@ -93,6 +93,28 @@
                         <button (click)="retour()">Retour</button>
                       </div>
 
+
+                      <div *ngIf="iduser !=null && etape==4">
+                        <form [formGroup]="lieuxForm" (ngSubmit)="validerLieux()" >
+                          <label>Lieux visités</label>
+                          <select  multiple class="form-control"  id="rating_moyen" formControlName="listeLieux">
+                            <option *ngFor="let l of listeLieux$ | async" [ngValue]="l">
+                              {{l.nom_L}}
+                            </option>
+                            </select>
+
+                            <button type="button" (click)="creerLieux()">Creer un nouveau lieux</button>
+                                    
+                                    <div *ngIf="creerLieu">
+                                      <app-formulaire-lieux></app-formulaire-lieux>
+                                    </div>
+                          
+
+                          <button type="submit">Valider</button>
+                        </form>
+                        <button (click)="retour()">Retour</button>
+                      </div>
+
                         
                 </div>
             </div>
