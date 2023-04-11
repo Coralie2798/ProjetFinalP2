@@ -31,11 +31,6 @@ const routes: Routes = [
   {path:"utilisateur", component:UtilisateurComponent},
   {path:"inscription", component:FormulaireInscriptionComponent},
   {path:"compagnie", component:CompagnieFormulaireComponent},
-  {path:"trajet", component:TrajetComponent},
-  {path:"ville", component:VilleComponent},
-
-
-  {path:"trajet", component:TrajetComponent},
   {path:"ville", component:VilleComponent},
 
 
@@ -45,23 +40,17 @@ const routes: Routes = [
   {path:"lieuxformulaire", component:FormulaireLieuxComponent},
   {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent},
   {path:"resto", component:RestaurantComponent},
-  {path:"guideformulaire", component:FormulaireGuideComponent},
-  {path:"guide", component:GuideComponent},
-  {path:"villeformulaire", component:FormulaireVilleComponent},
-  {path:"trajets",component:ListeTrajetsComponent},
   {path:"listeExperiences",component:ListeExperienceComponent},
   {path:"pays", component:FormulairePaysComponent},
 
-  {path:"ajouterExperience", component:FormulaireExperienceGeneraleComponent},
+ 
 
-  {path:"trajet", component:TrajetComponent},
+  
   {path:"guideformulaire", component:FormulaireGuideComponent},
   {path:"guide", component:GuideComponent},
   {path:"villeformulaire", component:FormulaireVilleComponent},
   {path:"trajet", component:TrajetComponent},
   {path:"trajets",component:ListeTrajetsComponent},
-  {path:"listeExperiences",component:ListeExperienceComponent},
-  {path:"pays",component:PaysComponent},
   {path:"paysformulaire",component:FormulairePaysComponent},
   {path:"updateguide",component:UpdateGuideComponent},
 ];
