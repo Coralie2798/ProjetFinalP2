@@ -6,7 +6,7 @@ Ce projet a pour sujet n°2 Best Trip.
 Les développeurs en charge de ce sujet : Coralie, Florian , Léo , Thaoura et Jérémy.
 
 ## Resume 
-JOUR1
+
 creation du projet avec la commande ng new ProjetFinalP2 , 
 creation de classes avec ng g class model/... --type=model,
 creation de services avec ng g s service/... 
