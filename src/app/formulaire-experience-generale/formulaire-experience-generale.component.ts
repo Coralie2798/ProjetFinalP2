@@ -109,7 +109,8 @@ export class FormulaireExperienceGeneraleComponent {
   }
 
   validerResto(){
-    console.log(this.restaurantForm.value.listeRestaurant)
+    //console.log(this.restaurantForm.value.listeRestaurant)
+    console.log(this.experienceForm1.value,this.iduser,this.restaurantForm.value,this.villeForm.value)
   }
 
   retour(){
