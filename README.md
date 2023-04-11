@@ -26,6 +26,9 @@ Un formulaire pour entrée une expérience de voyage a été réalisé à l'int�
 Un image peut aussi être ajouté.
 On peut également ajouter les différents restaurants où l'utilisateur s'est restauré et afficher la liste de ceux-ci
 On a la possibilité de noté l'expérience de 1 à 5.
+
+## Lieux visité
+L'utilisateur peut indiquer le lieu visité  : dans quel ville et à quel prix ?
  
 ## Guides
 
