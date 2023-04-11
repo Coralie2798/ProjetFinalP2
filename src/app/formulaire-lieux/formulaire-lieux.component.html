@@ -1,72 +1,35 @@
-
-<section class="h-100 gradient-form" style="background-color: #e45353;">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-xl-10">
-        <div class="card rounded-3 text-black">
-          <div class="row g-0">
-            <div class="col-lg-6">
-              <div class="card-body p-md-5 mx-md-4">
-
-                <div class="text-center">
-                  <img src="/ProjetFinalP2/images/logo.jfif" style=" width: 185px;" alt="logo">
-                <h4 class="mt-1 mb-5 pb-1">Lieu visité</h4>
-              </div>
-<form [formGroup]="lieuxForm" > 
-    <div class="form-group">
-
-        <label>Selectionnez une ville </label>
-        <select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="listeVille">
-                        
-            <option *ngFor="let v of listeVille | async"  [ngValue]="v" (click)="villeselectionne(v)">{{v.nom}}</option>
-
-
-        </select> 
-      <label>Nom</label>
-      <input type="text" formControlName="nom_L" class="form-control" id="nom_L" >
-      <label>Nom</label>
-    </div>
-    <div class="col-md-6 mb-4 ">
-      <div class="input-group form-outline ">
-          <div id="prix">
-            <input type="number" formControlName="prix_l" id="form3Example1" class="form-control" />
-            <span class="input-group-text" id="basic-addon2">€</span>
-          </div>
-          <label class="form-label" for="form3Example1">Prix de l'entrée</label>
-      </div>
+<div class="text-center">
+  <img src="/ProjetFinalP2/images/logo.jfif" style=" width: 185px;" alt="logo">
+  <h4 class="mt-1 mb-5 pb-1">Lieu visité</h4>
+</div>
+<form [formGroup]="lieuxForm" >
+  <div class="form-group">
+    <label>Nom</label>
+    <input type="text" formControlName="nom_L" class="form-control" id="nom_L">
   </div>
-  
+  <div class="col-md-6 mb-4 ">
+    <div class="input-group form-outline ">
+      <div id="prix">
+        <input type="number" formControlName="prix_L" id="form3Example1" class="form-control" />
+        <span class="input-group-text" id="basic-addon2">€</span>
+      </div>
+      <label class="form-label" for="form3Example1">Prix de l'entrée</label>
+    </div>
+  </div>
+
   <div id="ville" class="form-floating">
-    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+    <select class="form-select" id="floatingSelect" formControlName="ville" aria-label="Floating label select example">
       <option selected>Selectionnez la ville</option>
       <option *ngFor="let v of listeVille | async" [ngValue]="v">{{v.nom}}</option>
 
     </select>
     <label for="floatingSelect">Ville</label>
   </div>
-  
+
   <div class="text-center pt-1 mb-5 pb-1">
-    <button type="submit" class="btn btn-primary" >Valider</button>
+    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit"
+      (click)="saveLieux()">Enregistrer le lieux</button>
   </div>
-  </form>
-</div>
-</div>
-  <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+</form>
 
-      <img src="https://cdn-icons-png.flaticon.com/512/149/149061.png"
-        style="width: 120%;" alt="lieu">
 
-    
-    
-    <div class="form-group">
-        <label>Prix</label>
-        <input type="text" formControlName="prix_L" class="form-control" id="prix_L">
-    
-    <button type="submit" class="btn btn-primary" (click)="saveLieux()" >Submit</button>
-  
-  <button (click)="creerVille()">Creer une nouvelle ville</button>
-
-    <div *ngIf="creerVill">
-        <app-formulaire-ville></app-formulaire-ville>
-    </div>
