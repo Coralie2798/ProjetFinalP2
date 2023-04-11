@@ -12,12 +12,31 @@
                       style="width: 185px;" alt="logo">
                     <h4 class="mt-1 mb-5 pb-1">Destination</h4>
                   </div>
+
+                  <div class="form-group">
+                                <!--Choisir ville-->
+                                  <form *ngIf="villeSelectionne" [formGroup]="villeForm" (ngSubmit)="validerVille()">
+                                    <div class="form-group">
+                                      <label>Selectionnez une ville </label>
+                                      <select multiple class="form-select mb-3 " aria-label=".form-select-lg example"
+                                        formControlName="listeVille">
+                                        <option *ngFor="let v of villes$ | async" [ngValue]="v">{{v.nom}}</option>
+                                      </select>
+                                      <label>Ou entrez une autre ville :</label>
+                                      <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                    </form>
+
+                                    <button (click)="creerVille()">Creer une nouvelle ville</button>
+
+                                    <div *ngIf="creerVill">
+                                      <app-formulaire-ville></app-formulaire-ville>
+                                    </div>
+                                    <!-- -->
+                    </div>
                         <form [formGroup]="experienceForm1" >
 
-                            <div class="form-group">
-                                <label>Destination</label>
-                                <input type="text" formControlName="destination" class="form-control" id="destination" >
-                            </div>
+                            
                             <br>
                             <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label">Description</label>
@@ -46,9 +65,7 @@
 
                             <br> <br>
 
-                            <div class="text-center pt-1 mb-5 pb-1">
-                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" (click)="continuer()">Enregistrer</button>
-                            </div>
+                          
                         </form>
 
                         
@@ -69,16 +86,4 @@
     </div>
   </div>
 </section>
-<div *ngIf="etape==2">
-<form [formGroup]="experienceForm2">
-<select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="villes">
-                        
-  <option *ngFor="let v of villes$ | async"  [ngValue]="v">{{v.nom}}</option>
-
-</select> 
-<button (click)="validerVilles()">Valider</button>
-</form>
-<button (click)="back()">Retour</button>
-</div>
-<app-trajet *ngIf="etape==3" (output)="getTrajets($event)"></app-trajet>
 <router-outlet></router-outlet>

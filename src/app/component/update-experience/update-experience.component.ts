@@ -12,13 +12,13 @@ export class UpdateExperienceComponent implements OnInit {
 
 listeVille!:Observable<Ville[]>;
 v!:Observable<Ville>;
-idE!:number;
+idV!:number;
 
 constructor(private vs:VilleService){}
 
   ngOnInit(): void {
    this.listeVille=this.vs.getVille();
-   this.v=this.vs.getVilleByIdE(this.idE);
+   this.v=this.vs.getVilleById(this.idV);
   }
 
 

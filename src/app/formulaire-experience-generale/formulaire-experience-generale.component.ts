@@ -28,8 +28,10 @@ export class FormulaireExperienceGeneraleComponent {
   experienceForm3!:FormGroup;
   iduser!:string|null
 
-  
-  
+  villeForm!:FormGroup;
+  villeSelectionne=true;
+  creerVill=false;
+  v!:Ville;
   idCompagnies!:number[]
   payload!:ExperienceComplet
   villes$!:Observable<Ville[]>
@@ -48,14 +50,27 @@ export class FormulaireExperienceGeneraleComponent {
       rating_moyen:[null]
 
     })
-    this.experienceForm2 = this.fb.group({
+    this.villeForm = this.fb.group({
       villes:[null],
 
     })
 
-
-
   }
+
+
+
+  creerVille(){
+    this.creerVill=!this.creerVill
+    
+  }
+  
+  
+
+  villeselectionne(v:Ville)
+  {
+    this.v = v;
+  }
+
 
   saveExperience():void{
     console.log(this.experienceForm2.value.villes)
@@ -80,17 +95,8 @@ export class FormulaireExperienceGeneraleComponent {
     //this.rout.navigate(['trajet']);
   }
 
-  back(){
-    if(this.etape>1)
-    this.etape=this.etape-1
-  }
-
-  continuer(){
-    this.etape+=1
-  }
-
-  validerVilles(){
-    this.continuer()
+  validerVille(){
+    this.villeSelectionne=false;
   }
 
   getTrajets(trajets:Trajet[]){

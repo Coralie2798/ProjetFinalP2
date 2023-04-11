@@ -7,9 +7,9 @@
         </select> 
       <label>Inscrivez votre contenu ici :</label>
       <input type="text" formControlName="contenu" class="form-control" id="contenu" >
-    <button type="submit" class="btn btn-primary" (click)="saveGuide()" >Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="saveGuide()" >Valider</button>
     </div>
-    <button (click)="creerVille()">Creer une nouvelle ville</button>
+    <button type="button" class="btn btn-outline-secondary btn-sm" (click)="creerVille()">Creer une nouvelle ville</button>
 
     <div *ngIf="creerVill">
         <app-formulaire-ville></app-formulaire-ville>
