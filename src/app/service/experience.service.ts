@@ -45,6 +45,7 @@ export class ExperienceService {
   }
 
 
+
   
 
   addTrajet(t:Trajet):Observable<Trajet>
@@ -69,6 +70,14 @@ export class ExperienceService {
     
     return this.http.get<Restaurant[]>("http://localhost:8080/restaurants/afficher");
   }
+
+  getRestaurantByVille(idVille:number):Observable<Restaurant[]>
+  {  
+    
+    return this.http.get<Restaurant[]>("http://localhost:8080/restaurants/rechercher/" + idVille);
+  }
+
+  
 
   // getRestaurantById(id_resto):Observable<Restaurant>
   // {

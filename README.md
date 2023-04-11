@@ -1,32 +1,14 @@
 # ProjetFinalP2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+Ce projet a pour sujet n°2 Best Trip.
 
-## Development server
+## Les developpeurs 
+Les développeurs en charge de ce sujet : Coralie, Florian , Léo , Thaoura et Jérémy.
+## Notion
+Voici le lien de notre Backlog produit (Notion) : https://www.notion.so/ProjetFinalP2Angular-f76ef8327c6441dab97c7020a66f9bc1?pvs=4
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Resume 
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-## Resume j1
 creation du projet avec la commande ng new ProjetFinalP2 , 
 creation de classes avec ng g class model/... --type=model,
 creation de services avec ng g s service/... 
@@ -34,3 +16,24 @@ creation de composant avec ng g c component/...
 creation du formulaire d'inscription Utilisateur
 
 Creation formulaire compagnie, Modification component user pour rafraichir la pâge lorsque l'on supprime un utilisateur.
+
+## Connexion
+L'utilisateur doit être connecté pour pouvoir entrer une expérience de voyage.
+
+## Expérience de voyage
+
+Un formulaire pour entrée une expérience de voyage a été réalisé à l'intérieur duquel l'utilisateur doit rentré la ville visitée,le lieu visité ainsi que la description de l'expérience.
+Un image peut aussi être ajouté.
+On peut également ajouter les différents restaurants où l'utilisateur s'est restauré et afficher la liste de ceux-ci
+On a la possibilité de noté l'expérience de 1 à 5.
+
+## Lieux visité
+L'utilisateur peut indiquer le lieu visité  : dans quel ville et à quel prix ?
+ 
+## Guides
+
+L'utilisateur à la possibilité d'entrer un guide avec lequel l'expérience a été réalisé en entrant la ville et le contenu de la visite.
+On pourra afficher la liste des guides par rapport à la ville séléctionnée.
+On peut aussi ajouter un nouveau pays et une nouvelle ville à la liste si elle n'existe pas.
+On pourra supprimer et modifier cette liste à tous moments. 
+

@@ -10,7 +10,7 @@
                   <div class="text-center">
                     <img src=""
                       style="width: 185px;" alt="logo">
-                    <h4 class="mt-1 mb-5 pb-1">Destination</h4>
+                    <h4 class="mt-1 mb-5 pb-1">Experience</h4>
                   </div>
 
                   <div class="form-group" *ngIf="iduser !=null && etape==1">
@@ -18,8 +18,8 @@
                                   <form  [formGroup]="villeForm" (ngSubmit)="validerVille()">
                                     <div class="form-group">
                                       <label>Selectionnez une ville </label>
-                                      <select multiple class="form-select mb-3 " aria-label=".form-select-lg example"
-                                        formControlName="listeVille">
+                                      <select class="form-select mb-3 " aria-label=".form-select-lg example"
+                                        formControlName="Ville">
                                         <option *ngFor="let v of villes$ | async" [ngValue]="v">{{v.nom}}</option>
                                       </select>
                                       <label>Ou entrez une autre ville :</label>
@@ -71,6 +71,27 @@
                         <button (click)="retour()">Retour</button>
                       </div>
                         
+
+                      <div *ngIf="iduser !=null && etape==3">
+                        <form [formGroup]="restaurantForm" (ngSubmit)="validerResto()" >
+                          <label>Restaurant(s)</label>
+                          <select  multiple class="form-control"  id="rating_moyen" formControlName="listeRestaurant">
+                            <option *ngFor="let r of listeResto$ | async" [ngValue]="r">
+                              {{r.nom}}
+                            </option>
+                            </select>
+
+                            <button type="button" (click)="creerResto()">Creer un nouveau restaurant</button>
+                                    
+                                    <div *ngIf="creerRest">
+                                      <app-restaurant></app-restaurant>
+                                    </div>
+                          
+
+                          <button type="submit">Valider</button>
+                        </form>
+                        <button (click)="retour()">Retour</button>
+                      </div>
 
                         
                 </div>
