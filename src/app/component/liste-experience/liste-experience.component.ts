@@ -43,9 +43,9 @@ export class ListeExperienceComponent implements OnInit {
   }
 getDestination(id:number){
 
-  this.destination=this.es.getVilleByExp(id);
+  this.destination=this.vs.getVilleById(id);
   
-  console.log("destination" + this.destination);
+  console.log("destination " + this.destination);
 }
 
 afficherExperience(id:number) {
