@@ -22,11 +22,11 @@
                                         formControlName="Ville">
                                         <option *ngFor="let v of villes$ | async" [ngValue]="v">{{v.nom}}</option>
                                       </select>
-                                      <label>Ou entrez une autre ville :</label>
+                                      
                                       <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
                                     </form>
-
+                                    <label>Ou entrez une autre ville :</label>
                                     <button (click)="creerVille()">Creer une nouvelle ville</button>
                                     
                                     <div *ngIf="creerVill">
