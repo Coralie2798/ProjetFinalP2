@@ -6,6 +6,7 @@ import { Restaurant } from '../model/restaurant';
 import { Observable } from 'rxjs';
 import { Compagnie } from '../model/compagnie.model';
 import { Lieux } from '../model/lieux.model';
+import { Ville } from '../model/ville.model';
 
 
 
@@ -46,7 +47,10 @@ export class ExperienceService {
   }
 
 
-
+  getVilleByExp(idExp:number):Observable<Ville>
+  {
+    return this.http.get<Ville>("http://localhost:8080/experience/VilleExperience/" + this.idExp)
+  }
   
 
   addTrajet(t:Trajet):Observable<Trajet>
