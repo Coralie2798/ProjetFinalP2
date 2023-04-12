@@ -1,66 +1,44 @@
-<section class="h-100 gradient-form" style="background-color: #e45353;">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-xl-10">
-          <div class="card rounded-3 text-black">
-            <div class="row g-0">
-              <div class="col-lg-6">
-                <div class="card-body p-md-5 mx-md-4">
-                  <form [formGroup]="restaurantForm" >
+
+                <form [formGroup]="restaurantForm">
                   <div class="text-center">
-                      <img src="/ProjetFinalP2/images/logo.jfif" style=" width: 185px;" alt="logo">
+                    <img src="ProjetFinalP2/images/logo.jpg" style=" width: 185px;" alt="logo">
                     <h4 class="mt-1 mb-5 pb-1">Restaurant</h4>
                   </div>
-                  
+
                   <label>Selectionnez une ville </label>
-                  <select  class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="ville">
-                                  
-                      <option *ngFor="let v of listeVille"  [ngValue]="v" >{{v.nom}}</option>
-                 
-                  </select> 
-                    <p>Ville : {{v}}</p>
-                    <p>Entrez les informations sur le restaurant</p>
-  
-                    <div class="form-outline mb-4">
-                      <input type="text" id="nom" formControlName="nom"/>
-                      <label class="form-label" for="form2Example11">Nom du restaurant</label>
-                    </div>
-  
-                    <div class="form-outline mb-4">
-                      <input type="text" id="adresse" formControlName="adresse"/>
-                      <label class="form-label" for="form2Example22">Adresse du restaurant</label>
-                    </div>
+                  <select class="form-select mb-3 " aria-label=".form-select-lg example" formControlName="ville">
 
-                    <div class="form-outline mb-4">
-                        <input type="text" id="prix_l" formControlName="prix_l"/>
-                        <label class="form-label" for="form2Example22">Prix du restaurant</label>
-                      </div>
-  
-                    <div class="text-center pt-1 mb-5 pb-1">
-                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" (click)="saveRestaurant()">Enregistrer</button>
-                    </div>
+                    <option *ngFor="let v of listeVille" [ngValue]="v">{{v.nom}}</option>
 
-                    <button (click)="creerVille()">Creer une nouvelle ville</button>
+                  </select>
+                  <button type="button" class="btn btn-outline-secondary btn-sm" (click)="creerVille()">Creer une nouvelle ville</button>
 
-                    <div *ngIf="creerVill">
-                        <app-formulaire-ville></app-formulaire-ville>
-  
-                    <div class="d-flex align-items-center justify-content-center pb-4">
-                      <p class="mb-0 me-2">Donnez un avis </p>
-                      <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" formControlName="avis"></textarea>
-                        
-                      
-  
-                  
-  
+                  <div *ngIf="creerVill">
+                    <app-formulaire-ville></app-formulaire-ville>
+                  </div>
+                  <br>
+                  <p>Entrez les informations sur le restaurant</p>
+
+                  <div class="form-outline mb-4">
+                    <input class="form-control" type="text" id="nom" formControlName="nom" />
+                    <label class="form-label" for="form2Example11">Nom du restaurant</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input class="form-control" type="text" id="adresse" formControlName="adresse" />
+                    <label class="form-label" for="adresse">Adresse du restaurant</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input class="form-control" type="text" id="prix_l" formControlName="prix_l" />
+                    <label class="form-label" for="form2Example22">Prix du restaurant</label>
+                  </div>
+
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit"
+                      (click)="saveRestaurant()">Enregistrer</button>
+                  </div>
+
                 
-              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                    
-                    <img src="https://www.aixenprovencetourism.com/wp-content/uploads/2013/07/ou_manger-1920x1080.jpg"
-                    style="width: 120%;"  alt="logo">
-                    
-                
- 
-  <router-outlet></router-outlet>
+

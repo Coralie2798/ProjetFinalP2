@@ -5,6 +5,12 @@ import { Experience } from '../model/experience.model';
 import { Restaurant } from '../model/restaurant';
 import { Observable } from 'rxjs';
 import { Compagnie } from '../model/compagnie.model';
+import { Lieux } from '../model/lieux.model';
+
+import { ExperienceComplet } from '../experience-complet';
+
+import { Ville } from '../model/ville.model';
+
 
 
 
@@ -33,18 +39,24 @@ export class ExperienceService {
   }
 
   //RECUPERER EXPERIENCE
-  getExperienceById(id:number):Observable<Experience>
+  getExperienceById(idExp:number):Observable<Experience>
   {
     return this.http.get<Experience>("http://localhost:8080/experience/experienceId/" + this.idExp);
   }
 
   //RECUPERER COMPAGNIE
-  getCompagnieByExp(id:number):Observable<Compagnie>
+  getCompagnieByExp(idExp:number):Observable<Compagnie>
   {
     return this.http.get<Compagnie>("http://localhost:8080/compagnie/compagnieParExp/" + this.idExp);
   }
 
 
+
+
+  getVilleByExp(idExp:number)
+  {
+    return this.http.get<string>("http://localhost:8080/experience/VilleExperience/" + this.idExp)
+  }
   
 
   addTrajet(t:Trajet):Observable<Trajet>
@@ -60,6 +72,7 @@ export class ExperienceService {
 
   addRestaurant(resto:Restaurant):Observable<Restaurant>
   {
+    
     return this.http.post<Restaurant>("http://localhost:8080/restaurants/save", resto);
   }
 
@@ -70,15 +83,27 @@ export class ExperienceService {
     return this.http.get<Restaurant[]>("http://localhost:8080/restaurants/afficher");
   }
 
+  getRestaurantByVille(idVille:number):Observable<Restaurant[]>
+  {  
+    
+    return this.http.get<Restaurant[]>("http://localhost:8080/restaurants/rechercher/" + idVille);
+  }
+
+  getLieuxByVille(idVille:number):Observable<Lieux[]>
+  {
+    return this.http.get<Lieux[]>("http://localhost:8080/lieux/lieuxIdVille/" + idVille);
+  }
+
+
   // getRestaurantById(id_resto):Observable<Restaurant>
   // {
   //   return this.http.get<Restaurant>("http://localhost:8080/restaurants/restaurantId/" + id);
   // }
 
 
-  addExperience(e:Experience):Observable<Experience>
+  addExperience(e:ExperienceComplet):Observable<ExperienceComplet>
   {
-    return this.http.post<Experience>("http://localhost:8080/experience/saveExperience", e);
+    return this.http.post<ExperienceComplet>("http://localhost:8080/experience/saveExperience", e);
   }
 
  getExperience():Observable<Experience[]>

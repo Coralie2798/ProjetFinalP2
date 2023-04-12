@@ -1,84 +1,107 @@
 <section class="h-100 gradient-form" style="background-color: #e45353;">
     <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-xl-10">
-          <div class="card rounded-3 text-black">
-            <div class="row g-0">
-              <div class="col-lg-6">
-                <div class="card-body p-md-5 mx-md-4">
-  
-                  <div class="text-center">
-                      <img src="/ProjetFinalP2/images/logo.jfif" style=" width: 185px;" alt="logo">
-                    <h4 class="mt-1 mb-5 pb-1">Trajet</h4>
-                  </div>
-  
-                <div class="card-body p-5 shadow-5 text-center" *ngIf="listCompagnie">
-                    <form [formGroup]="trajetForm" (ngSubmit)="saveTrajet()">
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div class="form-outline">
-                                    <input type="text" formControlName="ville_depart" id="form3Example1" class="form-control" />
-                                    <label class="form-label" for="form3Example1">Ville de depart</label>
-                                    <select  class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="ville_depart">
-                        
-                                        <!-- <option *ngFor="let v of listeVille| async"  [ngValue]="v">{{v.nom}}</option> -->
-                        
-                                    </select> 
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+                <div class="card rounded-3 text-black">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="card-body p-md-5 mx-md-4">
+
+                                <div class="text-center">
+                                    <img src="ProjetFinalP2\images\logo.jpg" style=" width: 185px;" alt="logo">
+                                    <h4 class="mt-1 mb-5 pb-1">Trajet</h4>
                                 </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-outline">
-                                    <input type="text" formControlName="ville_arrivee" id="form3Example2" class="form-control" >
-                                    <label class="form-label" for="form3Example2">Ville d'arrivée</label>
-                                    <select  class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="ville_arrivee">
-                        
-                                        <!-- <option *ngFor="let v of listeVille| async"  [ngValue]="v">{{v.nom}}</option> -->
-                        
-                                    </select> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
+
+                                <div class="card-body p-5 shadow-5 text-center" *ngIf="listCompagnie">
+                                    <form [formGroup]="trajetForm" (ngSubmit)="saveTrajet()">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    
+                                                    <label class="form-label" for="ville_depart">Ville de
+                                                        depart</label>
+                                                    <select class="form-select mb-3 "
+                                                        aria-label=".form-select-lg example"
+                                                        formControlName="ville_depart"
+                                                        id="ville_depart">
+
+                                                        <option *ngFor="let v of listeVilles| async" [ngValue]="v">
+                                                            {{v.nom}}</option>
+
+                                                    </select>
+                                                    <button type="button" class="btn btn-outline-secondary btn-sm" (click)="creerVille()">Creer une nouvelle ville</button>
+
+                                                    <div *ngIf="creerVill">
+                                                        <app-formulaire-ville></app-formulaire-ville>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    
+                                                    <label class="form-label" for="ville_arrivee">Ville
+                                                        d'arrivée</label>
+                                                    <select class="form-select mb-3 "
+                                                        aria-label=".form-select-lg example"
+                                                        formControlName="ville_arrivee"
+                                                        id="ville_arrivee">
+
+                                                        <option *ngFor="let v of listeVilles| async" [ngValue]="v">
+                                                            {{v.nom}}</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+
+                                            <div class="col-md-6 mb-4 ">
+                                                <div class="input-group form-outline ">
+                                                    <div id="prix">
+                                                        <input type="number" formControlName="prix_t" id="form3Example1"
+                                                            class="form-control" />
+                                                        <span class="input-group-text" id="basic-addon2">€</span>
+                                                    </div>
+                                                    <label class="form-label" for="form3Example1">Prix de
+                                                        l'aller-retour</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <select class="form-select mb-3 " aria-label=".form-select-lg example"
+                                            formControlName="compagnie">
+
+                                            <option *ngFor="let c of listCompagnie | async" [ngValue]="c">{{c.nom}}
+                                            </option>
+
+                                        </select>
+                                        <button class="btn btn-outline-secondary btn-sm" type="button"
+                                            (click)="creerCompagnie()">Créer une nouvelle compagnie</button><br>
+                                            <div *ngIf="creerComp">
                            
-                            <div class="col-md-6 mb-4 ">
-                                <div class="input-group form-outline ">
-                                    <div id="prix">
-                                    <input type="number" formControlName="prix_t" id="form3Example1" class="form-control" />
-                                    <span class="input-group-text" id="basic-addon2">€</span></div>
-                                    <label class="form-label" for="form3Example1">Prix de l'aller-retour</label>
+                                                <app-compagnie-formulaire></app-compagnie-formulaire>
+                                                </div>
+                                        <button type="submit" class="btn btn-primary btn-block mb-4">
+                                            enregistrer le trajet
+                                        </button>
+
+                                    </form>
                                 </div>
                             </div>
+                           
+                            <!-- <button (click)="sendData()">Valider les trajets</button> -->
+
                         </div>
 
-                        <select  class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="compagnie">
-                        
-                            <option *ngFor="let c of listCompagnie | async"  [ngValue]="c">{{c.nom}}</option>
-            
-                        </select> 
-                        <button class="btn btn-outline-secondary btn-sm" (click)="creerCompagnie()">Créer une nouvelle compagnie</button><br>
-                        <button type="submit" class="btn btn-primary btn-block mb-4">
-                            enregistrer le trajet
-                        </button>
-                        
-                    </form>
+                       
+                        <div class="col-lg-6 mb-5 mb-lg-0">
+                            <img src="https://as1.ftcdn.net/v2/jpg/00/71/41/34/1000_F_71413455_GBCbY3cWW125quIdT4omGDSV3WvVfb8m.jpg"
+                                class="w-100 rounded-4 shadow-4" alt="trajet" />
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button (click)="creerCompagnie()">Creer une nouvelle compagnie</button>
-            <!-- <button (click)="sendData()">Valider les trajets</button> -->
-           
         </div>
-        
-<div *ngIf="creerComp">
-    <app-compagnie-formulaire></app-compagnie-formulaire>
     </div>
-        <div class="col-lg-6 mb-5 mb-lg-0">
-            <img src="https://as1.ftcdn.net/v2/jpg/00/71/41/34/1000_F_71413455_GBCbY3cWW125quIdT4omGDSV3WvVfb8m.jpg"
-             class="w-100 rounded-4 shadow-4"
-              alt="trajet" />
-          </div>
-    </div>
-</div>
-        </div>
-      </div>
-    </div>
-    </section>
+</section>

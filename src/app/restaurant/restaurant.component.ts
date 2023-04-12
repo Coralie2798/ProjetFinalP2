@@ -19,7 +19,7 @@ export class RestaurantComponent {
   creerVill=false
   listeVille!:Ville[];
   v!:Observable<Ville>
-
+  
 
   constructor(private fb:FormBuilder, private es:ExperienceService, private router:Router, private vs:VilleService){ }
 
@@ -40,13 +40,12 @@ export class RestaurantComponent {
   saveRestaurant()
     {
       console.log("Ville :" + this.v)
-      this.es.addRestaurant(new Restaurant(0,this.restaurantForm.value.nom,this.restaurantForm.value.adresse,this.restaurantForm.value.prix_l,this.restaurantForm.value.ville));   
+      this.es.addRestaurant(new Restaurant(0,this.restaurantForm.value.nom,this.restaurantForm.value.adresse,this.restaurantForm.value.prix_l,this.restaurantForm.value.ville)).subscribe();   
       this.restaurantForm.patchValue({ 
       nom:'',
       adresse:'',
       prix_l:'',
       }); 
-      this.router.navigate(['lieuxformulaire']);
     }
     creerVille(){
       this.creerVill=!this.creerVill

@@ -1,4 +1,4 @@
-<section class="h-100 gradient-form" style="background-color: #e45353;" *ngIf="iduser !=null && etape==1">
+<section class="h-100 gradient-form" style="background-color: #e45353;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-xl-10">
@@ -10,14 +10,34 @@
                   <div class="text-center">
                     <img src="https://img2.freepng.fr/20181107/grb/kisspng-travel-portable-network-graphics-clip-art-image-to-14-cliparts-for-free-download-travel-clipart-trav-5be280728af813.7489054415415706745692.jpg"
                       style="width: 185px;" alt="logo">
-                    <h4 class="mt-1 mb-5 pb-1">Destination</h4>
+                    <h4 class="mt-1 mb-5 pb-1">Experience</h4>
                   </div>
-                        <form [formGroup]="experienceForm1" >
 
-                            <div class="form-group">
-                                <label>Destination</label>
-                                <input type="text" formControlName="destination" class="form-control" id="destination" >
-                            </div>
+                  <div class="form-group" *ngIf="iduser !=null && etape==1">
+                                <!--Choisir ville-->
+                                  <form  [formGroup]="villeForm" (ngSubmit)="validerVille()">
+                                    <div class="form-group">
+                                      <label>Selectionnez une ville </label>
+                                      <select class="form-select mb-3 " aria-label=".form-select-lg example"
+                                        formControlName="Ville">
+                                        <option *ngFor="let v of villes$ | async" [ngValue]="v">{{v.nom}}</option>
+                                      </select>
+                                      
+                                      <button type="submit" class="btn btn-primary">Valider</button>
+                                    </div>
+                                    </form>
+                                    <label>Ou entrez une autre ville :</label>
+                                    <button class="btn btn-primary btn-sm" (click)="creerVille()">Creer une nouvelle ville</button>
+                                    
+                                    <div *ngIf="creerVill">
+                                      <app-formulaire-ville></app-formulaire-ville>
+                                    </div>
+                                    <!-- -->
+                    </div>
+                    <div *ngIf="iduser !=null && etape==2">
+                        <form [formGroup]="experienceForm1" (ngSubmit)="validExp()" >
+
+                            
                             <br>
                             <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label">Description</label>
@@ -46,10 +66,54 @@
 
                             <br> <br>
 
-                            <div class="text-center pt-1 mb-5 pb-1">
-                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" (click)="continuer()">Enregistrer</button>
-                            </div>
+                          <button class="btn btn-primary" type="submit">Valider</button>
                         </form>
+                        <button class="btn btn-primary" (click)="retour()">Retour</button>
+                      </div>
+                        
+
+                      <div *ngIf="iduser !=null && etape==3">
+                        <form [formGroup]="restaurantForm" (ngSubmit)="validerResto()" >
+                          <label>Restaurant(s)</label>
+                          <select  multiple class="form-control"  id="rating_moyen" formControlName="listeRestaurant">
+                            <option *ngFor="let r of listeResto$ | async" [ngValue]="r">
+                              {{r.nom}}
+                            </option>
+                            </select>
+
+                            <button type="button" (click)="creerResto()">Creer un nouveau restaurant</button>
+                                    
+                                    <div *ngIf="creerRest">
+                                      <app-restaurant></app-restaurant>
+                                    </div>
+                          
+
+                          <button type="submit">Valider</button>
+                        </form>
+                        <button (click)="retour()">Retour</button>
+                      </div>
+
+
+                      <div *ngIf="iduser !=null && etape==4">
+                        <form [formGroup]="lieuxForm" (ngSubmit)="validerLieux()" >
+                          <label>Lieux visités</label>
+                          <select  multiple class="form-control"  id="rating_moyen" formControlName="listeLieux">
+                            <option *ngFor="let l of listeLieux$ | async" [ngValue]="l">
+                              {{l.nom_L}}
+                            </option>
+                            </select>
+
+                            <button type="button" (click)="creerLieux()">Creer un nouveau lieux</button>
+                                    
+                                    <div *ngIf="creerLieu">
+                                      <app-formulaire-lieux></app-formulaire-lieux>
+                                    </div>
+                          
+
+                          <button type="submit">Valider</button>
+                        </form>
+                        <button (click)="retour()">Retour</button>
+                      </div>
 
                         
                 </div>
@@ -69,16 +133,4 @@
     </div>
   </div>
 </section>
-<div *ngIf="etape==2">
-<form [formGroup]="experienceForm2">
-<select multiple class="form-select mb-3 "  aria-label=".form-select-lg example" formControlName="villes">
-                        
-  <option *ngFor="let v of villes$ | async"  [ngValue]="v">{{v.nom}}</option>
-
-</select> 
-<button (click)="validerVilles()">Valider</button>
-</form>
-<button (click)="back()">Retour</button>
-</div>
-<app-trajet *ngIf="etape==3" (output)="getTrajets($event)"></app-trajet>
 <router-outlet></router-outlet>
