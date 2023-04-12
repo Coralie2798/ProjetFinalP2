@@ -48,39 +48,39 @@ ngOnInit(): void {
   this.listeR$=this.es.getRestaurant();
   this.listeL$=this.ls.getLieux();
   this.listeU$=this.us.getUtilisateur();
-  this.listeC$=this.cs.getCompagnies();
-  this.listeT$=this.es.getTrajet();
+  // this.listeC$=this.cs.getCompagnies();
+  // this.listeT$=this.es.getTrajet();
   this.exp=this.es.getExperienceById(this.idExperience);
-  this.tra=this.es.getTrajetByExp();
-  this.comp=this.cs.getCompagnieByExp()
+  // this.tra=this.es.getTrajetByExp();
+  // this.comp=this.cs.getCompagnieByExp()
   //this.resto=this.es.getRestoByid(this.idResto)
+
 }
 
 
 
 affE:boolean=false;
-affT:boolean=true;
+
 affA:boolean=true;
 
 afficherE():void{
   console.log("afficherE")
   this.affE=false
-  this.affT=true
-  this.affA=true
-}
-afficherT():void{
-  console.log("afficherT"+ this.idExperience)
-  this.affE=true
-  this.affT=false
+
   this.affA=true
 }
 afficherA():void{
   console.log("afficherA")
   this.affE=true
-  this.affT=true
+
   this.affA=false
 }
 
+getRestoByexp(idExp:number){
 
+}
 
+getLieuxByExp(idExp:number){
+
+}
 }

@@ -46,9 +46,12 @@ export class GuideComponent{
   }
   villeselectionne(v:Ville){
 
+    
     this.v = v;
+    console.log(v)
     this.listeG$= this.gs.getGuideIDV(v.id_ville);
     this.villechoisie=true;
+    
   }
 
 

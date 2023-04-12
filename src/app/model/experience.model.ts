@@ -1,3 +1,5 @@
+import { Ville } from "./ville.model";
+
 export class Experience {
 
     id_voyage:number;
@@ -6,9 +8,9 @@ export class Experience {
     depense:number;
     rating_moyen:number;
     id_trajet:number;
-    id_ville:number;
+    ville:Ville;
 
-    constructor( description:string, photo:string, depense:number, rating_moyen:number, id_voyage:number, id_trajet:number, id_ville:number)
+    constructor( description:string, photo:string, depense:number, rating_moyen:number, id_voyage:number, id_trajet:number, ville:Ville)
     {
         this.id_voyage=id_voyage
         this.description=description,
@@ -16,9 +18,10 @@ export class Experience {
         this.depense=depense,
         this.rating_moyen=rating_moyen,
         this.id_trajet=id_trajet;
-        this.id_ville=id_ville;
+        this.ville=ville;
         
     }
+
 
 
 
