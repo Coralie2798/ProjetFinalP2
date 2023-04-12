@@ -8,14 +8,15 @@ Les développeurs en charge de ce sujet : Coralie, Florian , Léo , Thaoura et J
 Voici le lien de notre Backlog produit (Notion) : https://www.notion.so/ProjetFinalP2Angular-f76ef8327c6441dab97c7020a66f9bc1?pvs=4
 
 ## Resume 
-
+Pour commencer:
 creation du projet avec la commande ng new ProjetFinalP2 , 
 creation de classes avec ng g class model/... --type=model,
 creation de services avec ng g s service/... 
 creation de composant avec ng g c component/...
-creation du formulaire d'inscription Utilisateur
-
+creation du formulaire d'inscription Utilisateur (formModule, ReactiveForm)
 Creation formulaire compagnie, Modification component user pour rafraichir la pâge lorsque l'on supprime un utilisateur.
+Parla suite :
+Mis en place d'une page de connexion avec un login et un mot de passe.
 
 ## Connexion
 L'utilisateur doit être connecté pour pouvoir entrer une expérience de voyage.
