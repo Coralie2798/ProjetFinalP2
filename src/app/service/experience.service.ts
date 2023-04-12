@@ -47,9 +47,11 @@ export class ExperienceService {
   }
 
 
-  getVilleByExp(idExp:number):Observable<Ville>
+
+
+  getVilleByExp(idExp:number)
   {
-    return this.http.get<Ville>("http://localhost:8080/experience/VilleExperience/" + this.idExp)
+    return this.http.get<string>("http://localhost:8080/experience/VilleExperience/" + this.idExp)
   }
   
 

@@ -20,11 +20,10 @@ export class ListeExperienceComponent implements OnInit {
   
   exp$!:Observable<Experience>;
   id!:number;
-  
   listeE$!: Observable<Experience[]>;
   listeR$!: Observable<Restaurant[]>;
   listeL$!: Observable<Lieux[]>;
-  destination!: Observable<Ville>
+  listeExp!:Experience[];
  
 
   
@@ -33,20 +32,11 @@ export class ListeExperienceComponent implements OnInit {
  
   
    this.listeE$=this.es.getExperience();
-   
-   
    this.listeR$=this.es.getRestaurant();
    this.listeL$=this.ls.getLieux();
-
-  
    
   }
-getDestination(id:number){
 
-  this.destination=this.vs.getVilleById(id);
-  
-  console.log("destination " + this.destination);
-}
 
 afficherExperience(id:number) {
   console.log(id);

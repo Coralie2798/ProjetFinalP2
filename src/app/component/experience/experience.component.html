@@ -13,19 +13,16 @@
 
 </div>
 
-<!-- <div [hidden]="cacher()">
-  <p>kzneffMZ</p>
-</div> -->
 
 
 
 <div [hidden]=affE id="E" *ngIf="exp | async as e">
   <p ><img src="{{e.photo}}" class="card-img-top" alt="photo" width="300" height="300"></p> 
   <br>
-  <h3 *ngIf="exp | async as e"> Destination</h3>
+  <h3> Destination</h3>
   <br> <br>
   <h4>Son voyage:</h4>
-  <p *ngIf="exp | async as e"> </p>
+  <p *ngIf="exp | async as e"></p>
   <br> <br>
 
   
