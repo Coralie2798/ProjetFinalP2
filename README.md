@@ -16,9 +16,13 @@ creation de composant avec ng g c component/...
 creation du formulaire d'inscription Utilisateur (formModule, ReactiveForm)
 Creation formulaire compagnie, Modification component user pour rafraichir la pâge lorsque l'on supprime un utilisateur.
 Installation de Bootstrap avec npm install bootstrap.
-Ajout d'un repertoire Git avec git init.
-Creation de plusieurs branches dans gitHub : utilisateur, expérience, guide en plus du main 
-
+Ajout d'un repertoire Git en faisant le lien avec gitHub : git remote add origin (lien gitHub)
+Creation de plusieurs branches dans gitHub : test,utilisateur, experience,experienceCompletPush et guide en plus de la branche master (git branch nomBranch)
+Utilisation des commandes git dans le terminal en continue : 
+- git add . , git commit -m "" (ajouter un commit) 
+- git  checkout (changer de branch)
+- git push origin nomBranch (faire un push)
+- git pull origin nomBranch (faire un pull)
 
 Par la suite :
 Mis en place d'une page de connexion avec un login et un mot de passe.
@@ -28,14 +32,12 @@ L'utilisateur doit être connecté pour pouvoir entrer une expérience de voyage
 
 ## Expérience de voyage
 
-Un formulaire pour entrée une expérience de voyage a été réalisé à l'intérieur duquel l'utilisateur doit rentré la ville visitée,le lieu visité ainsi que la description de l'expérience.
-Une image peut aussi être ajouté.
-On peut également ajouter les différents restaurants où l'utilisateur s'est restauré et afficher la liste de ceux-ci
+Un formulaire pour entrée une expérience de voyage a été réalisé à l'intérieur duquel l'utilisateur doit rentrer la ville visitée,le lieu visité et à quel prix ainsi que la description de l'expérience.
+Une image peut aussi être ajoutée.
+On peut également ajouter les différents restaurants où l'utilisateur s'est restauré et afficher la liste de ceux-ci.
 On a la possibilité de noté l'expérience de 1 à 5.
+L'utilisateur a également accès à la liste des expériences où il pourra voir les détails de chaque expérience notament la destination, le lieu visité et les dépenses réalisées pour chacune d'elle.
 
-## Lieux visité
-L'utilisateur peut indiquer le lieu visité  : dans quel ville et à quel prix ?
- 
 ## Guides
 
 L'utilisateur à la possibilité d'entrer un guide avec lequel l'expérience a été réalisé en entrant le pays, la ville et le contenu de la visite.
