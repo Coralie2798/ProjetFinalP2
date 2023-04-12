@@ -130,6 +130,10 @@ export class FormulaireExperienceGeneraleComponent {
   validerLieux(){
     this.etape+=1
     //renvoyer à la page de recap
+    console.log(new ExperienceComplet(this.experienceForm1.value.description,this.experienceForm1.value.photo,this.experienceForm1.value.rating_moyen,new Utilisateur(parseInt(this.iduser!),"","","","","","",""),this.restaurantForm.value.listeRestaurant,this.lieuxForm.value.listeLieux,this.villeForm.value.Ville) )
+    console.log(JSON.stringify(this.restaurantForm.value.listeRestaurant))
+    console.log(JSON.stringify(new ExperienceComplet(this.experienceForm1.value.description,this.experienceForm1.value.photo,this.experienceForm1.value.rating_moyen,new Utilisateur(parseInt(this.iduser!),"","","","","","",""),this.restaurantForm.value.listeRestaurant,this.lieuxForm.value.listeLieux,this.villeForm.value.Ville)))
+    this.es.addexpwithusertest(new ExperienceComplet(this.experienceForm1.value.description,this.experienceForm1.value.photo,this.experienceForm1.value.rating_moyen,new Utilisateur(parseInt(this.iduser!),"","","","","","",""),this.restaurantForm.value.listeRestaurant,this.lieuxForm.value.listeLieux,this.villeForm.value.Ville)).subscribe()
   }
 
   retour(){
