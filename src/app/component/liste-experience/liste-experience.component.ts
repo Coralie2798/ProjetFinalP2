@@ -37,18 +37,23 @@ export class ListeExperienceComponent implements OnInit {
    
    this.listeR$=this.es.getRestaurant();
    this.listeL$=this.ls.getLieux();
-   
+
+  
    
   }
+getDestination(id:number){
 
+  this.destination=this.es.getVilleByExp(id);
+  
+  console.log("destination" + this.destination);
+}
 
 afficherExperience(id:number) {
   console.log(id);
   
   this.exp$=this.es.getExperienceById(id);
   this.es.idExp=id;
-  this.destination=this.es.getVilleByExp(id);
-  console.log("destination" + this.destination);
+  
   this.router.navigate(['experience/']);
   //this.router.navigate(['experience/' + id]);
 }

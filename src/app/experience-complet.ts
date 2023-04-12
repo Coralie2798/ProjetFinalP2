@@ -6,7 +6,7 @@ import { Utilisateur } from "./model/utilisateur.model";
 import { Ville } from "./model/ville.model";
 
 export class ExperienceComplet {
-    private destination:string
+    private destination:Ville
     private description:string
     private photo:string
     private rating_moyen:number
@@ -15,7 +15,7 @@ export class ExperienceComplet {
     private listeLieux:Lieux[];
 
 
-    constructor(destination:string,description:string,photo:string,rating_moyen:number, u:Utilisateur,lt:any,lv:any, listeResto:Restaurant[], listeLieux:Lieux[]){
+    constructor(destination:Ville,description:string,photo:string,rating_moyen:number, u:Utilisateur,lt:any,lv:any, listeResto:Restaurant[], listeLieux:Lieux[]){
         this.description=description
         this.destination=destination
         this.photo=photo
@@ -23,7 +23,6 @@ export class ExperienceComplet {
         this.u=u
         this.listeLieux=listeLieux
         this.listeResto=listeResto
-
     }
     
 }
