@@ -13,9 +13,10 @@ export class ExperienceComplet {
     private u:Utilisateur;
     private listeResto:Restaurant[];
     private listeLieux:Lieux[];
+    private ville:any
 
 
-    constructor(description:string,photo:string,rating_moyen:number, u:Utilisateur, listeResto:Restaurant[], listeLieux:Lieux[]){
+    constructor(description:string,photo:string,rating_moyen:number, u:Utilisateur, listeResto:Restaurant[], listeLieux:Lieux[], v:any){
         this.description=description
         
         this.photo=photo
@@ -23,6 +24,7 @@ export class ExperienceComplet {
         this.u=u
         this.listeLieux=listeLieux
         this.listeResto=listeResto
+        this.ville=v
 
     }
     
