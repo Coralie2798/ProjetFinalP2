@@ -15,6 +15,10 @@ creation de services avec ng g s service/...
 creation de composant avec ng g c component/...
 creation du formulaire d'inscription Utilisateur (formModule, ReactiveForm)
 Creation formulaire compagnie, Modification component user pour rafraichir la pâge lorsque l'on supprime un utilisateur.
+Installation de Bootstrap avec npm install bootstrap.
+Ajout d'un repertoire Git avec git init.
+Creation de plusieurs branches dans gitHub : utilisateur, expérience, guide en plus du main 
+
 
 Par la suite :
 Mis en place d'une page de connexion avec un login et un mot de passe.
